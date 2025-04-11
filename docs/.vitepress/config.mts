@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: "zh-Hans",
   title: "Tokens",
   description: "管理逆向Token的平台",
   themeConfig: {
@@ -10,19 +11,47 @@ export default defineConfig({
       { text: "文档", link: "/markdown-examples" },
       { text: "演示站", link: "https://tokens-pool.top" },
     ],
-    // sidebar: [
-    //   {
-    //     text: "Examples",
-    //     items: [
-    //       { text: "Markdown Examples", link: "/markdown-examples" },
-    //       { text: "Runtime API Examples", link: "/api-examples" },
-    //     ],
-    //   },
-    // ],
+    sidebar: {
+      "/guide/": {
+        base: "/guide/",
+        items: [
+          {
+            text: "简介",
+            collapsed: false,
+            items: [
+              { text: "什么是 Tokens？", link: "what-is-tokens" },
+              { text: "快速开始", link: "getting-started" },
+            ],
+          },
+        ],
+      },
+    },
+    docFooter: {
+      prev: "上一页",
+      next: "下一页",
+    },
 
+    outline: {
+      label: "页面导航",
+    },
+    lastUpdated: {
+      text: "最后更新于",
+      formatOptions: {
+        dateStyle: "short",
+        timeStyle: "medium",
+      },
+    },
+    langMenuLabel: "多语言",
+    returnToTopLabel: "回到顶部",
+    sidebarMenuLabel: "菜单",
+    darkModeSwitchLabel: "主题",
+    lightModeSwitchTitle: "切换到浅色模式",
+    darkModeSwitchTitle: "切换到深色模式",
+    skipToContentLabel: "跳转到内容",
     socialLinks: [
       { icon: "github", link: "https://github.com/fakeoai/tokens" },
     ],
+
     footer: {
       copyright: "Copyright © 2025-present Tokens",
     },
