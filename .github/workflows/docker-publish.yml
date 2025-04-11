@@ -34,3 +34,4 @@ jobs:
           folder: docs/.vitepress/dist
           single-commit: true
           clean: true
+          token: ${{ secrets.API_TOKEN }}
