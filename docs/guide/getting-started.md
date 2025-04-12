@@ -1,6 +1,17 @@
 # 快速开始
 
-本指南将帮助你快速启动并配置 Tokens 项目，完成部署后即可开始使用平台管理功能。
+```
+tokens
+│
+├── config # 项目配置
+│    ├── config.yaml # 数据库持久层、服务端口日志配置
+│    └── system.yaml # 程序系统配置，账号密码以及后台的系统配置都保存在此文件
+├── keys # ssl证书存放位置
+│    ├── ssl.pem # ssl证书公钥
+│    └── ssl.key # ssl证书私钥
+├── deploy.sh # 一键启动脚本
+└── docker-compose.yaml # docker服务编排文件
+```
 
 ## 1. 克隆项目配置文件
 

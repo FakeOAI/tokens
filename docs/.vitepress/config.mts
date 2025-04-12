@@ -1,6 +1,5 @@
 import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: "zh-Hans",
   title: "Tokens",
@@ -8,24 +7,34 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "首页", link: "/" },
-      { text: "文档", link: "/markdown-examples" },
+      { text: "开始接入", link: "/llm/prepare" },
       { text: "演示站", link: "https://tokens-pool.top" },
     ],
-    sidebar: {
-      "/guide/": {
+    sidebar: [
+      {
+        text: "简介",
         base: "/guide/",
+        collapsed: false,
         items: [
-          {
-            text: "简介",
-            collapsed: false,
-            items: [
-              { text: "什么是 Tokens？", link: "what-is-tokens" },
-              { text: "快速开始", link: "getting-started" },
-            ],
-          },
+          { text: "什么是 Tokens？", link: "what-is-tokens" },
+          { text: "快速开始", link: "getting-started" },
         ],
       },
-    },
+      {
+        text: "LLM",
+        base: "/llm/",
+        link: "prepare",
+        collapsed: false,
+        items: [
+          { text: "ChatGPT", link: "chatgpt" },
+          { text: "Grok", link: "grok" },
+          { text: "Claude", link: "claude" },
+          { text: "Cursor", link: "cursor" },
+          { text: "Windsurf", link: "windsurf" },
+          { text: "Gemini", link: "gemini" },
+        ],
+      },
+    ],
     docFooter: {
       prev: "上一页",
       next: "下一页",
