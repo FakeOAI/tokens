@@ -32,6 +32,7 @@ export default defineConfig({
           { text: "Cursor", link: "cursor" },
           { text: "Windsurf", link: "windsurf" },
           { text: "Gemini", link: "gemini" },
+          { text: "Sora", link: "sora" },
         ],
       },
     ],

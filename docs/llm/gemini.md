@@ -12,6 +12,7 @@ POST http://<你的IP>:<你的端口>/gemini/v1/chat/completions
 - `gemini-2.0-flash-exp`
 - `gemini-2.0-flash-thinking-exp`
 - `gemini-2.5-pro-exp-03-25`
+- `gemini-2.0-flash-exp-image-generation`
 - 官网API支持的模型都支持
 
 ## 调用示例
