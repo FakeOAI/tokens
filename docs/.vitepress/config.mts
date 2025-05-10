@@ -36,6 +36,19 @@ export default defineConfig({
           { text: "Sora", link: "sora" },
         ],
       },
+      {
+        text: "高阶玩法",
+        link: "high-level-play",
+      },
+      // {
+      //   text: "系统配置",
+      //   base: "/config/",
+      //   collapsed: false,
+      //   link: "admin",
+      //   items: [
+      //     { text: "管理端配置", link: "admin" },
+      //   ],
+      // },
     ],
     docFooter: {
       prev: "上一页",
@@ -44,6 +57,7 @@ export default defineConfig({
 
     outline: {
       label: "页面导航",
+      level: [2, 3],
     },
     lastUpdated: {
       text: "最后更新于",
