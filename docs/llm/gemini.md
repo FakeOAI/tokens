@@ -13,10 +13,10 @@ POST http://<你的IP>:<你的端口>/gemini/v1/chat/completions
 - `gemini-2.0-flash-thinking-exp`
 - `gemini-2.5-pro-exp-03-25`
 - `gemini-2.0-flash-exp-image-generation`
-- 官网API支持的模型都支持
+- 官网 API 支持的模型都支持
 
 > [!WARNING]
-> Gemini API的安全配置程序默认全部关闭
+> Gemini API 的安全配置程序默认全部关闭
 
 ## 调用示例
 
@@ -110,7 +110,6 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 }'
 ```
 
-
 ### 视频理解
 
 > [!WARNING]
@@ -136,6 +135,78 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
                     }
                 }
             ]
+        }
+    ],
+    "model": "gemini-2.0-flash",
+    "stream": true
+}'
+```
+
+### 函数调用
+
+```bash
+curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: <你的许可证>' \
+--data-raw '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "What is the weather like in Boston today?"
+        }
+    ],
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "get_current_weather",
+                "description": "Get the current weather in a given location",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "location": {
+                            "type": "string",
+                            "description": "The city and state, e.g. San Francisco, CA"
+                        },
+                        "unit": {
+                            "type": "string",
+                            "enum": [
+                                "celsius",
+                                "fahrenheit"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "location"
+                    ]
+                }
+            }
+        }
+    ],
+    "model": "gemini-2.0-flash",
+    "stream": true
+}'
+```
+
+### 代码执行
+
+```bash
+curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: <你的许可证>' \
+--data-raw '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "What is the sum of the first 50 prime numbers? Generate and run code for the calculation, and make sure you get all 50."
+        }
+    ],
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "codeExecution"
+            }
         }
     ],
     "model": "gemini-2.0-flash",
