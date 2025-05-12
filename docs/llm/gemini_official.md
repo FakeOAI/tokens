@@ -3,7 +3,7 @@
 ## 接口地址
 
 > [!WARNING]
-> 该平台不需要添加任何token，直接调用即可
+> 该平台不需要添加任何 token，直接调用即可
 
 ```curl
 POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
@@ -11,13 +11,9 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 
 ## 模型列表
 
-- `gemini-2.5-pro-exp`
-- `gemini-2.0-flash-thinking-exp`
 - `gemini-2.0-flash`
-- `gemini-2.5-flash`
-- `gemini-2.0-flash-exp`
-- `gemini-2.0-flash-thinking`
-- 官网支持的模型都支持
+- `gemini-2.5-flash-preview`
+- `gemini-2.5-pro-preview`
 
 > [!WARNING]
 > 暂不支持文件图片识别以及未适配 `deeprearch`、`canvas` 等能力
