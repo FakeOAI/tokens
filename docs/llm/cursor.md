@@ -8,36 +8,37 @@ POST http://<你的IP>:<你的端口>/cursor/v1/chat/completions
 
 ## 模型列表
 
+- `gpt-4o-mini`
 - `gpt-4`
+- `gpt-4.1`
+- `gpt-4o`
+- `gpt-3.5-turbo`
+- `o1-mini`
+- `o3-mini`
+- `o4-mini`
+- `o1-preview`：**Pro 订阅类型**的 token 才可用
+- `gpt-4.5-preview`：**Pro 订阅类型**的 token 才可用
+- `o1`：**Pro 订阅类型**的 token 才可用
 - `claude-3.5-sonnet`
 - `claude-3.7-sonnet`
 - `claude-3.7-sonnet-thinking`
-- `gpt-4o`
 - `claude-3-opus`
-- `gpt-3.5-turbo`
-- `gpt-4-turbo-2024-04-09`
-- `gpt-4o-128k`
-- `gemini-1.5-flash-500k`
-- `claude-3-haiku-200k`
-- `claude-3-5-sonnet-200k`
-- `gpt-4o-mini`
-- `o1-mini`
 - `claude-3.5-haiku`
-- `gemini-2.0-pro-exp`
-- `gemini-2.0-flash-thinking-exp`
-- `gemini-2.0-flash`
-- `gemini-2.5-pro-exp-03-25`
-- `deepseek-v3`
-- `deepseek-r1`
-- `o3-mini`
-- `grok-2`
-- `o1-preview`：**Pro 订阅类型**的 token 才可用
-- `o1`：**Pro 订阅类型**的 token 才可用
-- `gpt-4.5-preview`：**Pro 订阅类型**的 token 才可用
 - `claude-3.7-sonnet-max`：**Pro 订阅类型**的 token 才可用
 - `claude-3.7-sonnet-thinking-max`：**Pro 订阅类型**的 token 才可用
+- `gemini-2.0-flash`
+- `gemini-2.5-flash-preview-04-17`
+- `gemini-2.5-pro-exp-03-25`
+- `gemini-2.5-pro-preview-05-26`
 - `gemini-2.5-pro-max`：**Pro 订阅类型**的 token 才可用
 - `gemini-2.5-pro-exp-03-25-max`：**Pro 订阅类型**的 token 才可用
+- `grok-2`
+- `grok-3-beta`
+- `grok-3-mini-beta`
+- `deepseek-v3`
+- `deepseek-v3.1`
+- `deepseek-r1`
+- Cursor设置里面有的模型都支持
 
 ## 调用示例
 

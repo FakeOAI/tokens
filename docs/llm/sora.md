@@ -65,3 +65,13 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/co
   开启后会分析用户的输入是否需要指定比例，但需要配置 OpenAI API 官方 KEY，原理是调用 OpenAI 的 [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs?api-mode=chat) 能力去分析用户 `prompt` 中是否指定了大小。
 
   ![WechatIMG401.jpg](/WechatIMG401.jpg)
+
+## 平台参数
+
+- `size`
+
+  生成图像的大小，格式为 `widthxheight`，宽度限制在 `1920` 内，高度限制在 `1080` 内，例如：`720x720`
+
+- `n`
+
+  生成不同**变体**的数量，默认为1，最大值为4
