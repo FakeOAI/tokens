@@ -24,20 +24,24 @@ POST http://<你的IP>:<你的端口>/cursor/v1/chat/completions
 - `claude-3.7-sonnet-thinking`
 - `claude-3-opus`
 - `claude-3.5-haiku`
-- `claude-3.7-sonnet-max`：**Pro 订阅类型**的 token 才可用
-- `claude-3.7-sonnet-thinking-max`：**Pro 订阅类型**的 token 才可用
 - `gemini-2.0-flash`
 - `gemini-2.5-flash-preview-04-17`
 - `gemini-2.5-pro-exp-03-25`
 - `gemini-2.5-pro-preview-05-26`
-- `gemini-2.5-pro-max`：**Pro 订阅类型**的 token 才可用
-- `gemini-2.5-pro-exp-03-25-max`：**Pro 订阅类型**的 token 才可用
 - `grok-2`
 - `grok-3-beta`
 - `grok-3-mini-beta`
 - `deepseek-v3`
 - `deepseek-v3.1`
 - `deepseek-r1`
+- `gemini-2.5-pro-max`：**Pro 订阅类型**的 token 才可用
+- `gemini-2.5-pro-exp-03-25-max`：**Pro 订阅类型**的 token 才可用
+- `claude-3.7-sonnet-max`：**Pro 订阅类型**的 token 才可用
+- `claude-3.7-sonnet-thinking-max`：**Pro 订阅类型**的 token 才可用
+- `claude-4-sonnet-max`：**Pro 订阅类型**的 token 才可用
+- `claude-4-sonnet-thinking-max`：**Pro 订阅类型**的 token 才可用
+- `claude-4-opus-max`：**Pro 订阅类型**的 token 才可用
+- `claude-4-opus-thinking-max`：**Pro 订阅类型**的 token 才可用
 - Cursor设置里面有的模型都支持
 
 ## 调用示例
