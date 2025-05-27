@@ -9,10 +9,12 @@ POST http://<你的IP>:<你的端口>/gemini/v1/chat/completions
 ## 模型列表
 
 - `gemini-2.0-flash`
-- `gemini-2.0-flash-exp`
-- `gemini-2.0-flash-thinking-exp`
-- `gemini-2.5-pro-exp-03-25`
-- `gemini-2.0-flash-exp-image-generation`
+- `gemini-2.0-flash-preview-image-generation`
+- `gemini-2.5-flash-preview-05-20`
+- `gemini-2.5-flash-preview-tts`
+- `gemini-2.5-pro-preview-05-06`：付费 key 才能使用
+- `gemini-2.5-pro-preview-tts`
+- `gemini-2.5-flash-preview-05-20-thinking`：开启思考模式
 - 官网 API 支持的模型都支持
 
 > [!WARNING]
