@@ -11,9 +11,8 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 
 ## 模型列表
 
-- `gemini-2.0-flash`
-- `gemini-2.5-flash-preview`
-- `gemini-2.5-pro-preview`
+- `gemini-2.5-flash`
+- `gemini-2.5-pro-preview`：该模型暂不可用
 
 > [!WARNING]
 > 暂不支持文件图片识别以及未适配 `deeprearch`、`canvas` 等能力
@@ -26,7 +25,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
 --header 'Authorization: <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
-    "model": "gemini-2.0-flash",
+    "model": "gemini-2.5-flash",
     "stream": true
 }'
 ```
