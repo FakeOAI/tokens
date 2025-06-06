@@ -2,9 +2,6 @@
 
 ## 接口地址
 
-> [!WARNING]
-> 该平台不需要添加任何 token，直接调用即可
-
 ```curl
 POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 ```
@@ -12,10 +9,7 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 ## 模型列表
 
 - `gemini-2.5-flash`
-- `gemini-2.5-pro-preview`：该模型暂不可用
-
-> [!WARNING]
-> 暂不支持文件图片识别以及未适配 `deeprearch`、`canvas` 等能力
+- `gemini-2.5-pro-preview`
 
 ## 调用示例
 
@@ -29,3 +23,12 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
     "stream": true
 }'
 ```
+
+## 如何提取该平台的 token
+
+> [!WARNING]
+> 取之前如果登录过，一定要退出重新登录，提取之后马上加入 tokens 号池中，否则很快会失效。
+
+登录 [Gemini 官网](https://gemini.google.com/), 打开 `f12` 找到 cookie 为 `__Secure-1PSID` 的值，即为 token
+
+![token](/WechatIMG424.jpg)
