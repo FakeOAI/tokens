@@ -19,6 +19,7 @@ POST http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions
 - `o4-mini`
 - `o4-mini-high`
 - `o1-pro`
+- `o3-pro`
 - 官网所有模型都支持
 - `gpt-4o-image`：调用最新的 gpt4o 画图能力
 - `g-[gizmo-id]`：调用 `gpts` 模型，`gizmo-id` 请在官网点击想要使用的 gpts，在地址栏获取，如下图所示
