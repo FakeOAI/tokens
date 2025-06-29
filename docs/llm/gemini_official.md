@@ -11,6 +11,7 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 - `gemini-2.5-flash-free`：无需加号即可调用，不支持图片文件分析
 - `gemini-2.5-flash`：需要加号才能调用，支持图片文件分析
 - `gemini-2.5-pro`：需要加号才能调用，支持图片文件分析
+- `gemini-deepsearch`：深度研究模型，需要加号才能调用
 
 ## 如何提取该平台的 token
 
