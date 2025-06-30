@@ -11,11 +11,17 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 - `gemini-2.5-flash-free`：无需加号即可调用，不支持图片文件分析
 - `gemini-2.5-flash`：需要加号才能调用，支持图片文件分析
 - `gemini-2.5-pro`：需要加号才能调用，支持图片文件分析
-- `gemini-deepsearch`：深度研究模型，需要加号才能调用
+- `gemini-deepsearch`：深度研究模型，需要付费 token 才可以调用
+- `gemini-video`：调用 gemini 官网的 veo3 模型，需要付费 token 才可以调用
+
+> [!WARNING]
+>
+> `gemini-video` 模型默认返回视频的 base64 编码，如需返回 URL 需在后台配置 OSS 储存设置
 
 ## 如何提取该平台的 token
 
 > [!WARNING]
+>
 > - 取之前如果登录过，**一定要退出重新登录**，提取之后马上加入 tokens 号池中，否则很快会失效。
 > - 最好无痕浏览器提取，提取完之后，页面不要进行任何对话等**点击操作**，马上关闭浏览器或网页，否则很快会失效。
 
