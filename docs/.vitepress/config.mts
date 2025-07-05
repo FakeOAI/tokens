@@ -28,7 +28,7 @@ export default defineConfig({
         items: [
           { text: "ChatGPT", link: "chatgpt" },
           { text: "Grok", link: "grok" },
-          { text: "Claude", link: "claude" },
+          { text: "Claude 官网逆向", link: "claude" },
           { text: "Claude API", link: "claude_api" },
           { text: "Cursor", link: "cursor" },
           { text: "Windsurf", link: "windsurf" },

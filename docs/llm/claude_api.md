@@ -23,8 +23,10 @@ POST http://<你的IP>:<你的端口>/claude_api/v1/messages
 ## 模型列表
 
 - `claude-sonnet-4-20250514`
+- `claude-opus-4-20250514`
 - `claude-3-7-sonnet-20250219`
 - `claude-sonnet-4-20250514-thinking`
+- `claude-opus-4-20250514-thinking`
 - `claude-3-7-sonnet-20250219-thinking`
 - 官网 API 支持的模型都支持
 
@@ -59,6 +61,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/m
 --header 'Authorization: <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
+    "system": [{"type": "text", "text": "你是一个AI助手，请根据用户的问题给出回答"}],
     "model": "claude-sonnet-4-20250514",
     "stream": true
 }'
