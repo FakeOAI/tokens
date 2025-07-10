@@ -34,6 +34,7 @@ POST http://<你的IP>:<你的端口>/cursor/v1/chat/completions
 - `deepseek-v3`
 - `deepseek-v3.1`
 - `deepseek-r1`
+- `grok-4-0709`
 - `gemini-2.5-pro-max`：**Pro 订阅类型**的 token 才可用
 - `gemini-2.5-pro-exp-03-25-max`：**Pro 订阅类型**的 token 才可用
 - `claude-3.7-sonnet-max`：**Pro 订阅类型**的 token 才可用

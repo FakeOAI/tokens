@@ -16,6 +16,7 @@ POST http://<你的IP>:<你的端口>/grok/v1/chat/completions
 - `grok-3-deepsearch`：使用 grok3 进行深度联网搜索
 - `grok-3-deepersearch`：使用 grok3 进行深度思考联网搜索
 - `grok-3-reasoning`：使用 grok3 进行思考
+- `grok-4`
 
 ## 调用示例
 
