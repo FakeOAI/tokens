@@ -4,7 +4,7 @@ services:
   mysql:
     image: mysql:8
     container_name: tokens-mysql
-    command: --mysql-native-password=ON --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    command: --mysql-native-password=ON --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max_connections=4096
     restart: always
     volumes:
       - ./data/mysql/:/var/lib/mysql/
