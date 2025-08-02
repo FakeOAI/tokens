@@ -8,7 +8,7 @@
 
 ## 开始接入
 
-请 [点击这里](https://docs.tokens-pool.top) 查看项目文档
+请 [点击这里](https://docs2.tokens-pool.top) 查看项目文档
 
 ## 声明
 
