@@ -23,10 +23,12 @@ POST http://<你的IP>:<你的端口>/claude_api/v1/messages
 ## 模型列表
 
 - `claude-sonnet-4-20250514`
+- `claude-opus-4-1-20250805`
 - `claude-opus-4-20250514`
 - `claude-3-7-sonnet-20250219`
 - `claude-sonnet-4-20250514-thinking`
 - `claude-opus-4-20250514-thinking`
+- `claude-opus-4-1-20250805-thinking`
 - `claude-3-7-sonnet-20250219-thinking`
 - 官网 API 支持的模型都支持
 
