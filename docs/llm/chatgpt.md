@@ -14,6 +14,9 @@ POST http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions
 - `gpt-4-5`
 - `gpt-4-1-mini`
 - `gpt-4-1`
+- `gpt-5`
+- `gpt-5-thinking`
+- `gpt-5-pro`
 - `o3`
 - `o3-mini`
 - `o4-mini`
