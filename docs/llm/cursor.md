@@ -10,6 +10,7 @@ POST http://<你的IP>:<你的端口>/cursor/v1/chat/completions
 
 - `gpt-4o-mini`
 - `gpt-4`
+- `gpt-5`
 - `gpt-4.1`
 - `gpt-4o`
 - `gpt-3.5-turbo`
@@ -43,6 +44,7 @@ POST http://<你的IP>:<你的端口>/cursor/v1/chat/completions
 - `claude-4-sonnet-thinking-max`：**Pro 订阅类型**的 token 才可用
 - `claude-4-opus-max`：**Pro 订阅类型**的 token 才可用
 - `claude-4-opus-thinking-max`：**Pro 订阅类型**的 token 才可用
+- `gpt-5-max`：**Pro 订阅类型**的 token 才可用
 - Cursor设置里面有的模型都支持
 
 ## 调用示例
