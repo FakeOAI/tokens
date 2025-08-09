@@ -16,6 +16,9 @@ hero:
       text: 快速开始
       link: /guide/getting-started
     - theme: alt
+      text: 计费标准
+      link: /pricing
+    - theme: alt
       text: 查看演示站
       link: https://tokens-pool.top
 
@@ -45,4 +48,3 @@ features:
     title: 简单的Docker部署
     details: 支持Docker一键部署，无需安装额外环境，轻松完成系统搭建。
 ---
-

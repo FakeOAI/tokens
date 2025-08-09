@@ -8,6 +8,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "开始接入", link: "/llm/prepare" },
+      { text: "计费标准", link: "/pricing" },
       { text: "演示站", link: "https://tokens-pool.top" },
     ],
     sidebar: [
@@ -31,7 +32,6 @@ export default defineConfig({
           { text: "Claude 官网逆向", link: "claude" },
           { text: "Claude API", link: "claude_api" },
           { text: "Cursor", link: "cursor" },
-          { text: "Windsurf", link: "windsurf" },
           { text: "Gemini API", link: "gemini" },
           { text: "Gemini 官网逆向", link: "gemini_official" },
           { text: "Sora", link: "sora" },
@@ -41,15 +41,10 @@ export default defineConfig({
         text: "高阶玩法",
         link: "high-level-play",
       },
-      // {
-      //   text: "系统配置",
-      //   base: "/config/",
-      //   collapsed: false,
-      //   link: "admin",
-      //   items: [
-      //     { text: "管理端配置", link: "admin" },
-      //   ],
-      // },
+      {
+        text: "计费标准",
+        link: "pricing",
+      },
     ],
     docFooter: {
       prev: "上一页",
