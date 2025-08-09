@@ -17,7 +17,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: 计费标准
-      link: /pricing
+      link: /others/platform-pricing
     - theme: alt
       text: 查看演示站
       link: https://tokens-pool.top

@@ -8,7 +8,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "开始接入", link: "/llm/prepare" },
-      { text: "计费标准", link: "/pricing" },
+      { text: "计费标准", link: "/others/platform-pricing" },
       { text: "演示站", link: "https://tokens-pool.top" },
     ],
     sidebar: [
@@ -38,12 +38,16 @@ export default defineConfig({
         ],
       },
       {
-        text: "高阶玩法",
+        text: "其他",
+        base: "/others/",
         link: "high-level-play",
-      },
-      {
-        text: "计费标准",
-        link: "pricing",
+        collapsed: false,
+        items: [
+          { text: "高阶玩法", link: "high-level-play" },
+          { text: "平台计费标准", link: "platform-pricing" },
+          { text: "代理计费标准", link: "proxy-pricing" },
+          { text: "联系作者", link: "contact" },
+        ],
       },
     ],
     docFooter: {
