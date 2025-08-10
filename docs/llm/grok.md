@@ -8,12 +8,9 @@ POST http://<你的IP>:<你的端口>/grok/v1/chat/completions
 
 ## 模型列表
 
-- `grok-3`：可开启自动调用联网、生图、思考以及深度网络搜索能力(需在后台系统配置中手动开启)
-- `grok-3-image`：使用 grok3 进行生图
-- `grok-3-deepsearch`：使用 grok3 进行深度联网搜索
-- `grok-3-deepersearch`：使用 grok3 进行深度思考联网搜索
-- `grok-3-reasoning`：使用 grok3 进行思考
-- `grok-4`：智能调用思考、画图、联网搜索等能力，`super grok` 订阅号才可以调用
+- `grok-3`：快速回应模式
+- `grok-4-auto`：最佳模式，智能调用思考、画图、联网搜索等能力
+- `grok-4`：专家模式，智能调用思考、画图、联网搜索等能力
 
 ## 调用示例
 
@@ -23,18 +20,12 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/grok/v1/chat/co
 --header 'Authorization: <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
-    "model": "grok-3-reasoning",
+    "model": "grok-4",
     "stream": true
 }'
 ```
 
 ## 平台配置
-
-- 是否开启 Grok-3 全能模型
-
-  全能模型可以根据用户输入自动调用 grok 的联网、搜索、画图以及思考等能力，而不是根据模型名称指定能力，但需要配置 OpenAI API 官方 KEY，原理是调用 OpenAI 的 [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs?api-mode=chat) 能力去分析调用哪种能力的 grok 模型。
-
-  ![3711744442607_.pic.jpg](/3711744442607_.pic.jpg)
 
 - Grok 会话最大上下文（单位：K）
 
