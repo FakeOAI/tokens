@@ -15,6 +15,7 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 - `gemini-video`：调用 gemini 官网的 veo3 模型，需要付费 token 才可以调用
 - `gemini-canvas`：调用 gemini 官网的 canvas 能力，需要付费 token 才可以调用
 - `gemini-imagen`：调用 gemini 官网的 imagen 能力，需要付费 token 才可以调用
+- `gemini-storybook`: 调用 gemini 官网的 storybook 能力，需要付费 token 才可以调用
 
 > [!WARNING]
 >
