@@ -6,6 +6,7 @@ services:
     container_name: tokens-mysql
     command: --mysql-native-password=ON --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max_connections=4096
     restart: always
+    pull_policy: never
     volumes:
       - ./data/mysql/:/var/lib/mysql/
     environment:
@@ -18,6 +19,7 @@ services:
     container_name: tokens-redis
     command: --requirepass "fakeoai" # redis库密码,不需要密码注释本行
     restart: always
+    pull_policy: never
     environment:
       TZ: Asia/Shanghai
     volumes:
