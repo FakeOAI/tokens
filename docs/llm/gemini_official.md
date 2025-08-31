@@ -9,17 +9,21 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 ## 模型列表
 
 - `gemini-2.5-flash-free`：无需加号即可调用，不支持图片文件分析
-- `gemini-2.5-flash`：需要加号才能调用，支持图片文件分析
-- `gemini-2.5-pro`：需要加号才能调用，支持图片文件分析
-- `gemini-deepsearch`：深度研究模型，需要付费 token 才可以调用
-- `gemini-video`：调用 gemini 官网的 veo3 模型，需要付费 token 才可以调用
-- `gemini-canvas`：调用 gemini 官网的 canvas 能力，需要付费 token 才可以调用
-- `gemini-imagen`：调用 gemini 官网的 imagen 能力，需要付费 token 才可以调用
-- `gemini-storybook`: 调用 gemini 官网的 storybook 能力，需要付费 token 才可以调用
+- `gemini-2.5-flash`
+- `gemini-2.5-flash-imagen`：调用 Gemini 官网的 Imagen 能力
+- `gemini-2.5-flash-canvas`：调用 Gemini 官网的 Canvas 能力
+- `gemini-2.5-flash-deepsearch`：调用 Gemini 官网的深度研究能力
+- `gemini-2.5-flash-storybook`: 调用 gemini 官网的 Storybook 能力
+- `gemini-2.5-pro`
+- `gemini-2.5-pro-deepsearch`：调用 Gemini 官网的深度研究能力
+- `gemini-2.5-pro-video`：调用 Gemini 官网的 Veo3 模型
+- `gemini-2.5-pro-canvas`：调用 Gemini 官网的 Canvas 能力
+- `gemini-2.5-pro-imagen`：调用 Gemini 官网的 Imagen 能力
+- `gemini-2.5-pro-storybook`: 调用 gemini 官网的 Storybook 能力
 
 > [!WARNING]
 >
-> `gemini-video` 模型默认返回视频的 base64 编码，如需返回 URL 需在后台配置 OSS 储存设置
+> `gemini-2.5-pro-video` 模型默认返回视频的 base64 编码，如需返回 URL 需在后台配置 OSS 储存设置
 
 ## 如何提取该平台的 token
 
@@ -44,3 +48,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
     "stream": true
 }'
 ```
+
+## 平台参数
+
+1. `return_origin_image`
+
+   - 调用 `imagen` 系列模型的时候是否返回原图
+   - 请求示例：`/v1/chat/completions?return_origin_image=true`
