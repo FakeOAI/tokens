@@ -58,7 +58,7 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 2. 文生图：`/v1/images/generations`
 
    ```bash
-   curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/generations' \
+   curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/generations' \
    --header 'Authorization: <你的许可证>' \
    --header 'Content-Type: multipart/form-data; boundary=--------------------------961278614886800824879278' \
    --form 'prompt="画小猫"' \
@@ -68,7 +68,7 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 3. 图生图：`/v1/images/edits`
 
    ```bash
-   curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/edits' \
+   curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/edits' \
    --header 'Authorization: <你的许可证>' \
    --header 'Content-Type: multipart/form-data; boundary=--------------------------961278614886800824879278' \
    --form 'image[]=@"/path/to/example.jpg"' \
