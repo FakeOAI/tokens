@@ -38,16 +38,43 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 
 ## 调用示例
 
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
---data-raw '{
+> [!WARNING]
+>
+> 文生图（`/v1/images/generations`）和图生图（`/v1/images/edits`）接口需要额外付费开通
+
+1. 对话格式：`/v1/chat/completions`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
     "model": "gemini-2.5-flash",
     "stream": true
-}'
-```
+   }'
+   ```
+
+2. 文生图：`/v1/images/generations`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/generations' \
+   --header 'Authorization: <你的许可证>' \
+   --header 'Content-Type: multipart/form-data; boundary=--------------------------961278614886800824879278' \
+   --form 'prompt="画小猫"' \
+   --form 'model="gemini-2.5-flash-imagen"'
+   ```
+
+3. 图生图：`/v1/images/edits`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/edits' \
+   --header 'Authorization: <你的许可证>' \
+   --header 'Content-Type: multipart/form-data; boundary=--------------------------961278614886800824879278' \
+   --form 'image[]=@"/path/to/example.jpg"' \
+   --form 'prompt="换一个风格"' \
+   --form 'model="gemini-2.5-flash-imagen"'
+   ```
 
 ## 平台参数
 
