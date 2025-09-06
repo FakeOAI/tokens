@@ -28,6 +28,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "ChatGPT", link: "chatgpt" },
+          { text: "Codex", link: "codex" },
           { text: "Grok", link: "grok" },
           { text: "Claude 官网逆向", link: "claude" },
           { text: "Claude API", link: "claude_api" },
