@@ -51,16 +51,17 @@ npm install -g @openai/codex # 或 brew install codex
 ::: code-group
 
 ```toml [config.toml]
-model_provider = "tokens"
+model_provider = "codex"
 model = "gpt-5"
 model_reasoning_effort = "high"
 disable_response_storage = true
 
-[model_providers.tokens]
-name = "tokens"
-base_url = "http://<你的IP>:<你的端口>/codex/v1"
+[model_providers.codex]
+name = "codex"
+base_url = "http://<你的IP>:<你的端口>/codex/v1" # 调用tokens地址
+# base_url = "你的new-api地址/v1" # 调用new-api地址
 wire_api = "responses"
-env_key = "TOKENS_LICENSE"
+env_key = "CODEX_API_KEY"
 ```
 
 ```json [auth.json]
@@ -74,7 +75,7 @@ env_key = "TOKENS_LICENSE"
 3. 设置环境变量
 
 ```bash
-export TOKENS_LICENSE=你的许可证 >> ~/.bashrc
+export CODEX_API_KEY=你的许可证 >> ~/.bashrc
 source ~/.bashrc
 ```
 
