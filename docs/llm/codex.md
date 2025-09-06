@@ -75,7 +75,7 @@ env_key = "CODEX_API_KEY"
 3. 设置环境变量
 
 ```bash
-export CODEX_API_KEY=你的许可证 >> ~/.bashrc
+export CODEX_API_KEY=Tokens许可证或new-api的apiKey >> ~/.bashrc
 source ~/.bashrc
 ```
 
