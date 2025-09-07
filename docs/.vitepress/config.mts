@@ -31,7 +31,7 @@ export default defineConfig({
           { text: "Codex", link: "codex" },
           { text: "Grok", link: "grok" },
           { text: "Claude 官网逆向", link: "claude" },
-          { text: "Claude API", link: "claude_api" },
+          { text: "Claude API（Claude Code）", link: "claude_api" },
           { text: "Cursor", link: "cursor" },
           { text: "Gemini API", link: "gemini" },
           { text: "Gemini 官网逆向", link: "gemini_official" },

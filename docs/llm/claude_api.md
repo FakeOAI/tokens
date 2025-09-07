@@ -32,45 +32,57 @@ POST http://<你的IP>:<你的端口>/claude_api/v1/messages
 - `claude-3-7-sonnet-20250219-thinking`
 - 官网 API 支持的模型都支持
 
-## OpenAI 格式接口的额外参数
+## 调用示例
 
-- `max_tokens`
+1. 对话格式：`/v1/chat/completions`
 
-  最大返回 token 数量，默认为 32000
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+       "messages": [{"role": "user", "content": "你是什么模型"}],
+       "model": "claude-sonnet-4-20250514",
+       "stream": true
+   }'
+   ```
 
-- `budget_tokens`
+2. 原生格式：`/v1/messages`
 
-  思考模式的预算 token 数量，默认为 16000
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/messages' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+       "messages": [{"role": "user", "content": "你是什么模型"}],
+       "system": [{"type": "text", "text": "你是一个AI助手，请根据用户的问题给出回答"}],
+       "model": "claude-sonnet-4-20250514",
+       "stream": true
+   }'
+   ```
 
-## OpenAI 格式接口调用示例
-
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
-    "model": "claude-sonnet-4-20250514",
-    "stream": true
-}'
-```
-
-## Claude 格式接口调用示例
-
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/messages' \
---header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
-    "system": [{"type": "text", "text": "你是一个AI助手，请根据用户的问题给出回答"}],
-    "model": "claude-sonnet-4-20250514",
-    "stream": true
-}'
-```
-
-## Claude Code
+## Claude Code 使用教程
 
 `Claude Code` 属于 `Claude` 旗下的一款终端命令行产品，其实内部使用的接口就是 Claude 官方 API，所以就需要一个官方的 `APIKEY` 才可以调用，或者通过 `Max`、`Pro` 的 Claude 订阅也可以换取一个**临时**的 APIKEY。
 
 所以在程序中，我们也可以添加 Claude 官网的 `SessionKey` 作为 Token，程序内部会自动进行 `APIKEY` 的转换、过期自动刷新以及调用频率的轮训管理。
+
+1. 安装 Claude Code 脚手架
+
+```bash
+npm install -g @anthropic/claude-code
+```
+
+2. 设置环境变量
+
+```bash
+export ANTHROPIC_BASE_URL=http://<你的IP>:<你的端口>/claude_api >> ~/.bashrc
+export ANTHROPIC_AUTH_TOKEN=你的许可证 >> ~/.bashrc
+source ~/.bashrc
+```
+
+3. 运行 Claude Code
+
+```bash
+claude
+```
