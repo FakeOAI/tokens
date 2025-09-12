@@ -82,3 +82,8 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 
    - 调用 `imagen` 系列模型的时候是否返回原图
    - 请求示例：`/v1/chat/completions?return_origin_image=true`
+
+1. `remove_watermark`
+
+   - 调用 `imagen` 系列模型的时候是否去除图片中的水印
+   - 请求示例：`/v1/chat/completions?remove_watermark=true`
