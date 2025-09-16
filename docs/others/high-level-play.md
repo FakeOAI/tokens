@@ -8,15 +8,3 @@
 
    - `gpt-4o|[free]`：调用此模型只会从数据库中轮训 `free` 类型的 token
    - `gpt-4o|[plus,pro]`：调用此模型只会从数据库中轮训 `plus` 和 `pro` 类型的 token
-
-## 全局参数
-
-1. `close_reasoning_content`
-
-   - 是否关闭思考内容，这是控制单次请求是否关闭思考内容，可在设置中关闭全局的思考内容。
-   - 请求示例：`/v1/chat/completions?close_reasoning_content=true`
-
-2. `return_reasoning_content`
-
-   - 思考内容是否输出在 `reasoning_content` 字段中，这是控制单次请求的思考内容是否输出到该字段中，可在设置中进行全局设置。
-   - 请求示例：`/v1/chat/completions?return_reasoning_content=true`
