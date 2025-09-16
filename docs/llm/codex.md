@@ -26,6 +26,10 @@ POST http://<你的IP>:<你的端口>/codex/v1/responses
 - `gpt-5-codex-medium`
 - `gpt-5-codex-high`
 
+> [!WARNING]
+>
+> 目前 `Codex` 平台只支持 `图片` 和 `PDF` 文件分析
+
 ## 调用示例
 
 ```bash
