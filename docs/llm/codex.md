@@ -22,6 +22,9 @@ POST http://<你的IP>:<你的端口>/codex/v1/responses
 - `gpt-5-low`
 - `gpt-5-medium`
 - `gpt-5-high`
+- `gpt-5-codex-low`
+- `gpt-5-codex-medium`
+- `gpt-5-codex-high`
 
 ## 调用示例
 
