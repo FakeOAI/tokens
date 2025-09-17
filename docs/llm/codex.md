@@ -32,16 +32,37 @@ POST http://<你的IP>:<你的端口>/codex/v1/responses
 
 ## 调用示例
 
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/codex/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
-    "model": "gpt-5-high",
-    "stream": true
-}'
-```
+1. 对话格式：`/v1/chat/completions`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/codex/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+       "messages": [{"role": "user", "content": "你是什么模型"}],
+       "session_id": "prompt_cache_key的别名，会话ID（可选），如果不变的话，系统会为该会话分配一个固定的token进行对话，直到该token上限或异常才会切换token",
+       "model": "gpt-5-high",
+       "stream": true
+   }'
+   ```
+
+2. 原生格式：`/v1/responses`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/codex/v1/responses' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+    "input": [{"content":[{"text":"hi","type":"input_text"}],"id":null,"role":"user","type":"message"}],
+    "session_id": "prompt_cache_key的别名，会话ID（可选），如果不变的话，系统会为该会话分配一个固定的token进行对话，直到该token上限或异常才会切换token",
+    "model": "gpt-5",
+    "reasoning": {
+      "effort": "high",
+      "summary": "auto"
+    },
+    "stream": false
+   }'
+   ```
 
 ## Codex 使用教程
 
@@ -53,7 +74,7 @@ npm install -g @openai/codex # 或 brew install codex
 
 2. 创建配置文件
 
-在用户根目录下创建两个必须的配置文件：`config.toml` 和 `auth.json`
+在用户根目录的 `.codex` 文件夹创建两个必要的配置文件：`config.toml` 和 `auth.json`
 
 ::: code-group
 
