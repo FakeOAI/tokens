@@ -72,43 +72,35 @@ POST http://<你的IP>:<你的端口>/codex/v1/responses
 npm install -g @openai/codex # 或 brew install codex
 ```
 
-2. 创建配置文件
+2. 设置环境变量
 
-在用户根目录的 `.codex` 文件夹创建两个必要的配置文件：`config.toml` 和 `auth.json`
+在终端中设置 `codex` 的环境变量：`OPENAI_BASE_URL`、`OPENAI_API_KEY`
 
 ::: code-group
 
-```toml [config.toml]
-model_provider = "codex"
-model = "gpt-5"
-model_reasoning_effort = "high"
-disable_response_storage = true
-
-[model_providers.codex]
-name = "codex"
-base_url = "http://<你的IP>:<你的端口>/codex/v1" # 调用tokens地址
-# base_url = "你的new-api地址/v1" # 调用new-api地址
-wire_api = "responses"
-env_key = "CODEX_API_KEY"
+```bash [Linux、MacOS]
+export OPENAI_BASE_URL="http://<你的IP>:<你的端口>/codex/v1"
+export OPENAI_API_KEY="Tokens许可证"
 ```
 
-```json [auth.json]
-{
-  "OPENAI_API_KEY": null
-}
+```bash [Windows - CMD]
+set OPENAI_BASE_URL=http://<你的IP>:<你的端口>/codex/v1
+set OPENAI_API_KEY=Tokens许可证
+```
+
+```powershell [Windows - PowerShell]
+$env:OPENAI_BASE_URL="http://<你的IP>:<你的端口>/codex/v1"
+$env:OPENAI_API_KEY="Tokens许可证"
 ```
 
 :::
 
-3. 设置环境变量
-
-```bash
-export CODEX_API_KEY=Tokens许可证或new-api的apiKey >> ~/.bashrc
-source ~/.bashrc
-```
-
-4. 运行 Codex
+3. 运行 Codex
 
 ```bash
 codex
 ```
+
+4. 启动后根据提示按 `2`，然后一直**按回车**，程序会自动填充刚才设置的密钥，之后就可以开始愉快的编程了！
+
+![d0de21a07160428517bc5819255ec816.png](/d0de21a07160428517bc5819255ec816.png)

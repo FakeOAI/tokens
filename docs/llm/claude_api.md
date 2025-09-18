@@ -75,11 +75,26 @@ npm install -g @anthropic/claude-code
 
 2. 设置环境变量
 
-```bash
-export ANTHROPIC_BASE_URL=http://<你的IP>:<你的端口>/claude_api >> ~/.bashrc
-export ANTHROPIC_AUTH_TOKEN=你的许可证 >> ~/.bashrc
-source ~/.bashrc
+在终端中设置 `Claude Code` 的环境变量：`ANTHROPIC_BASE_URL`、`ANTHROPIC_AUTH_TOKEN`
+
+::: code-group
+
+```bash [Linux、MacOS]
+export ANTHROPIC_BASE_URL="http://<你的IP>:<你的端口>/claude_api"
+export ANTHROPIC_AUTH_TOKEN="Tokens许可证"
 ```
+
+```bash [Windows - CMD]
+set ANTHROPIC_BASE_URL=http://<你的IP>:<你的端口>/claude_api
+set ANTHROPIC_AUTH_TOKEN=Tokens许可证
+```
+
+```powershell [Windows - PowerShell]
+$env:ANTHROPIC_BASE_URL="http://<你的IP>:<你的端口>/claude_api"
+$env:ANTHROPIC_AUTH_TOKEN="Tokens许可证"
+```
+
+:::
 
 3. 运行 Claude Code
 
