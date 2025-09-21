@@ -11,6 +11,7 @@ POST http://<你的IP>:<你的端口>/grok/v1/chat/completions
 - `grok-3`：快速回应模式
 - `grok-4-auto`：最佳模式，智能调用思考、画图、联网搜索等能力
 - `grok-4`：专家模式，智能调用思考、画图、联网搜索等能力
+- `grok-4-mini-thinking-tahoe`：Grok 4 快速模型
 
 ## 调用示例
 
