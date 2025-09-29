@@ -10,7 +10,7 @@ POST http://<你的IP>:<你的端口>/claude/v1/chat/completions
 
 1. 通用模型
 
-   - `claude-sonnet-4-20250514`：普号默认模型
+   - `claude-sonnet-4-5-20250929`：普号默认模型
 
 2. 付费模型
 
@@ -26,6 +26,8 @@ POST http://<你的IP>:<你的端口>/claude/v1/chat/completions
    - `claude-opus-4-20250514-thinking`
    - `claude-opus-4-1-20250805`
    - `claude-opus-4-1-20250805-thinking`
+   - `claude-opus-4-5-20250929`
+   - `claude-opus-4-5-20250929-thinking`
 
 ## 调用示例
 
