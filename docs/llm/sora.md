@@ -10,50 +10,62 @@ POST http://<你的IP>:<你的端口>/sora/v1/chat/completions
 
 - `sora_image`
 - `sora_video`
+- `sora_video2`：调用新版本的 Sora 生成视频
 
 ## 调用示例
 
-### 文生图
+> [!WARNING]
+>
+> 文生图（`/v1/images/generations`）和图生图（`/v1/images/edits`）接口需要额外付费开通
 
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "画小猫"}],
-    "model": "sora_image",
-    "stream": true
-}'
-```
+1. 对话格式：`/v1/chat/completions`
 
-### 图生图
+   - 对话接口文生图：
 
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
---data-raw '{
-    "messages": [
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "根据图片换个风格"
-                },
-                {
-                    "type": "image_url",
-                    "image_url": {
-                        "url": "url或者base64"
-                    }
-                }
-            ]
-        }
-    ],
-    "model": "sora_image",
-    "stream": true
-}'
-```
+     ```bash
+     curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
+     --header 'Content-Type: application/json' \
+     --header 'Authorization: <你的许可证>' \
+     --data-raw '{
+         "messages": [{"role": "user", "content": "画小猫"}],
+         "model": "sora_image",
+         "stream": true
+     }'
+     ```
+
+   - 对话接口图生图：
+
+     ```bash
+      curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
+      --header 'Content-Type: application/json' \
+      --header 'Authorization: <你的许可证>' \
+      --data-raw '{
+          "messages": [{"role":"user","content":[{"type":"text","text":"根据图片换个风格"},{"type":"image_url","image_url":{"url":"url或者base64"}}]}],
+          "model": "sora_image",
+          "stream": true
+      }'
+     ```
+
+2. 文生图：`/v1/images/generations`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/generations' \
+   --header 'Authorization: <你的许可证>' \
+   --header 'Content-Type: multipart/form-data; boundary=--------------------------961278614886800824879278' \
+   --form 'prompt="画小猫"' \
+   --form 'model="sora_image"'
+   ```
+
+3. 图生图：`/v1/images/edits`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/edits' \
+   --header 'Authorization: <你的许可证>' \
+   --header 'Content-Type: multipart/form-data; boundary=--------------------------961278614886800824879278' \
+   --form 'image[]=@"/path/to/example.jpg"' \
+   --form 'prompt="换一个风格"' \
+   --form 'model="sora_image"'
+   ```
 
 ## 平台配置
 
@@ -74,4 +86,4 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/co
 
 - `n`
 
-  生成不同**变体**的数量，默认为1，最大值为4
+  生成不同**变体**的数量，默认为 1，最大值为 4
