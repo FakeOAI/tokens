@@ -10,7 +10,9 @@ POST http://<你的IP>:<你的端口>/sora/v1/chat/completions
 
 - `sora_image`
 - `sora_video`
-- `sora_video2`：调用新版本的 Sora 生成视频
+- `sora_video2`：调用新版本的 Sora 生成视频，默认生成竖屏视频
+- `sora_video2-portrait`：调用新版本的 Sora 生成竖屏视频
+- `sora_video2-landscape`：调用新版本的 Sora 生成横屏视频
 
 ## 调用示例
 
