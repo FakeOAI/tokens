@@ -10,11 +10,16 @@ POST http://<你的IP>:<你的端口>/sora/v1/chat/completions
 
 - `sora_image`
 - `sora_video`
-- `sora_video2`：调用新版本的 Sora 生成视频，默认生成**10秒竖屏标清视频**，可指定下面参数，使用 `-` 连接符把参数连接起来，例如：`sora_video2-landscape`、`sora_video2-landscape-hd`、`sora_video2-hd-portrait`
-  1. `portrait`：生成竖屏视频
-  2. `landscape`：生成横屏视频
-  3. `hd`：生成高清视频
-  3. `15s`：生成15秒的视频
+- `sora_video2`：调用新版本的 Sora 生成视频，默认生成**10 秒竖屏标清视频**
+
+## 模型参数
+
+可指定下面参数，使用 `-` 连接符把参数连接起来，例如：`sora_video2-landscape`、`sora_video2-landscape-hd`、`sora_video2-hd-portrait`
+
+- `portrait`：生成竖屏视频，仅支持 `sora_video2` 模型指定该参数
+- `landscape`：生成横屏视频，仅支持 `sora_video2` 模型指定该参数
+- `hd`：生成高清视频，仅支持 `sora_video2` 模型指定该参数
+- `15s`：生成 15 秒的视频，仅支持 `sora_video2` 模型指定该参数
 
 ## 调用示例
 

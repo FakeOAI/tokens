@@ -13,6 +13,12 @@ POST http://<你的IP>:<你的端口>/grok/v1/chat/completions
 - `grok-4`：专家模式，智能调用思考、画图、联网搜索等能力
 - `grok-4-mini-thinking-tahoe`：Grok 4 快速模型
 
+## 模型参数
+
+可指定下面参数，使用 `-` 连接符把参数连接起来，例如：`grok-4-deepsearch`
+
+- `deepsearch`：调用深度研究能力，**全系模型**都可指定
+
 ## 调用示例
 
 ```bash
