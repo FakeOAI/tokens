@@ -25,7 +25,7 @@ POST http://<你的IP>:<你的端口>/sora/v1/chat/completions
 
 > [!WARNING]
 >
-> 文生图（`/v1/images/generations`）和图生图（`/v1/images/edits`）接口需要额外付费开通
+> 文生图（`/v1/images/generations`）、图生图（`/v1/images/edits`）、视频异步任务（`/v1/videos`）接口需要额外付费开通
 
 1. 对话格式：`/v1/chat/completions`
 
@@ -74,6 +74,46 @@ POST http://<你的IP>:<你的端口>/sora/v1/chat/completions
    --form 'image[]=@"/path/to/example.jpg"' \
    --form 'prompt="换一个风格"' \
    --form 'model="sora_image"'
+   ```
+
+4. 视频异步任务：
+
+   - 创建视频任务：`/v1/videos`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos' \
+   --header 'Authorization: <你的许可证>' \
+   --header 'Content-Type: application/json' \
+   --data-raw '{
+       "prompt": "画小猫",
+       "model": "sora_video2"
+   }'
+   ```
+
+   - 查询任务状态：`/v1/videos/{video_id}`
+
+   ```bash
+   curl --location --request GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}' \
+   --header 'Authorization: <你的许可证>' \
+   ```
+
+   - 视频编辑：`/v1/videos/{video_id}/remix`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/remix' \
+   --header 'Authorization: <你的许可证>' \
+   --header 'Content-Type: application/json' \
+   --data-raw '{
+       "prompt": "再加一只小狗",
+       "model": "sora_video2"
+   }'
+   ```
+
+   - 获取视频内容：`/v1/videos/{video_id}/content`
+
+   ```bash
+   curl --location --request GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/content' \
+   --header 'Authorization: <你的许可证>' \
    ```
 
 ## 平台配置
