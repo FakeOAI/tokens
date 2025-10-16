@@ -20,6 +20,8 @@ POST http://<你的IP>:<你的端口>/sora/v1/chat/completions
 - `landscape`：生成横屏视频，仅支持 `sora_video2` 模型指定该参数
 - `hd`：生成高清视频，仅支持 `sora_video2` 模型指定该参数
 - `15s`：生成 15 秒的视频，仅支持 `sora_video2` 模型指定该参数
+- `25s`：生成 25 秒的视频，仅支持 `sora_video2` 模型指定该参数
+- `pro`：使用 pro 版本的模型，仅支持 `sora_video2` 模型指定该参数
 
 ## 调用示例
 
