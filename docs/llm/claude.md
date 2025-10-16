@@ -28,6 +28,8 @@ POST http://<你的IP>:<你的端口>/claude/v1/chat/completions
    - `claude-opus-4-1-20250805-thinking`
    - `claude-sonnet-4-5-20250929`
    - `claude-sonnet-4-5-20250929-thinking`
+   - `claude-haiku-4-5-20251001`
+   - `claude-haiku-4-5-20251001-thinking`
 
 ## 调用示例
 

@@ -32,6 +32,8 @@ POST http://<你的IP>:<你的端口>/claude_api/v1/messages
 - `claude-opus-4-1-20250805-thinking`
 - `claude-sonnet-4-5-20250929-thinking`
 - `claude-3-7-sonnet-20250219-thinking`
+- `claude-haiku-4-5-20251001`
+- `claude-haiku-4-5-20251001-thinking`
 - 官网 API 支持的模型都支持
 
 ## 调用示例
