@@ -3,6 +3,7 @@ server:
   # httpsAddr: :443 # 项目https端口
   # httpsCertPath: keys/ssl.pem # ssl证书公钥地址
   # httpsKeyPath: keys/ssl.key # ssl证书私钥地址
+  adminPath: / # 自定义后台访问地址的前缀
   logPath: logs
   logStdout: false
 
