@@ -120,12 +120,9 @@ POST http://<你的IP>:<你的端口>/sora/v1/chat/completions
 
 ## 平台配置
 
-- 是否开启 Sora 分析生成的视频图像大小
+- 是否开启 Sora 分析 Prompt
 
-  > [!WARNING]
-  > 图片比例宽高不得大于 1920x1080 比例
-
-  开启后会分析用户的输入是否需要指定比例，但需要配置 OpenAI API 官方 KEY，原理是调用 OpenAI 的 [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs?api-mode=chat) 能力去分析用户 `prompt` 中是否指定了大小。
+  开启后会分析用户的输入是否需要指定比例、视频横竖方向，但需要配置 OpenAI API 官方 KEY，原理是调用 OpenAI 的 [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs?api-mode=chat) 能力去分析用户的 `prompt`
 
   ![WechatIMG401.jpg](/WechatIMG401.jpg)
 
@@ -133,8 +130,12 @@ POST http://<你的IP>:<你的端口>/sora/v1/chat/completions
 
 - `size`
 
-  生成图像的大小，格式为 `widthxheight`，宽度限制在 `1920` 内，高度限制在 `1080` 内，例如：`720x720`
+  生成图像的大小，格式为 `widthxheight`，对于图片，如果宽高一样，则生成 `1:1`，如果宽大于高，则生成 `3:2`，否则生成 `2:3`，对于视频，如果宽大于高，则生成横屏视频，否则生成竖屏视频
 
 - `n`
 
-  生成不同**变体**的数量，默认为 1，最大值为 4
+  图片生成不同**变体**的数量，默认为 `1`，最大值为 `4`
+
+- `watermark`
+
+  是否保留视频水印，默认为 `false`
