@@ -10,15 +10,15 @@ POST http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions
 
 - `gemini-2.5-flash-free`：无需加号即可调用，不支持图片文件分析
 - `gemini-2.5-flash`
-- `gemini-2.5-flash-imagen`：调用 Gemini 官网的 Imagen 能力
+- `gemini-2.5-flash-imagen`：调用 Gemini 官网的 `Nano Banana` 能力
 - `gemini-2.5-flash-canvas`：调用 Gemini 官网的 Canvas 能力
 - `gemini-2.5-flash-deepsearch`：调用 Gemini 官网的深度研究能力
 - `gemini-2.5-flash-storybook`: 调用 gemini 官网的 Storybook 能力
 - `gemini-2.5-pro`
 - `gemini-2.5-pro-deepsearch`：调用 Gemini 官网的深度研究能力
-- `gemini-2.5-pro-video`：调用 Gemini 官网的 Veo3 模型
+- `gemini-2.5-pro-video`：调用 Gemini 官网的 `Veo3.1` 模型
 - `gemini-2.5-pro-canvas`：调用 Gemini 官网的 Canvas 能力
-- `gemini-2.5-pro-imagen`：调用 Gemini 官网的 Imagen 能力
+- `gemini-2.5-pro-imagen`：调用 Gemini 官网的 `Nano Banana` 能力
 - `gemini-2.5-pro-storybook`: 调用 gemini 官网的 Storybook 能力
 
 > [!WARNING]
