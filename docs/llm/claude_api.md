@@ -105,3 +105,25 @@ $env:ANTHROPIC_AUTH_TOKEN="Tokens许可证"
 ```bash
 claude
 ```
+
+## 平台参数
+
+- `anthropic-beta` [请求头](https://docs.claude.com/en/api/beta-headers)
+  
+  程序默认传递以下 beta 功能请求头：
+  ```
+  claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,fine-grained-tool-streaming-2025-05-14
+  ```
+  
+  如需使用其他 beta 功能，可在请求头中添加 `anthropic-beta` 参数：
+  
+  **示例：**
+  ```bash
+  # 添加新的 beta 功能
+  --header 'anthropic-beta: test'
+  ```
+  
+  **最终合并结果：**
+  ```
+  anthropic-beta: claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,fine-grained-tool-streaming-2025-05-14,test
+  ```
