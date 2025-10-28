@@ -61,6 +61,13 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/co
 --data-raw '{
     "messages": [{"role": "user", "content": "画只猪在天上飞"}],
     "model": "veo_3_1",
-    "stream": true
+    "stream": true,
+    "n": 2
 }'
 ```
+
+## 平台参数
+
+- `n`
+
+  图片生成不同**变体**的数量，默认为 `1`，最大值为 `4`
