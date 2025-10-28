@@ -36,6 +36,7 @@ export default defineConfig({
           { text: "Gemini API", link: "gemini" },
           { text: "Gemini 官网逆向", link: "gemini_official" },
           { text: "Sora", link: "sora" },
+          { text: "Flow", link: "flow" },
         ],
       },
       {
