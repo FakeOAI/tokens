@@ -30,6 +30,10 @@ POST http://<你的IP>:<你的端口>/flow/v1/chat/completions
 
 ## 如何提取该平台的 token
 
+> [!WARNING]
+>
+> 一旦登陆加入号池中，请勿再官网再次登陆，不然号池的号会被挤下线
+
 1. 在后台插件管理中安装插件然后解压
 
    ![0edeffcf5a473a31361bb8e0a77b9189.png](/0edeffcf5a473a31361bb8e0a77b9189.png)
