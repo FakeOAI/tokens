@@ -19,6 +19,7 @@
 - Claude API（Claude Code）
 - ChatGPT 官逆
 - Codex
+- Flow
 
 ## 计费规则
 
@@ -42,6 +43,7 @@
 | **Gemini 官逆**  | `400 元/月` |
 | **Claude API**   | `500 元/月` |
 | **Codex**        | `500 元/月` |
+| **Flow**        | `400 元/月` |
 
 ## 注意事项
 
