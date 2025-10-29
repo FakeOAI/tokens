@@ -27,6 +27,7 @@ POST http://<你的IP>:<你的端口>/flow/v1/chat/completions
 - `portrait`：生成竖屏视频
 - `landscape`：生成横屏视频
 - `fast`：快速模式
+- `fl`：帧转视频模式
 
 ## 如何提取该平台的 token
 
