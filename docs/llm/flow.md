@@ -71,6 +71,58 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/co
 }'
 ```
 
+## 调用示例
+
+1. 对话格式：`/v1/chat/completions`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+      "messages": [{"role": "user", "content": "画只猪在天上飞"}],
+      "model": "veo_3_1",
+      "stream": true,
+      "n": 2
+   }'
+   ```
+
+2. 帧转视频
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+      "messages": [
+         {
+               "role": "user",
+               "content": [
+                  {
+                     "type": "text",
+                     "text": "根据两张图片生成一个完全的过渡视频"
+                  },
+                  {
+                     "type": "image_url",
+                     "image_url": {
+                           "url": "开始帧" // 必传一张
+                     }
+                  },
+                  {
+                     "type": "image_url",
+                     "image_url": {
+                           "url": "结束帧" // 可选
+                     }
+                  }
+               ]
+         }
+      ],
+      "model": "veo_3_1-fl-fast",
+      "stream": true,
+      "n": 2
+   }'
+   ```
+
 ## 平台参数
 
 - `n`
