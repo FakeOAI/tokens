@@ -73,58 +73,104 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/co
 
 ## 调用示例
 
+> [!WARNING]
+>
+> 视频异步任务（`/v1/videos`）接口需要额外付费开通
+
 1. 对话格式：`/v1/chat/completions`
 
+   - 对话接口文生图：
+
+     ```bash
+     curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
+     --header 'Content-Type: application/json' \
+     --header 'Authorization: <你的许可证>' \
+     --data-raw '{
+        "messages": [{"role": "user", "content": "画只猪在天上飞"}],
+        "model": "veo_3_1",
+        "stream": true,
+        "n": 2
+     }'
+     ```
+
+   - 帧转视频：
+
+     ```bash
+     curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
+     --header 'Content-Type: application/json' \
+     --header 'Authorization: <你的许可证>' \
+     --data-raw '{
+        "messages": [
+           {
+                 "role": "user",
+                 "content": [
+                    {
+                       "type": "text",
+                       "text": "根据两张图片生成一个完全的过渡视频"
+                    },
+                    {
+                       "type": "image_url",
+                       "image_url": {
+                             "url": "开始帧" // 必传一张
+                       }
+                    },
+                    {
+                       "type": "image_url",
+                       "image_url": {
+                             "url": "结束帧" // 可选
+                       }
+                    }
+                 ]
+           }
+        ],
+        "model": "veo_3_1-fl-fast",
+        "stream": true,
+        "n": 2
+     }'
+     ```
+
+2. 视频异步任务：
+
+   - 创建视频任务：`/v1/videos`
+
    ```bash
-   curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
-   --header 'Content-Type: application/json' \
+   curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/videos' \
    --header 'Authorization: <你的许可证>' \
+   --header 'Content-Type: application/json' \
    --data-raw '{
-      "messages": [{"role": "user", "content": "画只猪在天上飞"}],
-      "model": "veo_3_1",
-      "stream": true,
-      "n": 2
+       "prompt": "画小猫",
+       "model": "veo_3_1"
    }'
    ```
 
-2. 帧转视频
+   - 查询任务状态：`/v1/videos/{video_id}`
 
    ```bash
-   curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
-   --header 'Content-Type: application/json' \
+   curl --location --request GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}' \
    --header 'Authorization: <你的许可证>' \
+   ```
+
+   - 视频编辑：`/v1/videos/{video_id}/remix`
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}/remix' \
+   --header 'Authorization: <你的许可证>' \
+   --header 'Content-Type: application/json' \
    --data-raw '{
-      "messages": [
-         {
-               "role": "user",
-               "content": [
-                  {
-                     "type": "text",
-                     "text": "根据两张图片生成一个完全的过渡视频"
-                  },
-                  {
-                     "type": "image_url",
-                     "image_url": {
-                           "url": "开始帧" // 必传一张
-                     }
-                  },
-                  {
-                     "type": "image_url",
-                     "image_url": {
-                           "url": "结束帧" // 可选
-                     }
-                  }
-               ]
-         }
-      ],
-      "model": "veo_3_1-fl-fast",
-      "stream": true,
-      "n": 2
+       "prompt": "再加一只小狗",
+       "model": "veo_3_1"
    }'
+   ```
+
+   - 获取视频内容：`/v1/videos/{video_id}/content`
+
+   ```bash
+   curl --location --request GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}/content' \
+   --header 'Authorization: <你的许可证>' \
    ```
 
 ## 平台参数
 
 - `n`
 
-  图片生成不同**变体**的数量，默认为 `1`，最大值为 `4`
+  图片生成不同**变体**的数量，默认为 `1`，最大值为 `4`，`/v1/videos` 接口不支持此参数
