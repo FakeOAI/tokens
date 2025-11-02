@@ -1,38 +1,94 @@
-# ChatGPT 平台
+# ChatGPT 官网逆向接口文档
 
-## 接口地址
+## 基础信息
 
-```curl
-POST http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions
-```
+**Base URL:** `http://<你的IP>:<你的端口>/chatgpt`
+
+**认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+
+> [!WARNING]
+> 程序只负责转发以及处理格式转换，**任何引起降智的问题与程序无关**，请联系网关提供者
 
 ## 模型列表
 
-- `gpt-4`
-- `gpt-4o`
-- `gpt-4o-mini`
-- `gpt-4-5`
-- `gpt-4-1-mini`
-- `gpt-4-1`
-- `gpt-5`
-- `gpt-5-thinking`
-- `gpt-5-pro`
-- `o3`
-- `o3-mini`
-- `o4-mini`
-- `o4-mini-high`
-- `o1-pro`
-- `o3-pro`
-- 官网所有模型都支持
-- `gpt-4o-image`：调用最新的 gpt4o 画图能力
-- `[modelName]-gizmo-[gizmo-id]`：调用 `GPTs` 模型
+> [!NOTE]
+> 官网所有可用模型都支持
 
-  1. `modelName`：可以为任何 gpt 模型名称，比如：gpt-4o-gizmo-g-xxxx，使用 gpt-4o 模型调用 gpts 的能力
-  2. `gizmo-id`：请在官网点击想要使用的 gpts，在地址栏获取，如下图所示
+### 标准模型
 
-     ![2481748234920_.pic.jpg](/2481748234920_.pic.jpg)
+| 模型名称         | 功能说明        |
+| ---------------- | --------------- |
+| `gpt-4`          | GPT-4 标准模型  |
+| `gpt-4o`         | GPT-4 Optimized |
+| `gpt-4o-mini`    | GPT-4o 轻量版   |
+| `gpt-4-5`        | GPT-4.5 模型    |
+| `gpt-4-1-mini`   | GPT-4.1 Mini    |
+| `gpt-4-1`        | GPT-4.1 模型    |
+| `gpt-5`          | GPT-5 模型      |
+| `gpt-5-thinking` | GPT-5 思考模式  |
+| `gpt-5-pro`      | GPT-5 专业版    |
 
-## 调用示例
+### O 系列模型
+
+| 模型名称       | 功能说明         |
+| -------------- | ---------------- |
+| `o3`           | O3 模型          |
+| `o3-mini`      | O3 轻量版        |
+| `o4-mini`      | O4 轻量版        |
+| `o4-mini-high` | O4 Mini 高性能版 |
+| `o1-pro`       | O1 专业版        |
+| `o3-pro`       | O3 专业版        |
+
+### 特殊能力模型
+
+| 模型名称       | 功能说明            |
+| -------------- | ------------------- |
+| `gpt-4o-image` | GPT-4o 图像生成能力 |
+
+### GPTs 自定义模型
+
+调用 GPTs 自定义模型，格式：`[modelName]-gizmo-[gizmo-id]`
+
+**参数说明：**
+
+- `modelName`：基础模型名称（如 `gpt-4o`、`gpt-5` 等）
+- `gizmo-id`：GPTs 的唯一标识符
+
+**获取 gizmo-id：**
+
+1. 在 ChatGPT 官网打开想要使用的 GPTs
+2. 从地址栏获取 ID
+
+**示例：** `gpt-4o-gizmo-g-xxxx`（使用 gpt-4o 模型调用 GPTs）
+
+**截图示例：**
+
+![2481748234920_.pic.jpg](/2481748234920_.pic.jpg)
+
+## API 端点
+
+### 对话补全接口
+
+创建对话补全请求。
+
+**端点:** `POST /v1/chat/completions`
+
+**请求头:**
+
+```
+Content-Type: application/json
+Authorization: <你的许可证>
+```
+
+**请求参数:**
+
+| 参数       | 类型    | 必填 | 说明                           |
+| ---------- | ------- | ---- | ------------------------------ |
+| `messages` | array   | 是   | 对话消息数组                   |
+| `model`    | string  | 是   | 使用的模型名称                 |
+| `stream`   | boolean | 否   | 是否使用流式输出，默认为 false |
+
+**示例:**
 
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
@@ -45,13 +101,31 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat
 }'
 ```
 
+**调用 GPTs 示例:**
+
+```bash
+curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: <你的许可证>' \
+--data-raw '{
+    "messages": [{"role": "user", "content": "帮我分析一下这段代码"}],
+    "model": "gpt-4o-gizmo-g-2DQzU5UZl",
+    "stream": true
+}'
+```
+
 ## 平台配置
 
-- ChatGPT 网关地址
+### ChatGPT 网关地址
 
-  ChatGPT 网关起到转发以及对话接口请求逻辑的处理，程序不内置 ChatGPT 网关，请自备网关
+ChatGPT 网关起到转发以及对话接口请求逻辑的处理作用。
 
-  ![/3701744441658_.pic.jpg](/3701744441658_.pic.jpg)
+**重要说明：**
 
-> [!WARNING]
-> 程序只负责转发以及处理格式转换，**任何引起降智的问题与程序无关**，请联系网关提供者
+- 程序不内置 ChatGPT 网关，需要自备网关
+- 网关负责实际的请求处理和转发
+- 程序仅负责格式转换和协议适配
+
+**配置界面：**
+
+![/3701744441658_.pic.jpg](/3701744441658_.pic.jpg)
