@@ -313,3 +313,10 @@ Sora2 视频生成是否为高清视频。只有 `sora_video2-pro` 模型支持�
 
 **取值:** `true` | `false`  
 **默认值:** `false`
+
+### private（隐私模式）
+
+是否开启隐私模式，为 `true` 视频不会发布，同时视频无法进行 `remix` 操作(二次编辑)， 默认为 `false`。
+
+**取值:** `true` | `false`  
+**默认值:** `false`
