@@ -46,6 +46,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "高阶玩法", link: "high-level-play" },
+          { text: "储存配置", link: "storage" },
           { text: "全局参数", link: "global-params" },
           { text: "平台计费标准", link: "platform-pricing" },
           { text: "代理计费标准", link: "proxy-pricing" },
