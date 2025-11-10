@@ -73,6 +73,34 @@ Authorization: <你的许可证>
 
    ![9dbbf62375f48abca61eee3e17e2a9b2.png](/9dbbf62375f48abca61eee3e17e2a9b2.png)
 
+5. 添加成功之后，有可能会遇到需要手动设置项目 ID 的情况（部分账号需要），此时只需要访问 `https://console.cloud.google.com` 地址（无需登陆，因为刚刚加号的时候已经做了登陆了）
+
+   ![99a4067be25ca5887ebe8522b7645088.png](/99a4067be25ca5887ebe8522b7645088.png)
+
+   ![98586baf1445b2397327c5ae0ad784ad.png](/98586baf1445b2397327c5ae0ad784ad.png)
+
+   ![0ae009c012b2aeeda90685f0d649b579.png](/0ae009c012b2aeeda90685f0d649b579.png)
+
+6. 访问之后，按照如下步骤依次创建项目，获取最后的项目 ID 然后输入 tokens 后台管理里面
+
+   ![d255d8d8e951642de204396c6cc6aa6f.png](/d255d8d8e951642de204396c6cc6aa6f.png)
+
+   ![3eb18b0bbe9cded70e7ed0971c51ac6a.png](/3eb18b0bbe9cded70e7ed0971c51ac6a.png)
+
+   ![251751a28c87267d44eec7d7380eab22.png](/251751a28c87267d44eec7d7380eab22.png)
+
+   ![c1f8ffd9671c1fc804c14ebb0f2a447e.png](/c1f8ffd9671c1fc804c14ebb0f2a447e.png)
+
+   ![280204f25acc72029c091559b995ad56.png](/280204f25acc72029c091559b995ad56.png)
+
+7. 同时需要确保新建的项目开启了 **Gemini API 能力**，不然设置了项目 ID 也无效
+
+   ![c013bedb8b4b4203a4c2ef3e904a30a0.png](/c013bedb8b4b4203a4c2ef3e904a30a0.png)
+
+   ![94b3feb0657d50e6e70ab59a963a1378.png](/94b3feb0657d50e6e70ab59a963a1378.png)
+
+   ![b2fbb01c8a0f7266561da8b07b7590fa.png](/b2fbb01c8a0f7266561da8b07b7590fa.png)
+
 ## 使用示例
 
 ### 1. 基础对话
