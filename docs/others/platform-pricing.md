@@ -16,6 +16,7 @@
 
 - Cursor
 - Gemini 官逆
+- Gemini CLI 客户端逆向
 - Claude API（Claude Code）
 - ChatGPT 官逆
 - Codex
@@ -42,6 +43,7 @@
 | **ChatGPT 官逆** | `100 元/月` |
 | **Gemini 官逆**  | `400 元/月` |
 | **Claude API**   | `500 元/月` |
+| **Gemini CLI**   | `500 元/月` |
 | **Codex**        | `500 元/月` |
 | **Flow**        | `400 元/月` |
 
