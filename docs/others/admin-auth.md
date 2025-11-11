@@ -78,6 +78,7 @@ console.log("生成的 Token:", token);
 ```python [Python]
 # 安装依赖: pip install pyjwt
 import jwt
+import base64
 from datetime import datetime, timedelta
 
 # JWT 密钥 (需要与后台配置的密钥保持一致)
