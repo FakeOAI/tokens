@@ -7,7 +7,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "首页", link: "/" },
-      { text: "开始接入", link: "/llm/prepare" },
+      { text: "开始接入", link: "/platform/prepare" },
       { text: "计费标准", link: "/others/platform-pricing" },
       { text: "演示站", link: "https://tokens-pool.top" },
     ],
@@ -22,8 +22,8 @@ export default defineConfig({
         ],
       },
       {
-        text: "LLM",
-        base: "/llm/",
+        text: "逆向平台",
+        base: "/platform/",
         link: "prepare",
         collapsed: false,
         items: [
@@ -49,6 +49,7 @@ export default defineConfig({
           { text: "高阶玩法", link: "high-level-play" },
           { text: "储存配置", link: "storage" },
           { text: "全局参数", link: "global-params" },
+          { text: "后台鉴权", link: "admin-auth" },
           { text: "平台计费标准", link: "platform-pricing" },
           { text: "代理计费标准", link: "proxy-pricing" },
           { text: "联系作者", link: "contact" },
