@@ -189,13 +189,13 @@ except Exception as e:
 
 选择您要使用的平台，查看详细的接口文档：
 
-- [ChatGPT 接口文档](/llm/chatgpt)
-- [Claude 接口文档](/llm/claude)
-- [Claude API 接口文档](/llm/claude_api)
-- [Cursor 接口文档](/llm/cursor)
-- [Codex 接口文档](/llm/codex)
-- [Gemini 接口文档](/llm/gemini)
-- [Gemini Official 接口文档](/llm/gemini_official)
-- [Grok 接口文档](/llm/grok)
-- [Flow 接口文档](/llm/flow)
-- [Sora 接口文档](/llm/sora)
+- [ChatGPT 接口文档](/platform/chatgpt)
+- [Claude 接口文档](/platform/claude)
+- [Claude API 接口文档](/platform/claude_api)
+- [Cursor 接口文档](/platform/cursor)
+- [Codex 接口文档](/platform/codex)
+- [Gemini 接口文档](/platform/gemini)
+- [Gemini Official 接口文档](/platform/gemini_official)
+- [Grok 接口文档](/platform/grok)
+- [Flow 接口文档](/platform/flow)
+- [Sora 接口文档](/platform/sora)
