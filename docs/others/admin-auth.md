@@ -48,7 +48,7 @@ JWT 密钥用于签名和验证 Token 的合法性。**密钥一旦改变，所�
 
 ::: code-group
 
-```javascript
+```js [NodeJS]
 // 安装依赖: npm install jsonwebtoken
 const jwt = require("jsonwebtoken");
 
@@ -68,14 +68,14 @@ const exp = Math.floor(future.getTime() / 1000);
 // 生成 Token (exp 作为标准 claim 写入)
 const token = jwt.sign(
   { ...payload, exp },
-  secret,
+  btoa(secret), // 使用 btoa 编码密钥
   { algorithm: "HS256" } // 指定签名算法
 );
 
 console.log("生成的 Token:", token);
 ```
 
-```python
+```python [Python]
 # 安装依赖: pip install pyjwt
 import jwt
 from datetime import datetime, timedelta
@@ -90,7 +90,7 @@ payload = {
 }
 
 # 生成 Token
-token = jwt.encode(payload, secret, algorithm="HS256")
+token = jwt.encode(payload, base64.b64encode(secret.encode()).decode(), algorithm="HS256")
 
 print(f"生成的 Token: {token}")
 ```
