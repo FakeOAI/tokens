@@ -29,6 +29,7 @@ export default defineConfig({
             items: [
               { text: "ChatGPT 官网逆向", link: "chatgpt" },
               { text: "Codex 客户端逆向", link: "codex" },
+              { text: "Sora 官网逆向", link: "sora" },
             ],
           },
           {
