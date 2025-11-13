@@ -198,45 +198,7 @@ curl --location --request GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{
 --header 'Authorization: <你的许可证>'
 ```
 
-### 4. 视频编辑（Remix）
-
-基于已生成的视频进行二次编辑。
-
-**端点:** `POST /v1/videos/{video_id}/remix`
-
-**路径参数:**
-
-| 参数       | 类型   | 必填 | 说明          |
-| ---------- | ------ | ---- | ------------- |
-| `video_id` | string | 是   | 原视频任务 ID |
-
-**请求头:**
-
-```
-Content-Type: application/json
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数     | 类型   | 必填 | 说明           |
-| -------- | ------ | ---- | -------------- |
-| `prompt` | string | 是   | 编辑指令描述   |
-| `model`  | string | 是   | 使用的模型名称 |
-
-**示例:**
-
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}/remix' \
---header 'Authorization: <你的许可证>' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "prompt": "再加一只小狗",
-    "model": "veo_3_1"
-}'
-```
-
-### 5. 获取视频内容
+### 4. 获取视频内容
 
 获取已生成视频的实际内容。
 
