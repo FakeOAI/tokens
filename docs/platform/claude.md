@@ -47,30 +47,11 @@
 | `claude-haiku-4-5-20251001`          | Claude 4.5 Haiku          |
 | `claude-haiku-4-5-20251001-thinking` | Claude 4.5 Haiku 思考模式 |
 
-## API 端点
+## 支持的接口
 
-### 对话补全接口
+### 对话接口
 
-创建对话补全请求。
-
-**端点:** `POST /v1/chat/completions`
-
-**请求头:**
-
-```
-Content-Type: application/json
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数       | 类型    | 必填 | 说明                           |
-| ---------- | ------- | ---- | ------------------------------ |
-| `messages` | array   | 是   | 对话消息数组                   |
-| `model`    | string  | 是   | 使用的模型名称                 |
-| `stream`   | boolean | 否   | 是否使用流式输出，默认为 false |
-
-**示例:**
+官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/claude/v1/chat/completions' \
@@ -79,19 +60,6 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/claude/v1/chat/
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
     "model": "claude-3-7-sonnet-20250219",
-    "stream": true
-}'
-```
-
-**思考模式示例:**
-
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/claude/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "解释一下量子纠缠"}],
-    "model": "claude-3-7-sonnet-20250219-thinking",
     "stream": true
 }'
 ```

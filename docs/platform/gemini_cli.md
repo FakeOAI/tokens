@@ -8,7 +8,7 @@
 
 ## 模型列表
 
-> [!NOTE]
+> [!WARNING]
 > 官网 API 支持的模型**基本上都支持**
 
 ### Flash 系列
@@ -25,125 +25,26 @@
 | `gemini-2.5-pro`          | Gemini 2.5 Pro          |
 | `gemini-2.5-pro-thinking` | Gemini 2.5 Pro 思考模式 |
 
-## API 端点
+## 支持的接口
 
-### 对话补全接口
+### 对话接口
 
-创建对话补全请求，支持文本对话、多模态理解、函数调用等多种能力。
+官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
-**端点:** `POST /v1/chat/completions`
+::: code-group
 
-**请求头:**
-
-```
-Content-Type: application/json
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数       | 类型    | 必填 | 说明                           |
-| ---------- | ------- | ---- | ------------------------------ |
-| `messages` | array   | 是   | 对话消息数组                   |
-| `model`    | string  | 是   | 使用的模型名称                 |
-| `stream`   | boolean | 否   | 是否使用流式输出，默认为 false |
-| `tools`    | array   | 否   | 函数调用工具列表               |
-
-**示例:**
-
-```bash
+```bash [普通对话]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
-    "model": "gemini-2.5-pro",
+    "model": "gemini-2.0-pro",
     "stream": true
 }'
 ```
 
-### Gemini API 原生格式
-
-**请求头:**
-
-```
-Content-Type: application/json
-X-Goog-Api-Key: <你的许可证>
-```
-
-**非流式:** `POST /v1beta/models/<模型名称>/generateContent`
-
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/generateContent' \
---header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: <你的许可证>' \
---data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
-```
-
-**流式:** `POST /v1beta/models/<模型名称>/streamGenerateContent`
-
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/streamGenerateContent' \
---header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: <你的许可证>' \
---data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
-```
-
-## 如何添加该平台的 token
-
-> [!WARNING]
->
-> - 程序自动创建 `Google Cloud` 项目，并开启 `Gemini for Google Cloud API` 能力
-
-1. 在后台插件管理中安装插件然后解压
-
-   ![0edeffcf5a473a31361bb8e0a77b9189.png](/0edeffcf5a473a31361bb8e0a77b9189.png)
-
-2. 在谷歌浏览器的插件管理中导入解压的文件夹
-
-   ![04563c906701e8bdb2ca9080abf1ddf3.png](/04563c906701e8bdb2ca9080abf1ddf3.png)
-
-   ![2bcea57f1b869e4c15b8f83962d0a615.png](/2bcea57f1b869e4c15b8f83962d0a615.png)
-
-   ![df2beb27952e0523390419952b1ab0a1.png](/df2beb27952e0523390419952b1ab0a1.png)
-
-3. 返回插件管理刷新页面，看到插件已经安装后才可以点击添加 `Gemini CLI Token` 按钮
-
-   ![5e3620f58fe5e805ac08413e7eab75f2.png](/5e3620f58fe5e805ac08413e7eab75f2.png)
-
-4. 登陆谷歌账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
-
-   ![f97c554473195e7f631f5eae2fd66a1a.png](/f97c554473195e7f631f5eae2fd66a1a.png)
-
-   ![9dbbf62375f48abca61eee3e17e2a9b2.png](/9dbbf62375f48abca61eee3e17e2a9b2.png)
-
-## 使用示例
-
-### 1. 基础对话
-
-**示例:**
-
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
-    "model": "gemini-2.5-pro-thinking",
-    "stream": true
-}'
-```
-
-### 2. 图片理解
-
-支持对图片内容进行分析和理解。
-
-> [!WARNING]
-> 图片只支持 png、jpeg、webp、heic、heif 格式
-
-**示例:**
-
-```bash
+```bash [图片理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -163,21 +64,12 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
             }
         ]
     }],
-    "model": "gemini-2.5-pro",
+    "model": "gemini-2.0-pro",
     "stream": true
 }'
 ```
 
-### 3. 音频理解
-
-支持对音频内容进行分析和转录。
-
-> [!WARNING]
-> 音频只支持 wav、mp3、aiff、aac、ogg、flac 格式
-
-**示例:**
-
-```bash
+```bash [音频理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -197,21 +89,12 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
             }
         ]
     }],
-    "model": "gemini-2.5-pro",
+    "model": "gemini-2.0-pro",
     "stream": true
 }'
 ```
 
-### 4. 视频理解
-
-支持对视频内容进行分析和理解。
-
-> [!WARNING]
-> 视频只支持 mp4、mpeg、mov、avi、x-flv、mpg、webm、wmv、3gpp 格式
-
-**示例:**
-
-```bash
+```bash [视频理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -231,18 +114,12 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
             }
         ]
     }],
-    "model": "gemini-2.5-pro",
+    "model": "gemini-2.0-pro",
     "stream": true
 }'
 ```
 
-### 5. 函数调用
-
-支持定义和调用自定义函数，让模型能够执行特定操作。
-
-**示例:**
-
-```bash
+```bash [函数调用]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -272,18 +149,12 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
             }
         }
     }],
-    "model": "gemini-2.5-pro",
+    "model": "gemini-2.0-pro",
     "stream": true
 }'
 ```
 
-### 6. 代码执行
-
-支持生成和执行代码，解决复杂的计算问题。
-
-**示例:**
-
-```bash
+```bash [代码执行]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -298,38 +169,59 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
             "name": "codeExecution"
         }
     }],
-    "model": "gemini-2.5-pro",
+    "model": "gemini-2.0-pro",
     "stream": true
 }'
 ```
 
-## 支持的文件格式
+:::
 
-### 图片格式
+### Gemini API 原生格式
 
-- png
-- jpeg
-- webp
-- heic
-- heif
+官方文档：`https://ai.google.dev/gemini-api/docs`
 
-### 音频格式
+::: code-group
 
-- wav
-- mp3
-- aiff
-- aac
-- ogg
-- flac
+```bash [非流式]
+curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/generateContent' \
+--header 'Content-Type: application/json' \
+--header 'X-Goog-Api-Key: <你的许可证>' \
+--data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+```
 
-### 视频格式
+```bash [流式]
+curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/streamGenerateContent' \
+--header 'Content-Type: application/json' \
+--header 'X-Goog-Api-Key: <你的许可证>' \
+--data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+```
 
-- mp4
-- mpeg
-- mov
-- avi
-- x-flv
-- mpg
-- webm
-- wmv
-- 3gpp
+:::
+
+## 如何添加该平台的 token
+
+> [!WARNING]
+>
+> - 程序自动创建 `Google Cloud` 项目，并开启 `Gemini for Google Cloud API` 能力
+
+1. 在后台插件管理中安装插件然后解压
+
+   ![0edeffcf5a473a31361bb8e0a77b9189.png](/0edeffcf5a473a31361bb8e0a77b9189.png)
+
+2. 在谷歌浏览器的插件管理中导入解压的文件夹
+
+   ![04563c906701e8bdb2ca9080abf1ddf3.png](/04563c906701e8bdb2ca9080abf1ddf3.png)
+
+   ![2bcea57f1b869e4c15b8f83962d0a615.png](/2bcea57f1b869e4c15b8f83962d0a615.png)
+
+   ![df2beb27952e0523390419952b1ab0a1.png](/df2beb27952e0523390419952b1ab0a1.png)
+
+3. 返回插件管理刷新页面，看到插件已经安装后才可以点击添加 `Gemini CLI Token` 按钮
+
+   ![5e3620f58fe5e805ac08413e7eab75f2.png](/5e3620f58fe5e805ac08413e7eab75f2.png)
+
+4. 登陆谷歌账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
+
+   ![f97c554473195e7f631f5eae2fd66a1a.png](/f97c554473195e7f631f5eae2fd66a1a.png)
+
+   ![9dbbf62375f48abca61eee3e17e2a9b2.png](/9dbbf62375f48abca61eee3e17e2a9b2.png)

@@ -6,10 +6,6 @@
 
 **认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
 
-> [!WARNING]
->
-> 文生图（`/v1/images/generations`）和图生图（`/v1/images/edits`）接口需要额外付费开通
-
 ## 模型列表
 
 ### Flash 系列模型
@@ -51,30 +47,15 @@
 
 ![token](/WechatIMG424.jpg)
 
-## API 端点
+## 支持的接口
 
-### 1. 对话补全接口
+> [!WARNING]
+>
+> 图片接口需要额外付费开通
 
-创建对话补全请求，支持文本对话、图像生成、视频生成等多种能力。
+### 对话接口
 
-**端点:** `POST /v1/chat/completions`
-
-**请求头:**
-
-```
-Content-Type: application/json
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数       | 类型    | 必填 | 说明                           |
-| ---------- | ------- | ---- | ------------------------------ |
-| `messages` | array   | 是   | 对话消息数组                   |
-| `model`    | string  | 是   | 使用的模型名称                 |
-| `stream`   | boolean | 否   | 是否使用流式输出，默认为 false |
-
-**示例:**
+OpenAI 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions' \
@@ -87,42 +68,13 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
 }'
 ```
 
-**带查询参数的示例:**
+### 图片接口
 
-```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions?return_origin_image=true&remove_watermark=true' \
---header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "画一只小猫"}],
-    "model": "gemini-2.5-flash-imagen",
-    "stream": true
-}'
-```
+官方文档：`https://platform.openai.com/docs/api-reference/images/create`
 
-### 2. 文生图接口
+::: code-group
 
-标准的图像生成接口。
-
-**端点:** `POST /v1/images/generations`
-
-**请求头:**
-
-```
-Content-Type: multipart/form-data
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数     | 类型   | 必填 | 说明           |
-| -------- | ------ | ---- | -------------- |
-| `prompt` | string | 是   | 生成图像的描述 |
-| `model`  | string | 是   | 使用的模型名称 |
-
-**示例:**
-
-```bash
+```bash [文生图]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/generations' \
 --header 'Authorization: <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
@@ -130,30 +82,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
 --form 'model="gemini-2.5-flash-imagen"'
 ```
 
-### 3. 图生图接口
-
-基于输入图像进行图像编辑。
-
-**端点:** `POST /v1/images/edits`
-
-**请求头:**
-
-```
-Content-Type: multipart/form-data
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数      | 类型   | 必填 | 说明           |
-| --------- | ------ | ---- | -------------- |
-| `image[]` | file   | 是   | 输入的图像文件 |
-| `prompt`  | string | 是   | 编辑指令描述   |
-| `model`   | string | 是   | 使用的模型名称 |
-
-**示例:**
-
-```bash
+```bash [图生图]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/edits' \
 --header 'Authorization: <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
@@ -162,22 +91,11 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
 --form 'model="gemini-2.5-flash-imagen"'
 ```
 
-## 全局参数说明
+:::
 
-### return_origin_image（返回原图）
+## 额外参数说明
 
-调用 `imagen` 系列模型时是否返回原图。
-
-**取值:** `true` | `false`  
-**默认值:** `false`  
-**使用方式:** URL 查询参数  
-**示例:** `/v1/chat/completions?return_origin_image=true`
-
-### remove_watermark（去除水印）
-
-调用 `imagen` 系列模型时是否去除图片中的水印。
-
-**取值:** `true` | `false`  
-**默认值:** `false`  
-**使用方式:** URL 查询参数  
-**示例:** `/v1/chat/completions?remove_watermark=true`
+| 参数                  | 描述                                         | 取值范围/选项    | 默认值  |
+| --------------------- | -------------------------------------------- | ---------------- | ------- |
+| `return_origin_image` | 调用 `imagen` 系列模型时是否返回原图         | `true` / `false` | `false` |
+| `remove_watermark`    | 调用 `imagen` 系列模型时是否去除图片中的水印 | `true` / `false` | `false` |

@@ -6,12 +6,9 @@
 
 **认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
 
-> [!WARNING]
-> Gemini API 的安全配置程序默认全部关闭
-
 ## 模型列表
 
-> [!NOTE]
+> [!WARNING]
 > 官网 API 支持的模型都支持
 
 ### Flash 系列
@@ -33,37 +30,17 @@
 | `gemini-2.5-pro-preview-tts` | Gemini 2.5 Pro TTS 预览版 |
 | `gemini-2.5-pro-thinking`    | Gemini 2.5 Pro 思考模式   |
 
-## API 端点
+## 支持的接口
 
-### 对话补全接口
+### 对话接口
 
-创建对话补全请求，支持文本对话、多模态理解、函数调用等多种能力。
+OpenAI 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
-**端点:** `POST /v1/chat/completions`
+Gemini 官方文档：`https://ai.google.dev/gemini-api/docs`
 
-**请求头:**
+::: code-group
 
-```
-Content-Type: application/json
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数       | 类型    | 必填 | 说明                           |
-| ---------- | ------- | ---- | ------------------------------ |
-| `messages` | array   | 是   | 对话消息数组                   |
-| `model`    | string  | 是   | 使用的模型名称                 |
-| `stream`   | boolean | 否   | 是否使用流式输出，默认为 false |
-| `tools`    | array   | 否   | 函数调用工具列表               |
-
-## 使用示例
-
-### 1. 基础对话
-
-**示例:**
-
-```bash
+```bash [普通对话]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -74,11 +51,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 }'
 ```
 
-### 2. 图像生成
-
-**示例:**
-
-```bash
+```bash [图像生成]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -89,16 +62,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 }'
 ```
 
-### 3. 图片理解
-
-支持对图片内容进行分析和理解。
-
-> [!WARNING]
-> 图片只支持 png、jpeg、webp、heic、heif 格式
-
-**示例:**
-
-```bash
+```bash [图片理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -123,16 +87,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 }'
 ```
 
-### 4. 音频理解
-
-支持对音频内容进行分析和转录。
-
-> [!WARNING]
-> 音频只支持 wav、mp3、aiff、aac、ogg、flac 格式
-
-**示例:**
-
-```bash
+```bash [音频理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -157,16 +112,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 }'
 ```
 
-### 5. 视频理解
-
-支持对视频内容进行分析和理解。
-
-> [!WARNING]
-> 视频只支持 mp4、mpeg、mov、avi、x-flv、mpg、webm、wmv、3gpp 格式
-
-**示例:**
-
-```bash
+```bash [视频理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -191,13 +137,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 }'
 ```
 
-### 6. 函数调用
-
-支持定义和调用自定义函数，让模型能够执行特定操作。
-
-**示例:**
-
-```bash
+```bash [函数调用]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -232,13 +172,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 }'
 ```
 
-### 7. 代码执行
-
-支持生成和执行代码，解决复杂的计算问题。
-
-**示例:**
-
-```bash
+```bash [代码执行]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -258,33 +192,4 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 }'
 ```
 
-## 支持的文件格式
-
-### 图片格式
-
-- png
-- jpeg
-- webp
-- heic
-- heif
-
-### 音频格式
-
-- wav
-- mp3
-- aiff
-- aac
-- ogg
-- flac
-
-### 视频格式
-
-- mp4
-- mpeg
-- mov
-- avi
-- x-flv
-- mpg
-- webm
-- wmv
-- 3gpp
+:::

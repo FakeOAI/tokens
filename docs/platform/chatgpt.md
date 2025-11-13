@@ -6,12 +6,9 @@
 
 **认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
 
-> [!WARNING]
-> 程序只负责转发以及处理格式转换，**任何引起降智的问题与程序无关**，请联系网关提供者
-
 ## 模型列表
 
-> [!NOTE]
+> [!WARNING]
 > 官网所有可用模型都支持
 
 ### 标准模型
@@ -65,32 +62,15 @@
 
 ![2481748234920_.pic.jpg](/2481748234920_.pic.jpg)
 
-## API 端点
+## 支持的接口
 
-### 对话补全接口
+### 对话接口
 
-创建对话补全请求。
+官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
-**端点:** `POST /v1/chat/completions`
+::: code-group
 
-**请求头:**
-
-```
-Content-Type: application/json
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数       | 类型    | 必填 | 说明                           |
-| ---------- | ------- | ---- | ------------------------------ |
-| `messages` | array   | 是   | 对话消息数组                   |
-| `model`    | string  | 是   | 使用的模型名称                 |
-| `stream`   | boolean | 否   | 是否使用流式输出，默认为 false |
-
-**示例:**
-
-```bash
+```bash [普通对话]
 curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -101,9 +81,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat
 }'
 ```
 
-**调用 GPTs 示例:**
-
-```bash
+```bash [调用GPTs]
 curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -114,17 +92,14 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat
 }'
 ```
 
-## 平台配置
+:::
 
-### ChatGPT 网关地址
+## 网关配置
 
 ChatGPT 网关起到转发以及对话接口请求逻辑的处理作用。
 
-**重要说明：**
-
 - 程序不内置 ChatGPT 网关，需要自备网关
-- 网关负责实际的请求处理和转发
-- 程序仅负责格式转换和协议适配
+- 程序只负责转发以及处理格式转换，**任何引起降智的问题与程序无关**，请联系网关提供者
 
 **配置界面：**
 
