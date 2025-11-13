@@ -32,10 +32,6 @@ export default defineConfig({
             ],
           },
           {
-            text: "xAI",
-            items: [{ text: "Grok 官网逆向", link: "grok" }],
-          },
-          {
             text: "Anthropic",
             items: [
               { text: "Claude 官网逆向", link: "claude" },
@@ -51,6 +47,7 @@ export default defineConfig({
               { text: "Flow 官网逆向", link: "flow" },
             ],
           },
+          { text: "Grok 官网逆向", link: "grok" },
           { text: "Cursor 客户端逆向", link: "cursor" },
         ],
       },
