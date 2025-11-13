@@ -42,6 +42,29 @@
 | `gpt-5-codex-medium` | GPT-5 Codex 中级推理 | Medium   |
 | `gpt-5-codex-high`   | GPT-5 Codex 高级推理 | High     |
 
+### GPT-5.1 系列
+
+| 模型名称         | 功能说明         | 推理级别 |
+| ---------------- | ---------------- | -------- |
+| `gpt-5.1-low`    | GPT-5.1 低级推理 | Low      |
+| `gpt-5.1-medium` | GPT-5.1 中级推理 | Medium   |
+| `gpt-5.1-high`   | GPT-5.1 高级推理 | High     |
+
+### GPT-5.1 Codex 系列
+
+| 模型名称               | 功能说明               | 推理级别 |
+| ---------------------- | ---------------------- | -------- |
+| `gpt-5.1-codex-low`    | GPT-5.1 Codex 低级推理 | Low      |
+| `gpt-5.1-codex-medium` | GPT-5.1 Codex 中级推理 | Medium   |
+| `gpt-5.1-codex-high`   | GPT-5.1 Codex 高级推理 | High     |
+
+### GPT-5.1 Codex Mini 系列
+
+| 模型名称                    | 功能说明                    | 推理级别 |
+| --------------------------- | --------------------------- | -------- |
+| `gpt-5.1-codex-mini-medium` | GPT-5.1 Codex Mini 中级推理 | Medium   |
+| `gpt-5.1-codex-mini-high`   | GPT-5.1 Codex Mini 高级推理 | High     |
+
 ## API 端点
 
 ### 1. OpenAI 兼容格式接口
