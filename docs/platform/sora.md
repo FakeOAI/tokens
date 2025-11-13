@@ -175,7 +175,7 @@ Authorization: <你的许可证>
 | `model`     | string  | 是   | 使用的模型名称（支持参数组合） |
 | `watermark` | boolean | 否   | 是否保留视频水印，默认为 false |
 
-**示例:**
+**示例 1: 文生视频**
 
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos' \
@@ -185,6 +185,17 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos'
     "prompt": "画小猫",
     "model": "sora_video2"
 }'
+```
+
+**示例 2: 图生视频**
+
+```bash
+curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos' \
+--header 'Authorization: <你的许可证>' \
+--header 'Content-Type: multipart/form-data' \
+--form 'input_reference[]=@"/path/to/example.jpg"' \
+--form 'prompt="根据图片生成视频"' \
+--form 'model="sora_video2"'
 ```
 
 ### 5. 查询视频任务状态
