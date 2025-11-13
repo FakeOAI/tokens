@@ -39,7 +39,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
 --header 'Authorization: <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
-    "model": "gemini-2.0-pro",
+    "model": "gemini-2.5-pro",
     "stream": true
 }'
 ```
@@ -64,7 +64,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
             }
         ]
     }],
-    "model": "gemini-2.0-pro",
+    "model": "gemini-2.5-pro",
     "stream": true
 }'
 ```
@@ -89,7 +89,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
             }
         ]
     }],
-    "model": "gemini-2.0-pro",
+    "model": "gemini-2.5-pro",
     "stream": true
 }'
 ```
@@ -149,7 +149,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
             }
         }
     }],
-    "model": "gemini-2.0-pro",
+    "model": "gemini-2.5-pro",
     "stream": true
 }'
 ```
@@ -169,7 +169,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
             "name": "codeExecution"
         }
     }],
-    "model": "gemini-2.0-pro",
+    "model": "gemini-2.5-pro",
     "stream": true
 }'
 ```
