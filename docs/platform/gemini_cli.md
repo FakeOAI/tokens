@@ -49,6 +49,46 @@ Authorization: <你的许可证>
 | `stream`   | boolean | 否   | 是否使用流式输出，默认为 false |
 | `tools`    | array   | 否   | 函数调用工具列表               |
 
+**示例:**
+
+```bash
+curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: <你的许可证>' \
+--data-raw '{
+    "messages": [{"role": "user", "content": "你是什么模型"}],
+    "model": "gemini-2.5-pro",
+    "stream": true
+}'
+```
+
+### Gemini API 原生格式
+
+**请求头:**
+
+```
+Content-Type: application/json
+X-Goog-Api-Key: <你的许可证>
+```
+
+**非流式:** `POST /v1beta/models/<模型名称>/generateContent`
+
+```bash
+curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/generateContent' \
+--header 'Content-Type: application/json' \
+--header 'X-Goog-Api-Key: <你的许可证>' \
+--data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+```
+
+**流式:** `POST /v1beta/models/<模型名称>/streamGenerateContent`
+
+```bash
+curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/streamGenerateContent' \
+--header 'Content-Type: application/json' \
+--header 'X-Goog-Api-Key: <你的许可证>' \
+--data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+```
+
 ## 如何添加该平台的 token
 
 > [!WARNING]
