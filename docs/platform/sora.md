@@ -8,7 +8,7 @@
 
 > [!WARNING]
 >
-> 文生图（`/v1/images/generations`）、图生图（`/v1/images/edits`）、视频异步任务（`/v1/videos`）接口需要额外付费开通
+> 默认授权只有对话接口（`/v1/chat/completions`），图片接口（`/v1/images/generations`和`/v1/images/edits`）、视频任务（`/v1/videos`）接口需要额外付费开通
 
 ## 模型列表
 
@@ -37,32 +37,15 @@
 | `25s`       | 生成 25 秒视频    | `sora_video2` |
 | `pro`       | 使用 Pro 版本模型 | `sora_video2` |
 
-## API 端点
+## 支持的接口
 
-### 1. 对话补全接口
+### 1. 对话接口
 
-使用对话格式生成图像或视频。
+官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
-**端点:** `POST /v1/chat/completions`
+::: code-group
 
-**请求头:**
-
-```
-Content-Type: application/json
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数       | 类型    | 必填 | 说明             |
-| ---------- | ------- | ---- | ---------------- |
-| `messages` | array   | 是   | 对话消息数组     |
-| `model`    | string  | 是   | 使用的模型名称   |
-| `stream`   | boolean | 否   | 是否使用流式输出 |
-
-**示例 1: 文生图**
-
-```bash
+```bash [文生图]
 curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -73,9 +56,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/co
 }'
 ```
 
-**示例 2: 图生图**
-
-```bash
+```bash [图生图]
 curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
@@ -92,29 +73,15 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/co
 }'
 ```
 
-### 2. 文生图接口
+:::
 
-标准的图像生成接口。
+### 2. 图片接口
 
-**端点:** `POST /v1/images/generations`
+官方文档：`https://platform.openai.com/docs/api-reference/images/create`
 
-**请求头:**
+::: code-group
 
-```
-Content-Type: multipart/form-data
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数     | 类型   | 必填 | 说明           |
-| -------- | ------ | ---- | -------------- |
-| `prompt` | string | 是   | 生成图像的描述 |
-| `model`  | string | 是   | 使用的模型名称 |
-
-**示例:**
-
-```bash
+```bash [文生图]
 curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/generations' \
 --header 'Authorization: <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
@@ -122,30 +89,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/
 --form 'model="sora_image"'
 ```
 
-### 3. 图生图接口
-
-基于输入图像进行图像编辑。
-
-**端点:** `POST /v1/images/edits`
-
-**请求头:**
-
-```
-Content-Type: multipart/form-data
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数      | 类型   | 必填 | 说明           |
-| --------- | ------ | ---- | -------------- |
-| `image[]` | file   | 是   | 输入的图像文件 |
-| `prompt`  | string | 是   | 编辑指令描述   |
-| `model`   | string | 是   | 使用的模型名称 |
-
-**示例:**
-
-```bash
+```bash [图生图]
 curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/edits' \
 --header 'Authorization: <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
@@ -154,30 +98,15 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/
 --form 'model="sora_image"'
 ```
 
-### 4. 创建视频任务
+:::
 
-创建异步视频生成任务。
+### 3. 视频接口
 
-**端点:** `POST /v1/videos`
+官方文档：`https://platform.openai.com/docs/api-reference/videos/create`
 
-**请求头:**
+::: code-group
 
-```
-Content-Type: application/json
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数        | 类型    | 必填 | 说明                           |
-| ----------- | ------- | ---- | ------------------------------ |
-| `prompt`    | string  | 是   | 视频生成描述                   |
-| `model`     | string  | 是   | 使用的模型名称（支持参数组合） |
-| `watermark` | boolean | 否   | 是否保留视频水印，默认为 false |
-
-**示例 1: 文生视频**
-
-```bash
+```bash [文生视频]
 curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos' \
 --header 'Authorization: <你的许可证>' \
 --header 'Content-Type: application/json' \
@@ -187,9 +116,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos'
 }'
 ```
 
-**示例 2: 图生视频**
-
-```bash
+```bash [图生视频]
 curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos' \
 --header 'Authorization: <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
@@ -198,60 +125,17 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos'
 --form 'model="sora_video2"'
 ```
 
-### 5. 查询视频任务状态
-
-查询视频生成任务的当前状态。
-
-**端点:** `GET /v1/videos/{video_id}`
-
-**路径参数:**
-
-| 参数       | 类型   | 必填 | 说明        |
-| ---------- | ------ | ---- | ----------- |
-| `video_id` | string | 是   | 视频任务 ID |
-
-**请求头:**
-
-```
-Authorization: <你的许可证>
-```
-
-**示例:**
-
-```bash
+```bash [查询视频任务状态]
 curl --location --request GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}' \
 --header 'Authorization: <你的许可证>'
 ```
 
-### 6. 视频编辑（Remix）
-
-基于已生成的视频进行二次编辑。
-
-**端点:** `POST /v1/videos/{video_id}/remix`
-
-**路径参数:**
-
-| 参数       | 类型   | 必填 | 说明          |
-| ---------- | ------ | ---- | ------------- |
-| `video_id` | string | 是   | 原视频任务 ID |
-
-**请求头:**
-
-```
-Content-Type: application/json
-Authorization: <你的许可证>
+```bash [获取视频内容]
+curl --location --request GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/content' \
+--header 'Authorization: <你的许可证>'
 ```
 
-**请求参数:**
-
-| 参数     | 类型   | 必填 | 说明           |
-| -------- | ------ | ---- | -------------- |
-| `prompt` | string | 是   | 编辑指令描述   |
-| `model`  | string | 是   | 使用的模型名称 |
-
-**示例:**
-
-```bash
+```bash [编辑视频]
 curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/remix' \
 --header 'Authorization: <你的许可证>' \
 --header 'Content-Type: application/json' \
@@ -261,30 +145,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/
 }'
 ```
 
-### 7. 获取视频内容
-
-获取已生成视频的实际内容。
-
-**端点:** `GET /v1/videos/{video_id}/content`
-
-**路径参数:**
-
-| 参数       | 类型   | 必填 | 说明        |
-| ---------- | ------ | ---- | ----------- |
-| `video_id` | string | 是   | 视频任务 ID |
-
-**请求头:**
-
-```
-Authorization: <你的许可证>
-```
-
-**示例:**
-
-```bash
-curl --location --request GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/content' \
---header 'Authorization: <你的许可证>'
-```
+:::
 
 ## 全局参数说明
 
