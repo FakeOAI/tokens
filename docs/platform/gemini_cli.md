@@ -1,4 +1,4 @@
-# Gemini CLI 客户端逆向接口文档
+# Gemini Cli 客户端逆向接口文档
 
 ## 基础信息
 

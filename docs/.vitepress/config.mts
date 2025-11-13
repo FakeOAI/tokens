@@ -7,7 +7,6 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "首页", link: "/" },
-      { text: "开始接入", link: "/platform/prepare" },
       { text: "计费标准", link: "/others/platform-pricing" },
       { text: "演示站", link: "https://tokens-pool.top" },
     ],
@@ -22,22 +21,37 @@ export default defineConfig({
         ],
       },
       {
-        text: "逆向平台",
         base: "/platform/",
-        link: "prepare",
         collapsed: false,
         items: [
-          { text: "ChatGPT 官网逆向", link: "chatgpt" },
-          { text: "Codex 客户端逆向", link: "codex" },
-          { text: "Grok 官网逆向", link: "grok" },
-          { text: "Claude 官网逆向", link: "claude" },
-          { text: "Claude Code 客户端逆向", link: "claude_api" },
+          {
+            text: "OpenAI",
+            items: [
+              { text: "ChatGPT 官网逆向", link: "chatgpt" },
+              { text: "Codex 客户端逆向", link: "codex" },
+            ],
+          },
+          {
+            text: "xAI",
+            items: [{ text: "Grok 官网逆向", link: "grok" }],
+          },
+          {
+            text: "Anthropic",
+            items: [
+              { text: "Claude 官网逆向", link: "claude" },
+              { text: "Claude Code 客户端逆向", link: "claude_api" },
+            ],
+          },
+          {
+            text: "Google",
+            items: [
+              { text: "Gemini 官方API", link: "gemini" },
+              { text: "Gemini 官网逆向", link: "gemini_official" },
+              { text: "Gemini Cli 客户端逆向", link: "gemini_cli" },
+              { text: "Flow 官网逆向", link: "flow" },
+            ],
+          },
           { text: "Cursor 客户端逆向", link: "cursor" },
-          { text: "Gemini API", link: "gemini" },
-          { text: "Gemini 官网逆向", link: "gemini_official" },
-          { text: "Gemini Cli 客户端逆向", link: "gemini_cli" },
-          { text: "Sora 官网逆向", link: "sora" },
-          { text: "Flow 官网逆向", link: "flow" },
         ],
       },
       {
