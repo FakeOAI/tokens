@@ -35,7 +35,7 @@ export default defineConfig({
           { text: "Cursor 客户端逆向", link: "cursor" },
           { text: "Gemini API", link: "gemini" },
           { text: "Gemini 官网逆向", link: "gemini_official" },
-          { text: "Gemini CLI 客户端逆向", link: "gemini_cli" },
+          { text: "Gemini Cli 客户端逆向", link: "gemini_cli" },
           { text: "Sora 官网逆向", link: "sora" },
           { text: "Flow 官网逆向", link: "flow" },
         ],

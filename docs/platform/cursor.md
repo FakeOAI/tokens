@@ -8,7 +8,7 @@
 
 ## 模型列表
 
-> [!NOTE]
+> [!WARNING]
 > Cursor 设置里面有的模型都支持
 
 ### GPT 系列
@@ -93,30 +93,11 @@
 | `gemini-2.5-pro-max`           | Gemini 2.5 Pro Max        |
 | `gemini-2.5-pro-exp-03-25-max` | Gemini 2.5 Pro 实验版 Max |
 
-## API 端点
+## 支持的接口
 
-### 对话补全接口
+### 对话接口
 
-创建对话补全请求。
-
-**端点:** `POST /v1/chat/completions`
-
-**请求头:**
-
-```
-Content-Type: application/json
-Authorization: <你的许可证>
-```
-
-**请求参数:**
-
-| 参数       | 类型    | 必填 | 说明                           |
-| ---------- | ------- | ---- | ------------------------------ |
-| `messages` | array   | 是   | 对话消息数组                   |
-| `model`    | string  | 是   | 使用的模型名称                 |
-| `stream`   | boolean | 否   | 是否使用流式输出，默认为 false |
-
-**示例:**
+官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/cursor/v1/chat/completions' \
@@ -128,40 +109,3 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/cursor/v1/chat/
     "stream": true
 }'
 ```
-
-## 平台配置
-
-### Cursor Token 轮询数量
-
-由于 Cursor 封控比较严格，如果轮询号池内所有账号容易导致号池所有账号都被封控。
-
-**配置说明：**
-
-- 设置固定数量的 Token 进行轮询
-- 只有在 Token 异常时才取新的 Token 加入号池
-- 高并发情况下可以短时间内充分利用单个账号的价值
-- 避免因频繁切换导致所有账号被封控
-
-### Cursor 上限标记的报错
-
-由于 Cursor 上限的文本不断频繁变动，系统开放给用户自行配置。
-
-**配置方式：**
-
-- 一行一个报错匹配文本
-- 匹配上的都会进行 Token `上限` 的标记
-- 如果不填写则使用程序默认的匹配规则
-
-### Cursor 异常标记的报错
-
-由于 Cursor 异常的文本不断频繁变动，系统开放给用户自行配置。
-
-**配置方式：**
-
-- 一行一个报错匹配文本
-- 匹配上的都会进行 Token `异常` 的标记
-- 如果不填写则使用程序默认的匹配规则
-
-**配置界面：**
-
-![3731744443802_.pic.jpg](/3731744443802_.pic.jpg)

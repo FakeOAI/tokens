@@ -14,7 +14,7 @@
 | `sora_video`  | 视频生成（旧版本） | -                          |
 | `sora_video2` | 视频生成（新版本） | 默认生成 10 秒竖屏标清视频 |
 
-### 模型参数组合
+**模型参数组合**
 
 `sora_video2` 模型支持使用 `-` 连接符组合多个参数，例如：
 
@@ -22,7 +22,7 @@
 - `sora_video2-landscape-hd`
 - `sora_video2-hd-portrait-15s`
 
-**支持的参数：**
+**支持的参数**
 
 | 参数        | 说明              | 适用模型      |
 | ----------- | ----------------- | ------------- |
@@ -39,7 +39,7 @@
 >
 > 默认授权只有**对话接口**，**图片接口**、**视频任务**接口需要额外付费开通
 
-### 1. 对话接口
+### 对话接口
 
 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
@@ -75,7 +75,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/co
 
 :::
 
-### 2. 图片接口
+### 图片接口
 
 官方文档：`https://platform.openai.com/docs/api-reference/images/create`
 
@@ -100,7 +100,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/
 
 :::
 
-### 3. 视频接口
+### 视频接口
 
 官方文档：`https://platform.openai.com/docs/api-reference/videos/create`
 
