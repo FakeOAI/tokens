@@ -1,5 +1,7 @@
 # ChatGPT 官网逆向接口文档
 
+官网地址：`https://chatgpt.com`
+
 ## 基础信息
 
 **Base URL:** `http://<你的IP>:<你的端口>/chatgpt`
