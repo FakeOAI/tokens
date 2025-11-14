@@ -1,12 +1,14 @@
 # Gemini 官网逆向接口文档
 
-官网地址：`https://gemini.google.com`
-
 ## 基础信息
+
+**官网地址：** `https://gemini.google.com`
 
 **Base URL:** `http://<你的IP>:<你的端口>/gemini_official`
 
 **认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+
+**Token 提取：** [点击查看](/others/extract-token.md#gemini-官网)
 
 ## 模型列表
 
@@ -31,23 +33,6 @@
 | `gemini-2.5-pro-canvas`     | Canvas 创作能力（Pro）          | -                                    |
 | `gemini-2.5-pro-imagen`     | 图像生成模型（Nano Banana Pro） | -                                    |
 | `gemini-2.5-pro-storybook`  | Storybook 故事创作（Pro）       | -                                    |
-
-## 如何提取该平台的 token
-
-> [!WARNING]
->
-> - 提取之前如果已登录过，**一定要退出重新登录**，提取之后马上加入 tokens 号池中，否则很快会失效
-> - 建议使用无痕浏览器提取，提取完之后，页面不要进行任何对话等**点击操作**，马上关闭浏览器或网页，否则很快会失效
-
-**提取步骤：**
-
-1. 登录 [Gemini 官网](https://gemini.google.com/)
-2. 按 `F12` 打开开发者工具
-3. 找到 Cookie 中 `__Secure-1PSID` 的值，即为 token
-
-**示例截图：**
-
-![token](/WechatIMG424.jpg)
 
 ## 支持的接口
 

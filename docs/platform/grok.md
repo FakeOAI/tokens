@@ -1,12 +1,14 @@
 # Grok 官网逆向接口文档
 
-官网地址：`https://grok.com`
-
 ## 基础信息
+
+**官网地址：** `https://grok.com`
 
 **Base URL:** `http://<你的IP>:<你的端口>/grok`
 
 **认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+
+**Token 提取：** [点击查看](/others/extract-token.md#grok)
 
 ## 模型列表
 

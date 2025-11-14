@@ -60,7 +60,8 @@ export default defineConfig({
         items: [
           { text: "高阶玩法", link: "high-level-play" },
           { text: "储存配置", link: "storage" },
-          { text: "全局参数", link: "global-params" },
+          { text: "额外参数", link: "extra-params" },
+          { text: "Token提取", link: "extract-token" },
           { text: "后台鉴权", link: "admin-auth" },
           { text: "平台计费标准", link: "platform-pricing" },
           { text: "代理计费标准", link: "proxy-pricing" },

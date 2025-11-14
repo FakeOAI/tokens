@@ -1,12 +1,14 @@
 # Codex 官网逆向接口文档
 
-官网地址：`https://openai.com/zh-Hans-CN/codex`
-
 ## 基础信息
+
+**官网地址：** `https://openai.com/zh-Hans-CN/codex`
 
 **Base URL:** `http://<你的IP>:<你的端口>/codex`
 
 **认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+
+**Token 提取：** [点击查看](/others/extract-token.md#openai)
 
 ## 模型列表
 

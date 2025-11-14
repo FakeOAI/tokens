@@ -1,12 +1,14 @@
 # Claude Code 客户端逆向接口文档
 
-官网地址：`https://claude.com/product/claude-code`
-
 ## 基础信息
+
+**官网地址：** `https://claude.com/product/claude-code`
 
 **Base URL:** `http://<你的IP>:<你的端口>/claude_api`
 
 **认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+
+**Token 提取：** [点击查看](/others/extract-token.md#anthropic)
 
 ## 模型列表
 
