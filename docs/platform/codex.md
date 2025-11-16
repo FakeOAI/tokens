@@ -29,6 +29,13 @@
 | `gpt-5-codex-medium` | GPT-5 Codex 中级推理 | Medium   |
 | `gpt-5-codex-high`   | GPT-5 Codex 高级推理 | High     |
 
+### GPT-5 Codex Mini 系列
+
+| 模型名称                  | 功能说明                  | 推理级别 |
+| ------------------------- | ------------------------- | -------- |
+| `gpt-5-codex-mini-medium` | GPT-5 Codex Mini 中级推理 | Medium   |
+| `gpt-5-codex-mini-high`   | GPT-5 Codex Mini 高级推理 | High     |
+
 ### GPT-5.1 系列
 
 | 模型名称         | 功能说明         | 推理级别 |
