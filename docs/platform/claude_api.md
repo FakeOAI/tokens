@@ -6,7 +6,7 @@
 
 **Base URL:** `http://<你的IP>:<你的端口>/claude_api`
 
-**认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+**认证方式:** `Bearer Token`、`X-Api-Key请求头`
 
 **Token 提取：** [点击查看](/others/extract-token.md#anthropic)
 
@@ -51,7 +51,7 @@
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
     "model": "claude-sonnet-4-20250514",
@@ -68,7 +68,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/c
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/messages' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
     "system": [{"type": "text", "text": "你是一个AI助手，请根据用户的问题给出回答"}],

@@ -6,7 +6,7 @@
 
 **Base URL:** `http://<你的IP>:<你的端口>/gemini`
 
-**认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+**认证方式:** `Bearer Token`、`X-Goog-Api-Key请求头`、`URL参数key`
 
 **Token 提取：** [点击查看](/others/extract-token.md#gemini-api)
 
@@ -47,7 +47,7 @@ Gemini 官方文档：`https://ai.google.dev/gemini-api/docs`
 ```bash [普通对话]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
     "model": "gemini-2.0-flash",
@@ -58,7 +58,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```bash [图像生成]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "画小猫"}],
     "model": "gemini-2.0-flash-exp-image-generation",
@@ -69,7 +69,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```bash [图片理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{
         "role": "user",
@@ -94,7 +94,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```bash [音频理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{
         "role": "user",
@@ -119,7 +119,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```bash [视频理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{
         "role": "user",
@@ -144,7 +144,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```bash [函数调用]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{
         "role": "user",
@@ -179,7 +179,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```bash [代码执行]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{
         "role": "user",

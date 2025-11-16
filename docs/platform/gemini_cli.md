@@ -6,7 +6,7 @@
 
 **Base URL:** `http://<你的IP>:<你的端口>/gemini_cli`
 
-**认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+**认证方式:** `Bearer Token`、`X-Goog-Api-Key请求头`、`URL参数key`
 
 **Token 提取：** [点击查看](/others/extract-token.md#gemini-cli)
 
@@ -40,7 +40,7 @@
 ```bash [普通对话]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
     "model": "gemini-2.5-pro",
@@ -76,7 +76,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
 ```bash [音频理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{
         "role": "user",
@@ -101,7 +101,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
 ```bash [视频理解]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{
         "role": "user",
@@ -161,7 +161,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
 ```bash [代码执行]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{
         "role": "user",
@@ -189,14 +189,14 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/c
 ```bash [非流式]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/generateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: <你的许可证>' \
+--header 'X-Goog-Api-Key: Bearer <你的许可证>' \
 --data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
 ```
 
 ```bash [流式]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/streamGenerateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: <你的许可证>' \
+--header 'X-Goog-Api-Key: Bearer <你的许可证>' \
 --data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
 ```
 

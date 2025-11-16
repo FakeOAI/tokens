@@ -6,7 +6,7 @@
 
 **Base URL:** `http://<你的IP>:<你的端口>/cursor`
 
-**认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+**认证方式:** `Bearer Token`
 
 **Token 提取：** [点击查看](/others/extract-token.md#cursor)
 
@@ -106,7 +106,7 @@
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/cursor/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
     "model": "claude-3.7-sonnet-thinking",

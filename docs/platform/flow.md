@@ -6,7 +6,7 @@
 
 **Base URL:** `http://<你的IP>:<你的端口>/flow`
 
-**认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+**认证方式:** `Bearer Token`
 
 **Token 提取：** [点击查看](/others/extract-token.md#flow)
 
@@ -48,7 +48,7 @@
 ```bash [文生视频]
 curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "画只猪在天上飞"}],
     "model": "veo_3_1",
@@ -60,7 +60,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/co
 ```bash [帧转视频]
 curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{
         "role": "user",
@@ -97,7 +97,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/co
 
 ```bash [创建视频任务]
 curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/videos' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "prompt": "画小猫",
@@ -107,12 +107,12 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/videos'
 
 ```bash [查询视频任务状态]
 curl --location --request GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}' \
---header 'Authorization: <你的许可证>'
+--header 'Authorization: Bearer <你的许可证>'
 ```
 
 ```bash [获取视频内容]
 curl --location --request GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}/content' \
---header 'Authorization: <你的许可证>'
+--header 'Authorization: Bearer <你的许可证>'
 ```
 
 ::::

@@ -6,7 +6,7 @@
 
 **Base URL:** `http://<你的IP>:<你的端口>/gemini_official`
 
-**认证方式:** 在请求头中添加 `Authorization: <你的许可证>`
+**认证方式:** `Bearer Token`
 
 **Token 提取：** [点击查看](/others/extract-token.md#gemini-官网)
 
@@ -47,7 +47,7 @@ OpenAI 官方文档：`https://platform.openai.com/docs/api-reference/chat/creat
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions' \
 --header 'Content-Type: application/json' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
     "model": "gemini-2.5-flash",
@@ -63,7 +63,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
 
 ```bash [文生图]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/generations' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'prompt="画小猫"' \
 --form 'model="gemini-2.5-flash-imagen"'
@@ -71,7 +71,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
 
 ```bash [图生图]
 curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/edits' \
---header 'Authorization: <你的许可证>' \
+--header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'image[]=@"/path/to/example.jpg"' \
 --form 'prompt="换一个风格"' \
