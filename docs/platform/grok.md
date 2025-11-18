@@ -19,6 +19,7 @@
 | `grok-4`                       | 专家模式，智能调用思考、画图、联网搜索等能力 |
 | `grok-4-mini-thinking-tahoe`   | Grok 4 快速模型                              |
 | `grok-4-1-non-thinking-w-tool` | Grok 4.1 Beta 模型                           |
+| `grok-4-1-thinking-1108b`      | Grok 4.1 Thinking Beta 模型                  |
 
 **模型参数组合**
 

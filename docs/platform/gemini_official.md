@@ -10,29 +10,28 @@
 
 **Token 提取：** [点击查看](/others/extract-token.md#gemini-官网)
 
-## 模型列表
+### 模型列表
 
-### Flash 系列模型
+| 模型名称                | 特殊说明                             |
+| ----------------------- | ------------------------------------ |
+| `gemini-2.5-flash-free` | 无需加号即可调用，不支持图片文件分析 |
+| `gemini-2.5-flash`      | -                                    |
+| `gemini-2.5-pro`        | -                                    |
+| `gemini-3-pro`          | -                                    |
 
-| 模型名称                      | 功能说明                    | 特殊要求                             |
-| ----------------------------- | --------------------------- | ------------------------------------ |
-| `gemini-2.5-flash-free`       | 基础对话模型                | 无需加号即可调用，不支持图片文件分析 |
-| `gemini-2.5-flash`            | 标准对话模型                | -                                    |
-| `gemini-2.5-flash-imagen`     | 图像生成模型（Nano Banana） | -                                    |
-| `gemini-2.5-flash-canvas`     | Canvas 创作能力             | -                                    |
-| `gemini-2.5-flash-deepsearch` | 深度研究模型                | -                                    |
-| `gemini-2.5-flash-storybook`  | Storybook 故事创作          | -                                    |
+**模型参数组合**
 
-### Pro 系列模型
+所有模型都支持使用 `-` 连接符组合参数，例如：`gemini-2.5-pro-imagen`
 
-| 模型名称                    | 功能说明                        | 特殊要求                             |
-| --------------------------- | ------------------------------- | ------------------------------------ |
-| `gemini-2.5-pro`            | 专业对话模型                    | -                                    |
-| `gemini-2.5-pro-deepsearch` | 深度研究模型（Pro）             | -                                    |
-| `gemini-2.5-pro-video`      | 视频生成模型（Veo 3.1）         | 默认返回 base64，返回 URL 需配置 OSS |
-| `gemini-2.5-pro-canvas`     | Canvas 创作能力（Pro）          | -                                    |
-| `gemini-2.5-pro-imagen`     | 图像生成模型（Nano Banana Pro） | -                                    |
-| `gemini-2.5-pro-storybook`  | Storybook 故事创作（Pro）       | -                                    |
+**支持的参数**
+
+| 参数         | 说明                            | 适用模型            |
+| ------------ | ------------------------------- | ------------------- |
+| `imagen`     | 调用图像生成能力（Nano Banana） | 全系模型            |
+| `video`      | 调用视频生成能力（Veo 3.1）     | 仅支持 Pro 系列模型 |
+| `canvas`     | 调用 Canvas 创作能力            | 全系模型            |
+| `deepsearch` | 调用深度研究能力                | 全系模型            |
+| `storybook`  | 调用故事创作能力                | 全系模型            |
 
 ## 支持的接口
 
