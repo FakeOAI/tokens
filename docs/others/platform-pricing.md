@@ -8,19 +8,19 @@
 
 ### 普通平台
 
-- Claude 官逆
-- Grok 官逆
-- Gemini API
+- Claude 官网逆向
+- Grok 官网逆向
+- Gemini 官方 API
 
 ### 特殊平台
 
-- Cursor
-- Gemini 官逆
-- Gemini CLI 客户端逆向
-- Claude API（Claude Code）
-- ChatGPT 官逆
-- Codex
-- Flow
+- Cursor 客户端逆向
+- Gemini 官网逆向
+- Gemini Cli 客户端逆向
+- Claude Code 客户端逆向
+- ChatGPT 官网逆向
+- Codex 客户端逆向
+- Flow 官网逆向
 
 ## 计费规则
 
@@ -36,16 +36,16 @@
 
 ### 特殊平台计费
 
-| 平台             | 价格        |
-| ---------------- | ----------- |
-| **Cursor**       | `300 元/月` |
-| **Sora**       | `300 元/月` |
-| **ChatGPT 官逆** | `100 元/月` |
-| **Gemini 官逆**  | `400 元/月` |
-| **Claude API**   | `500 元/月` |
-| **Gemini CLI**   | `500 元/月` |
-| **Codex**        | `500 元/月` |
-| **Flow**        | `400 元/月` |
+| 平台                       | 价格        |
+| -------------------------- | ----------- |
+| **Cursor 客户端逆向**      | `300 元/月` |
+| **Sora 官网逆向**          | `300 元/月` |
+| **ChatGPT 官网逆向**       | `100 元/月` |
+| **Gemini 官网逆向**        | `400 元/月` |
+| **Claude Code 客户端逆向** | `500 元/月` |
+| **Gemini Cli 客户端逆向**  | `500 元/月` |
+| **Codex 客户端逆向**       | `500 元/月` |
+| **Flow 官网逆向**          | `400 元/月` |
 
 ## 注意事项
 
