@@ -45,6 +45,20 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 
 ## Google
 
+### 插件安装
+
+- 在后台插件管理中安装插件然后解压
+
+  ![0edeffcf5a473a31361bb8e0a77b9189.png](/9db98cc88f05aecb1eddeb7463ee1f1a.png)
+
+- 在谷歌浏览器的插件管理中导入解压的文件夹
+
+  ![04563c906701e8bdb2ca9080abf1ddf3.png](/04563c906701e8bdb2ca9080abf1ddf3.png)
+
+  ![2bcea57f1b869e4c15b8f83962d0a615.png](/2bcea57f1b869e4c15b8f83962d0a615.png)
+
+  ![df2beb27952e0523390419952b1ab0a1.png](/df2beb27952e0523390419952b1ab0a1.png)
+
 ### Gemini API
 
 打开 [Gemini AiStudio](https://aistudio.google.com/) 控制台，点击底部的 `Get API Key` 然后创建或查询已存在的 API KEY
@@ -64,21 +78,11 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 
 ### Flow
 
-- 在后台插件管理中安装插件然后解压
+- 先 [按照这里](#插件安装) 的步骤安装好插件，然后返回插件管理刷新页面
 
-  ![0edeffcf5a473a31361bb8e0a77b9189.png](/0edeffcf5a473a31361bb8e0a77b9189.png)
+- 点击 `添加Flow平台Token` 按钮
 
-- 在谷歌浏览器的插件管理中导入解压的文件夹
-
-  ![04563c906701e8bdb2ca9080abf1ddf3.png](/04563c906701e8bdb2ca9080abf1ddf3.png)
-
-  ![2bcea57f1b869e4c15b8f83962d0a615.png](/2bcea57f1b869e4c15b8f83962d0a615.png)
-
-  ![df2beb27952e0523390419952b1ab0a1.png](/df2beb27952e0523390419952b1ab0a1.png)
-
-- 返回插件管理刷新页面，看到插件已经安装后才可以点击添加 `Flow Token` 按钮
-
-  ![cc31d927c59c83d68685b514f29933d5.png](/cc31d927c59c83d68685b514f29933d5.png)
+  ![](/4066755b24c74d5bd73a47883a65d6f9.png)
 
 - 登陆谷歌账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
 
@@ -92,24 +96,28 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 >
 > - 程序自动创建 `Google Cloud` 项目，并开启 `Gemini for Google Cloud API` 能力
 
-- 在后台插件管理中安装插件然后解压
+- 先 [按照这里](#插件安装) 的步骤安装好插件，然后返回插件管理刷新页面
 
-  ![0edeffcf5a473a31361bb8e0a77b9189.png](/0edeffcf5a473a31361bb8e0a77b9189.png)
+- 点击 `添加Gemini Cli平台的Token` 按钮
 
-- 在谷歌浏览器的插件管理中导入解压的文件夹
-
-  ![04563c906701e8bdb2ca9080abf1ddf3.png](/04563c906701e8bdb2ca9080abf1ddf3.png)
-
-  ![2bcea57f1b869e4c15b8f83962d0a615.png](/2bcea57f1b869e4c15b8f83962d0a615.png)
-
-  ![df2beb27952e0523390419952b1ab0a1.png](/df2beb27952e0523390419952b1ab0a1.png)
-
-- 返回插件管理刷新页面，看到插件已经安装后才可以点击添加 `Gemini CLI Token` 按钮
-
-  ![5e3620f58fe5e805ac08413e7eab75f2.png](/5e3620f58fe5e805ac08413e7eab75f2.png)
+  ![5e3620f58fe5e805ac08413e7eab75f2.png](/e36e1bac4c24d9ea5d3ddd3916c20797.png)
 
 - 登陆谷歌账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
 
   ![f97c554473195e7f631f5eae2fd66a1a.png](/f97c554473195e7f631f5eae2fd66a1a.png)
 
   ![9dbbf62375f48abca61eee3e17e2a9b2.png](/9dbbf62375f48abca61eee3e17e2a9b2.png)
+
+### Antigravity
+
+- 先 [按照这里](#插件安装) 的步骤安装好插件，然后返回插件管理刷新页面
+
+- 点击 `添加Antigravity平台的Token` 按钮
+
+  ![5e3620f58fe5e805ac08413e7eab75f2.png](/8aa28c66fb4fb024caeaba745c214e35.png)
+
+- 登陆谷歌账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
+
+  ![f97c554473195e7f631f5eae2fd66a1a.png](/9354f5b0a03de472665fe60e8328d3f2.png)
+
+  ![9dbbf62375f48abca61eee3e17e2a9b2.png](/f5970918ab11951dde25544b535d0696.png)

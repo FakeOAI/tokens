@@ -8,7 +8,7 @@
 
 **认证方式:** `Bearer Token`、`X-Goog-Api-Key请求头`、`URL参数key`
 
-**Token 提取：** [点击查看](/others/extract-token.md#gemini-cli)
+**Token 提取：** [点击查看](/others/extract-token.md#antigravity)
 
 ## 模型列表
 
