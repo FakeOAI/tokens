@@ -20,7 +20,11 @@
 | `claude-sonnet-4-5-thinking` |
 | `gpt-oss-120b-medium`        |
 
-## 支持的接口
+### 对话接口
+
+官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
+
+::: code-group
 
 ```bash [普通对话]
 curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
