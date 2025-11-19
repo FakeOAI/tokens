@@ -18,6 +18,7 @@
 - Gemini 官网逆向
 - Gemini Cli 客户端逆向
 - Claude Code 客户端逆向
+- Antigravity 客户端逆向
 - ChatGPT 官网逆向
 - Codex 客户端逆向
 - Flow 官网逆向
@@ -44,6 +45,7 @@
 | **Gemini 官网逆向**        | `400 元/月` |
 | **Claude Code 客户端逆向** | `500 元/月` |
 | **Gemini Cli 客户端逆向**  | `500 元/月` |
+| **Antigravity 客户端逆向** | `500 元/月` |
 | **Codex 客户端逆向**       | `500 元/月` |
 | **Flow 官网逆向**          | `400 元/月` |
 
