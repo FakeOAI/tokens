@@ -24,10 +24,12 @@
 
 ### Pro 系列
 
-| 模型名称                  | 功能说明                |
-| ------------------------- | ----------------------- |
-| `gemini-2.5-pro`          | Gemini 2.5 Pro          |
-| `gemini-2.5-pro-thinking` | Gemini 2.5 Pro 思考模式 |
+| 模型名称                        | 功能说明                    |
+| ------------------------------- | --------------------------- |
+| `gemini-2.5-pro`                | Gemini 2.5 Pro              |
+| `gemini-3-pro-preview`          | Gemini 3 Pro 预览版         |
+| `gemini-2.5-pro-thinking`       | Gemini 2.5 Pro 思考模式     |
+| `gemini-3-pro-preview-thinking` | Gemini 3 Pro 预览版思考模式 |
 
 ## 支持的接口
 
