@@ -59,6 +59,15 @@
 | `gpt-5.1-codex-mini-medium` | GPT-5.1 Codex Mini 中级推理 | Medium   |
 | `gpt-5.1-codex-mini-high`   | GPT-5.1 Codex Mini 高级推理 | High     |
 
+### GPT-5.1 Codex Max 系列
+
+| 模型名称                   | 功能说明                     | 推理级别 |
+| -------------------------- | ---------------------------- | -------- |
+| `gpt-5.1-codex-max-low`    | GPT-5.1 Codex Max 低级推理   | Low      |
+| `gpt-5.1-codex-max-medium` | GPT-5.1 Codex Max 中级推理   | Medium   |
+| `gpt-5.1-codex-max-high`   | GPT-5.1 Codex Max 高级推理   | High     |
+| `gpt-5.1-codex-max-xhigh`  | GPT-5.1 Codex Max 超高级推理 | xHigh    |
+
 ## 支持的接口
 
 ### 对话接口
