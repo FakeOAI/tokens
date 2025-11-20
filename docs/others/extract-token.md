@@ -110,14 +110,21 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 
 ### Antigravity
 
-- 先 [按照这里](#插件安装) 的步骤安装好插件，然后返回插件管理刷新页面
+1. `refresh_token` 方式添加：
 
-- 点击 `添加Antigravity平台的Token` 按钮
+   - 在 Token 管理页面的添加 Token 中选择 Antigravity 平台，一行一个 `refresh_token`
+   - 需要确保 `refresh_token` 是由回调地址 `http://localhost:1024/oauth-callback` 生成的，不然其他回调地址生成的 `refresh_token` 无法加入到号池内
 
-  ![5e3620f58fe5e805ac08413e7eab75f2.png](/8aa28c66fb4fb024caeaba745c214e35.png)
+2. 插件添加：
 
-- 登陆谷歌账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
+   - 先 [按照这里](#插件安装) 的步骤安装好插件，然后返回插件管理刷新页面
 
-  ![f97c554473195e7f631f5eae2fd66a1a.png](/9354f5b0a03de472665fe60e8328d3f2.png)
+   - 点击 `添加Antigravity平台的Token` 按钮
 
-  ![9dbbf62375f48abca61eee3e17e2a9b2.png](/f5970918ab11951dde25544b535d0696.png)
+     ![5e3620f58fe5e805ac08413e7eab75f2.png](/8aa28c66fb4fb024caeaba745c214e35.png)
+
+   - 登陆谷歌账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
+
+     ![f97c554473195e7f631f5eae2fd66a1a.png](/9354f5b0a03de472665fe60e8328d3f2.png)
+
+     ![9dbbf62375f48abca61eee3e17e2a9b2.png](/f5970918ab11951dde25544b535d0696.png)
