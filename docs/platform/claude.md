@@ -43,6 +43,8 @@
 | `claude-opus-4-20250514-thinking`   | Claude 4 Opus 思考模式   |
 | `claude-opus-4-1-20250805`          | Claude 4.1 Opus          |
 | `claude-opus-4-1-20250805-thinking` | Claude 4.1 Opus 思考模式 |
+| `claude-opus-4-5-20251101`          | Claude 4.5 Opus          |
+| `claude-opus-4-5-20251101-thinking` | Claude 4.5 Opus 思考模式 |
 
 #### Claude 4 Haiku 系列
 
