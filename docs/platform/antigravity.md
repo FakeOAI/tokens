@@ -26,6 +26,12 @@
 | `claude-sonnet-4-5-thinking` |                                |
 | `gpt-oss-120b-medium`        |                                |
 
+## 支持的接口
+
+> [!WARNING]
+>
+> 图片接口需要额外付费开通
+
 ### 对话接口
 
 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
@@ -175,6 +181,33 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 
 :::
 
+### 图片接口
+
+官方文档：`https://platform.openai.com/docs/api-reference/images/create`
+
+::: code-group
+
+```bash [文生4K图]
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/images/generations' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: multipart/form-data' \
+--form 'prompt="画小猫"' \
+--form 'model="gemini-3-pro-image"'
+--form 'image_size="4K"'
+```
+
+```bash [图生4K图]
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/images/edits' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: multipart/form-data' \
+--form 'image[]=@"/path/to/example.jpg"' \
+--form 'prompt="换一个风格"' \
+--form 'model="gemini-3-pro-image"'
+--form 'image_size="4K"'
+```
+
+:::
+
 ### Gemini API 原生格式
 
 官方文档：`https://ai.google.dev/gemini-api/docs`
@@ -216,11 +249,18 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1b
 --data-raw '{"contents":[{"role":"user","parts":[{"text":"今日金价是多少？"}]}],"tools":[{"googleSearch":{}}]}'
 ```
 
+```bash [思考模式]
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-high:generateContent' \
+--header 'Content-Type: application/json' \
+--header 'X-Goog-Api-Key: Bearer <你的许可证>' \
+--data-raw '{"contents":[{"parts":[{"text":"9.8和9.11谁大"}]}],"generationConfig":{"thinkingConfig":{"thinkingLevel":"high"}}}'
+```
+
 :::
 
 ## 额外参数说明
 
-| 参数           | 描述                                        | 取值范围/选项      | 默认值 |
-| -------------- | ------------------------------------------- | ------------------ | ------ |
-| `aspect_ratio` | 指定图片比例，仅对话格式的 image 模型支持   | 任意比例           | `1:1`  |
-| `image_size`   | 指定图片分辨率，仅对话格式的 image 模型支持 | `1K` / `2K` / `4K` | `1K`   |
+| 参数           | 描述                                              | 取值范围/选项      | 默认值 |
+| -------------- | ------------------------------------------------- | ------------------ | ------ |
+| `aspect_ratio` | 指定图片比例，仅对话和图片接口的 image 模型支持   | 任意比例           | `1:1`  |
+| `image_size`   | 指定图片分辨率，仅对话和图片接口的 image 模型支持 | `1K` / `2K` / `4K` | `1K`   |
