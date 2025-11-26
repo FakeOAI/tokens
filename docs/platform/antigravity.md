@@ -12,19 +12,19 @@
 
 ## 模型列表
 
-| 模型名称                     | 说明                     |
-| ---------------------------- | ------------------------ |
-| `gemini-2.5-flash`           |                          |
-| `gemini-2.5-flash-image`     | Nano Banana 图像生成     |
-| `gemini-2.5-flash-lite`      |                          |
+| 模型名称                     | 说明                           |
+| ---------------------------- | ------------------------------ |
+| `gemini-2.5-flash`           | 支持联网搜索，请看原生格式示例 |
+| `gemini-2.5-flash-image`     | Nano Banana 图像生成           |
+| `gemini-2.5-flash-lite`      |                                |
 | `gemini-2.5-flash-thinking`  |
-| `gemini-2.5-pro`             |                          |
-| `gemini-3-pro-image`         | Nano Banana Pro 图像生成 |
-| `gemini-3-pro-low`           |                          |
-| `gemini-3-pro-high`          |                          |
-| `claude-sonnet-4-5`          |                          |
-| `claude-sonnet-4-5-thinking` |                          |
-| `gpt-oss-120b-medium`        |                          |
+| `gemini-2.5-pro`             |                                |
+| `gemini-3-pro-image`         | Nano Banana Pro 图像生成       |
+| `gemini-3-pro-low`           |                                |
+| `gemini-3-pro-high`          |                                |
+| `claude-sonnet-4-5`          |                                |
+| `claude-sonnet-4-5-thinking` |                                |
+| `gpt-oss-120b-medium`        |                                |
 
 ### 对话接口
 
@@ -207,6 +207,13 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1b
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
 --data-raw '{"contents":[{"role":"user","parts":[{"text":"换一个风格"},{"inline_data":{"mime_type":"image/jpeg","data":"$IMG_BASE64"}}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
+```
+
+```bash [联网搜索]
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-2.5-flash/generateContent' \
+--header 'Content-Type: application/json' \
+--header 'X-Goog-Api-Key: Bearer <你的许可证>' \
+--data-raw '{"contents":[{"role":"user","parts":[{"text":"今日金价是多少？"}]}],"tools":[{"googleSearch":{}}]}'
 ```
 
 :::
