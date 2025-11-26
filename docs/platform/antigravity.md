@@ -196,21 +196,21 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1b
 ```
 
 ```bash [文生4K图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image/generateContent' \
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
 --data-raw '{"contents":[{"role":"user","parts":[{"text":"画小猫"}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
 ```
 
 ```bash [图生4K图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image/generateContent' \
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
 --data-raw '{"contents":[{"role":"user","parts":[{"text":"换一个风格"},{"inline_data":{"mime_type":"image/jpeg","data":"$IMG_BASE64"}}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
 ```
 
 ```bash [联网搜索]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-2.5-flash/generateContent' \
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-2.5-flash:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
 --data-raw '{"contents":[{"role":"user","parts":[{"text":"今日金价是多少？"}]}],"tools":[{"googleSearch":{}}]}'
