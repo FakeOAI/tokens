@@ -182,14 +182,14 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 ::: code-group
 
 ```bash [非流式]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low/generateContent' \
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
 --data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
 ```
 
 ```bash [流式]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low/streamGenerateContent' \
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low:streamGenerateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
 --data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
