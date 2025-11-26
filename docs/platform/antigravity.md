@@ -12,13 +12,19 @@
 
 ## 模型列表
 
-| 模型名称                     |
-| ---------------------------- |
-| `gemini-3-pro-low`           |
-| `gemini-3-pro-high`          |
-| `claude-sonnet-4-5`          |
-| `claude-sonnet-4-5-thinking` |
-| `gpt-oss-120b-medium`        |
+| 模型名称                     | 说明                     |
+| ---------------------------- | ------------------------ |
+| `gemini-2.5-flash`           |                          |
+| `gemini-2.5-flash-image`     | Nano Banana 图像生成     |
+| `gemini-2.5-flash-lite`      |                          |
+| `gemini-2.5-flash-thinking`  |
+| `gemini-2.5-pro`             |                          |
+| `gemini-3-pro-image`         | Nano Banana Pro 图像生成 |
+| `gemini-3-pro-low`           |                          |
+| `gemini-3-pro-high`          |                          |
+| `claude-sonnet-4-5`          |                          |
+| `claude-sonnet-4-5-thinking` |                          |
+| `gpt-oss-120b-medium`        |                          |
 
 ### 对话接口
 
@@ -189,4 +195,25 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1b
 --data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
 ```
 
+```bash [文生4K图]
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image/generateContent' \
+--header 'Content-Type: application/json' \
+--header 'X-Goog-Api-Key: Bearer <你的许可证>' \
+--data-raw '{"contents":[{"role":"user","parts":[{"text":"画小猫"}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
+```
+
+```bash [图生4K图]
+curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image/generateContent' \
+--header 'Content-Type: application/json' \
+--header 'X-Goog-Api-Key: Bearer <你的许可证>' \
+--data-raw '{"contents":[{"role":"user","parts":[{"text":"换一个风格"},{"inline_data":{"mime_type":"image/jpeg","data":"$IMG_BASE64"}}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
+```
+
 :::
+
+## 额外参数说明
+
+| 参数           | 描述                                        | 取值范围/选项      | 默认值 |
+| -------------- | ------------------------------------------- | ------------------ | ------ |
+| `aspect_ratio` | 指定图片比例，仅对话格式的 image 模型支持   | 任意比例           | `1:1`  |
+| `image_size`   | 指定图片分辨率，仅对话格式的 image 模型支持 | `1K` / `2K` / `4K` | `1K`   |
