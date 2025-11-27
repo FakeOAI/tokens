@@ -1,16 +1,8 @@
 # 全平台接口文档
 
-本文档提供了 Tokens 平台所有支持的 API 接口使用说明。所有接口均兼容 OpenAI 官方 API 格式，可以直接使用 OpenAI SDK 进行调用。
+## [对话接口](https://platform.openai.com/docs/api-reference/chat/create)
 
-## 对话接口
-
-对话接口是 Tokens 平台的核心接口，支持文本对话、图片理解、文件处理等多种功能。
-
-**官方文档参考：** `https://platform.openai.com/docs/api-reference/chat/create`
-
-**接口地址：** `POST http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completions`
-
-**认证方式：** `Bearer Token`（在请求头中传递许可证）
+`POST /{platform}/v1/chat/completions`
 
 **请求参数：**
 
@@ -25,7 +17,7 @@
 ::: code-group
 
 ```bash [发送文字]
-curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completions' \
+curl -X POST 'http://localhost/{platform}/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
@@ -40,7 +32,7 @@ curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completion
 ```
 
 ```bash [发送图片]
-curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completions' \
+curl -X POST 'http://localhost/{platform}/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
@@ -66,7 +58,7 @@ curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completion
 ```
 
 ```bash [发送文件]
-curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completions' \
+curl -X POST 'http://localhost/{platform}/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
@@ -92,7 +84,7 @@ curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completion
 ```
 
 ```bash [流式对话]
-curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completions' \
+curl -X POST 'http://localhost/{platform}/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
@@ -108,7 +100,7 @@ curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completion
 ```
 
 ```bash [多轮对话]
-curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/chat/completions' \
+curl -X POST 'http://localhost/{platform}/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
@@ -182,29 +174,25 @@ data: [DONE]
 
 ## 图片接口
 
-### 图片生成接口
+### [图片生成接口](https://platform.openai.com/docs/api-reference/images/create)
 
-图片接口兼容 OpenAI API 接口格式，支持图片生成、图片编辑等格式，以及平台独特的图片异步生成功能。
-
-**官方文档参考：** `https://platform.openai.com/docs/api-reference/images/create`
-
-**接口地址：** `POST http://<你的IP>:<你的端口>/<平台名称>/v1/images/generations`
-
-**认证方式：** `Bearer Token`（在请求头中传递许可证）
+`POST /{platform}/v1/images/generations`
 
 **请求参数：**
 
-| 参数名   | 类型     | 必填 | 说明                                                 |
-| -------- | -------- | ---- | ---------------------------------------------------- |
-| `prompt` | `string` | 是   | 图片描述，用于生成图片                               |
-| `model`  | `string` | 是   | 平台模型名称，不同平台支持的模型不同，详见各平台文档 |
+| 参数名            | 类型      | 必填 | 说明                                                      |
+| ----------------- | --------- | ---- | --------------------------------------------------------- |
+| `prompt`          | `string`  | 是   | 图片描述，用于编辑图片                                    |
+| `model`           | `string`  | 是   | 平台模型名称，不同平台支持的模型不同，详见各平台文档      |
+| `response_format` | `enum`    | 否   | 响应格式，枚举值为 `b64_json` 或 `url`，默认为 `b64_json` |
+| `async`           | `boolean` | 否   | 是否异步生成，默认为 `false`                              |
 
 **请求示例：**
 
 ::: code-group
 
 ```bash [JSON格式]
-curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/images/generations' \
+curl -X POST 'http://localhost/{platform}/v1/images/generations' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
@@ -214,39 +202,45 @@ curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/images/generati
 ```
 
 ```bash [表单格式]
-curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/images/generations' \
+curl -X POST 'http://localhost/{platform}/v1/images/generations' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'prompt="<图片描述>"' \
 --form 'model="<平台模型>"'
 ```
 
+```bash [异步生成接口]
+curl -X POST 'http://localhost/{platform}/v1/images/generations?async=true' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <你的许可证>' \
+--data-raw '{
+    "prompt": "<图片描述>",
+    "model": "<平台模型>"
+}'
+```
+
 :::
 
-### 图片编辑接口
+### [图片编辑接口](https://platform.openai.com/docs/api-reference/images/createEdit)
 
-图片编辑接口兼容 OpenAI API 接口格式，支持图片编辑、图片修复等格式，以及平台独特的图片异步编辑功能。
-
-**官方文档参考：** `https://platform.openai.com/docs/api-reference/images/create`
-
-**接口地址：** `POST http://<你的IP>:<你的端口>/<平台名称>/v1/images/edits`
-
-**认证方式：** `Bearer Token`（在请求头中传递许可证）
+`POST /{platform}/v1/images/edits`
 
 **请求参数：**
 
-| 参数名   | 类型               | 必填 | 说明                                                 |
-| -------- | ------------------ | ---- | ---------------------------------------------------- |
-| `prompt` | `string`           | 是   | 图片描述，用于编辑图片                               |
-| `model`  | `string`           | 是   | 平台模型名称，不同平台支持的模型不同，详见各平台文档 |
-| `image`  | `string` / `array` | 是   | 图片 URL 或者 base64，支持单图或多图                 |
+| 参数名            | 类型                           | 必填 | 说明                                                      |
+| ----------------- | ------------------------------ | ---- | --------------------------------------------------------- |
+| `prompt`          | `string`                       | 是   | 图片描述，用于编辑图片                                    |
+| `model`           | `string`                       | 是   | 平台模型名称，不同平台支持的模型不同，详见各平台文档      |
+| `image`           | `string` / `string[]` / `form` | 是   | 图片 URL 或者 base64，支持单图或多图                      |
+| `response_format` | `enum`                         | 否   | 响应格式，枚举值为 `b64_json` 或 `url`，默认为 `b64_json` |
+| `async`           | `boolean`                      | 否   | 是否异步生成，默认为 `false`                              |
 
 **请求示例：**
 
 ::: code-group
 
 ```bash [JSON格式]
-curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/images/edits' \
+curl -X POST 'http://localhost/{platform}/v1/images/edits' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
@@ -257,7 +251,7 @@ curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/images/edits' \
 ```
 
 ```bash [表单格式]
-curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/images/edits' \
+curl -X POST 'http://localhost/{platform}/v1/images/edits' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'image[]=@"/path/to/example1.jpg"' \
@@ -266,16 +260,173 @@ curl -X POST 'http://<你的IP>:<你的端口>/<平台名称>/v1/images/edits' \
 --form 'model="<平台模型>"'
 ```
 
+```bash [异步编辑接口]
+curl -X POST 'http://localhost/{platform}/v1/images/edits?async=true' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <你的许可证>' \
+--data-raw '{
+    "image": "<图片URL或者base64>",
+    "prompt": "<图片描述>",
+    "model": "<平台模型>"
+}'
+```
+
 :::
+
+**响应示例：**
+
+::: code-group
+
+```json [Base64响应]
+{
+  "created": 1234567890,
+  "data": [
+    {
+      "b64_json": "data:image/png;base64,..."
+    }
+  ]
+}
+```
+
+```json [URL响应]
+{
+  "created": 1234567890,
+  "data": [
+    {
+      "url": "https://example.com/image.png"
+    }
+  ]
+}
+```
+
+:::
+
+### 获取图片任务详情接口
+
+`GET /{platform}/v1/images/{task_id}`
+
+[具体返回请看](#获取视频任务详情接口)
 
 ## 视频接口
 
-视频接口兼容 OpenAI API 接口格式，支持视频生成、视频编辑等格式，以及平台独特的视频异步生成功能。
+### [视频生成接口](https://platform.openai.com/docs/api-reference/videos/create)
 
-**官方文档参考：** `https://platform.openai.com/docs/api-reference/videos/create`
-
-**接口地址：** `POST http://<你的IP>:<你的端口>/<平台名称>/v1/videos`
-
-**认证方式：** `Bearer Token`（在请求头中传递许可证）
+`POST /{platform}/v1/videos`
 
 **请求参数：**
+
+| 参数名            | 类型                           | 必填 | 说明                                                 |
+| ----------------- | ------------------------------ | ---- | ---------------------------------------------------- |
+| `prompt`          | `string`                       | 是   | 视频描述，用于生成视频                               |
+| `model`           | `string`                       | 是   | 平台模型名称，不同平台支持的模型不同，详见各平台文档 |
+| `input_reference` | `string` / `string[]` / `form` | 否   | 输入参考，用于生成视频，可以是图片的 URL 或者 base64 |
+
+**请求示例：**
+
+::: code-group
+
+```bash [JSON格式]
+curl -X POST 'http://localhost/{platform}/v1/videos' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <你的许可证>' \
+--data-raw '{
+    "prompt": "<视频描述>",
+    "model": "<平台模型>",
+    "input_reference": "<输入参考的URL或者base64>"
+}'
+```
+
+```bash [表单格式]
+curl -X POST 'http://localhost/{platform}/v1/videos' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: multipart/form-data' \
+--form 'input_reference[]=@"/path/to/example1.jpg"' \
+--form 'input_reference[]=@"/path/to/example2.jpg"' \
+--form 'prompt="<视频描述>"' \
+--form 'model="<平台模型>"'
+```
+
+:::
+
+### [视频编辑接口](https://platform.openai.com/docs/api-reference/videos/remix)
+
+`POST /{platform}/v1/videos/{task_id}/remix`
+
+**请求参数：**
+
+| 参数名            | 类型                           | 必填 | 说明                                                 |
+| ----------------- | ------------------------------ | ---- | ---------------------------------------------------- |
+| `prompt`          | `string`                       | 是   | 视频描述，用于编辑视频                               |
+| `model`           | `string`                       | 是   | 平台模型名称，不同平台支持的模型不同，详见各平台文档 |
+| `input_reference` | `string` / `string[]` / `form` | 否   | 输入参考，用于编辑视频，可以是图片的 URL 或者 base64 |
+
+**请求示例：**
+
+::: code-group
+
+```bash [JSON格式]
+curl -X POST 'http://localhost/{platform}/v1/videos/{task_id}/remix' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <你的许可证>' \
+--data-raw '{
+    "prompt": "<视频编辑提示词>",
+    "model": "<平台模型>"
+    "input_reference": "<输入参考的URL或者base64>"
+}'
+```
+
+```bash [表单格式]
+curl -X POST 'http://localhost/{platform}/v1/videos/{task_id}/remix' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: multipart/form-data' \
+--form 'input_reference[]=@"/path/to/example1.jpg"' \
+--form 'input_reference[]=@"/path/to/example2.jpg"' \
+--form 'prompt="<视频编辑提示词>"' \
+--form 'model="<平台模型>"'
+```
+
+:::
+
+### [获取视频任务详情接口](https://platform.openai.com/docs/api-reference/videos/retrieve)
+
+`GET /{platform}/v1/videos/{task_id}`
+
+**请求参数：**
+
+| 参数名    | 类型      | 必填 | 说明                                                       |
+| --------- | --------- | ---- | ---------------------------------------------------------- |
+| `task_id` | `string`  | 是   | 任务 ID                                                    |
+| `detail`  | `boolean` | 否   | 是否返回任务详情，详情包含任务的元数据信息，默认为 `false` |
+
+**异步响应：**
+
+::: code-group
+
+```json [普通响应]
+{
+  "id": "<任务ID>",
+  "object": "<任务类型>",
+  "model": "<平台模型>",
+  "status": "<任务状态>",
+  "created_at": "<创建时间>"
+}
+```
+
+```json [详情响应]
+{
+  "id": "<任务ID>",
+  "object": "<任务类型>",
+  "model": "<平台模型>",
+  "status": "<任务状态>",
+  "created_at": "<创建时间>",
+  "detail": {...}
+}
+```
+
+:::
+
+### [获取视频文件内容接口](https://platform.openai.com/docs/api-reference/videos/content)
+
+`GET /{platform}/v1/videos/{task_id}/content`
+
+返回视频文件内容
