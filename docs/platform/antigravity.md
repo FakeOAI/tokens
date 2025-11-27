@@ -253,7 +253,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1b
 curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-high:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data-raw '{"contents":[{"parts":[{"text":"9.8和9.11谁大"}]}],"generationConfig":{"thinkingConfig":{"thinkingLevel":"high"}}}'
+--data-raw '{"contents":[{"role":"user","parts":[{"text":"9.8和9.11谁大"}]}],"generationConfig":{"thinkingConfig":{"includeThoughts":true,"thinkingLevel":"high"}}}'
 ```
 
 :::
