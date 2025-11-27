@@ -44,11 +44,16 @@
 OpenAI 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
 ```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "你是什么模型"
+        }
+    ],
     "model": "gemini-2.5-flash",
     "stream": true
 }'
@@ -61,7 +66,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
 ::: code-group
 
 ```bash [文生图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/generations' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/generations' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'prompt="画小猫"' \
@@ -69,7 +74,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official
 ```
 
 ```bash [图生图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/edits' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/edits' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'image[]=@"/path/to/example.jpg"' \

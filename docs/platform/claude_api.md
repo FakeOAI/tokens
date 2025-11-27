@@ -51,11 +51,16 @@
 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
 ```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/claude_api/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "你是什么模型"
+        }
+    ],
     "model": "claude-sonnet-4-20250514",
     "stream": true
 }'
@@ -68,12 +73,22 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/c
 官方文档：`https://docs.claude.com/en/api/messages`
 
 ```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/claude_api/v1/messages' \
+curl -X POST 'http://<你的IP>:<你的端口>/claude_api/v1/messages' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
-    "system": [{"type": "text", "text": "你是一个AI助手，请根据用户的问题给出回答"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "你是什么模型"
+        }
+    ],
+    "system": [
+        {
+            "type": "text",
+            "text": "你是一个AI助手，请根据用户的问题给出回答"
+        }
+    ],
     "model": "claude-sonnet-4-20250514",
     "stream": true
 }'

@@ -14,7 +14,7 @@
 
 ```bash
 # 获取后台面板数据
-curl --location --request GET 'http://<你的IP>:<你的端口>/admin-api/dashboard' \
+curl -X GET 'http://<你的IP>:<你的端口>/admin-api/dashboard' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的JWT Token>'
 ```

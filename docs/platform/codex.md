@@ -75,11 +75,16 @@
 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
 ```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/codex/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/codex/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "你是什么模型"
+        }
+    ],
     "session_id": "my-session-123，可选",
     "model": "gpt-5-high",
     "stream": true
@@ -91,11 +96,23 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/codex/v1/chat/c
 官方文档：`https://platform.openai.com/docs/api-reference/responses/create`
 
 ```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/codex/v1/responses' \
+curl -X POST 'http://<你的IP>:<你的端口>/codex/v1/responses' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "input": [{"content":[{"text":"hi","type":"input_text"}],"id":null,"role":"user","type":"message"}],
+--data '{
+    "input": [
+        {
+            "content": [
+                {
+                    "text": "hi",
+                    "type": "input_text"
+                }
+            ],
+            "id": null,
+            "role": "user",
+            "type": "message"
+        }
+    ],
     "session_id": "my-session-123，可选",
     "model": "gpt-5",
     "reasoning": {

@@ -75,22 +75,32 @@
 ::: code-group
 
 ```bash [普通对话]
-curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "你是什么模型"
+        }
+    ],
     "model": "gpt-4o",
     "stream": true
 }'
 ```
 
 ```bash [调用GPTs]
-curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "帮我分析一下这段代码"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "帮我分析一下这段代码"
+        }
+    ],
     "model": "gpt-4o-gizmo-g-2DQzU5UZl",
     "stream": true
 }'

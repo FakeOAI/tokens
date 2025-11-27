@@ -61,6 +61,7 @@ export default defineConfig({
         items: [
           { text: "高阶玩法", link: "high-level-play" },
           { text: "储存配置", link: "storage" },
+          // { text: "接口文档", link: "api-reference" },
           { text: "额外参数", link: "extra-params" },
           { text: "Token提取", link: "extract-token" },
           { text: "后台鉴权", link: "admin-auth" },

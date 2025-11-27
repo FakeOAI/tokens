@@ -38,11 +38,16 @@
 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
 ```bash
-curl --location --request POST 'http://<你的IP>:<你的端口>/grok/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/grok/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "你是什么模型"
+        }
+    ],
     "model": "grok-4",
     "stream": true
 }'

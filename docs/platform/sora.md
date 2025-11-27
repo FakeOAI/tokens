@@ -50,28 +50,43 @@
 ::: code-group
 
 ```bash [文生图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "画小猫"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "画小猫"
+        }
+    ],
     "model": "sora_image",
     "stream": true
 }'
 ```
 
 ```bash [图生图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{
-        "role": "user",
-        "content": [
-            {"type": "text", "text": "根据图片换个风格"},
-            {"type": "image_url", "image_url": {"url": "url或者base64"}}
-        ]
-    }],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "根据图片换个风格"
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": "url或者base64"
+                    }
+                }
+            ]
+        }
+    ],
     "model": "sora_image",
     "stream": true
 }'
@@ -86,7 +101,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/chat/co
 ::: code-group
 
 ```bash [文生图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/generations' \
+curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/images/generations' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'prompt="画小猫"' \
@@ -94,7 +109,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/
 ```
 
 ```bash [图生图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/edits' \
+curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/images/edits' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'image[]=@"/path/to/example.jpg"' \
@@ -111,10 +126,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/images/
 ::: code-group
 
 ```bash [文生视频]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos' \
+curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/videos' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: application/json' \
---data-raw '{
+--data '{
     "prompt": "画小猫",
     "model": "sora_video2"
 }'
@@ -130,12 +145,12 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos'
 ```
 
 ```bash [查询视频任务状态]
-curl --location --request GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}' \
+curl -X GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}' \
 --header 'Authorization: Bearer <你的许可证>'
 ```
 
 ```bash [获取视频内容]
-curl --location --request GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/content' \
+curl -X GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/content' \
 --header 'Authorization: Bearer <你的许可证>'
 ```
 

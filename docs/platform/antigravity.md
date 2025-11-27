@@ -39,10 +39,10 @@
 ::: code-group
 
 ```bash [普通对话]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{"role": "user", "content": "你是什么模型"}],
     "model": "gemini-3-pro-low",
     "stream": true
@@ -50,10 +50,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 ```
 
 ```bash [图片理解]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": [
@@ -75,10 +75,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 ```
 
 ```bash [音频理解]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": [
@@ -100,10 +100,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 ```
 
 ```bash [视频理解]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": [
@@ -125,10 +125,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 ```
 
 ```bash [函数调用]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": "What is the weather like in Boston today?"
@@ -160,10 +160,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 ```
 
 ```bash [代码执行]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": "What is the sum of the first 50 prime numbers? Generate and run code for the calculation, and make sure you get all 50."
@@ -188,7 +188,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 ::: code-group
 
 ```bash [文生4K图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/images/generations' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1/images/generations' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'prompt="画小猫"' \
@@ -197,7 +197,7 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 ```
 
 ```bash [图生4K图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/images/edits' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1/images/edits' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'image[]=@"/path/to/example.jpg"' \
@@ -215,45 +215,45 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1/
 ::: code-group
 
 ```bash [非流式]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low:generateContent' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+--data '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
 ```
 
 ```bash [流式]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low:streamGenerateContent' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low:streamGenerateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data-raw '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+--data '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
 ```
 
 ```bash [文生4K图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image:generateContent' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data-raw '{"contents":[{"role":"user","parts":[{"text":"画小猫"}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
+--data '{"contents":[{"role":"user","parts":[{"text":"画小猫"}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
 ```
 
 ```bash [图生4K图]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image:generateContent' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data-raw '{"contents":[{"role":"user","parts":[{"text":"换一个风格"},{"inline_data":{"mime_type":"image/jpeg","data":"$IMG_BASE64"}}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
+--data '{"contents":[{"role":"user","parts":[{"text":"换一个风格"},{"inline_data":{"mime_type":"image/jpeg","data":"$IMG_BASE64"}}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
 ```
 
 ```bash [联网搜索]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-2.5-flash:generateContent' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-2.5-flash:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data-raw '{"contents":[{"role":"user","parts":[{"text":"今日金价是多少？"}]}],"tools":[{"googleSearch":{}}]}'
+--data '{"contents":[{"role":"user","parts":[{"text":"今日金价是多少？"}]}],"tools":[{"googleSearch":{}}]}'
 ```
 
 ```bash [思考模式]
-curl --location --request POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-high:generateContent' \
+curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-high:generateContent' \
 --header 'Content-Type: application/json' \
 --header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data-raw '{"contents":[{"role":"user","parts":[{"text":"9.8和9.11谁大"}]}],"generationConfig":{"thinkingConfig":{"includeThoughts":true,"thinkingLevel":"high"}}}'
+--data '{"contents":[{"role":"user","parts":[{"text":"9.8和9.11谁大"}]}],"generationConfig":{"thinkingConfig":{"includeThoughts":true,"thinkingLevel":"high"}}}'
 ```
 
 :::

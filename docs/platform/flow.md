@@ -46,11 +46,16 @@
 :::: code-group
 
 ```bash [文生视频]
-curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "画只猪在天上飞"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "画只猪在天上飞"
+        }
+    ],
     "model": "veo_3_1",
     "stream": true,
     "n": 2
@@ -58,10 +63,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/co
 ```
 
 ```bash [帧转视频]
-curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": [
@@ -96,22 +101,22 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/chat/co
 :::: code-group
 
 ```bash [创建视频任务]
-curl --location --request POST 'http://<你的IP>:<你的端口>/flow/v1/videos' \
+curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/videos' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: application/json' \
---data-raw '{
+--data '{
     "prompt": "画小猫",
     "model": "veo_3_1"
 }'
 ```
 
 ```bash [查询视频任务状态]
-curl --location --request GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}' \
+curl -X GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}' \
 --header 'Authorization: Bearer <你的许可证>'
 ```
 
 ```bash [获取视频内容]
-curl --location --request GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}/content' \
+curl -X GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}/content' \
 --header 'Authorization: Bearer <你的许可证>'
 ```
 

@@ -45,32 +45,42 @@ Gemini 官方文档：`https://ai.google.dev/gemini-api/docs`
 ::: code-group
 
 ```bash [普通对话]
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "你是什么模型"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "你是什么模型"
+        }
+    ],
     "model": "gemini-2.0-flash",
     "stream": true
 }'
 ```
 
 ```bash [图像生成]
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "messages": [{"role": "user", "content": "画小猫"}],
+--data '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "画小猫"
+        }
+    ],
     "model": "gemini-2.0-flash-exp-image-generation",
     "stream": true
 }'
 ```
 
 ```bash [图片理解]
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": [
@@ -92,10 +102,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```
 
 ```bash [音频理解]
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": [
@@ -117,10 +127,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```
 
 ```bash [视频理解]
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": [
@@ -142,10 +152,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```
 
 ```bash [函数调用]
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": "What is the weather like in Boston today?"
@@ -177,10 +187,10 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/
 ```
 
 ```bash [代码执行]
-curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
+--data '{
     "messages": [{
         "role": "user",
         "content": "What is the sum of the first 50 prime numbers? Generate and run code for the calculation, and make sure you get all 50."
