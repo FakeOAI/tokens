@@ -28,14 +28,15 @@
 
 **支持的参数**
 
-| 参数        | 说明              | 适用模型      |
-| ----------- | ----------------- | ------------- |
-| `portrait`  | 生成竖屏视频      | `sora_video2` |
-| `landscape` | 生成横屏视频      | `sora_video2` |
-| `hd`        | 生成高清视频      | `sora_video2` |
-| `15s`       | 生成 15 秒视频    | `sora_video2` |
-| `25s`       | 生成 25 秒视频    | `sora_video2` |
-| `pro`       | 使用 Pro 版本模型 | `sora_video2` |
+| 参数         | 说明                                   | 适用模型      |
+| ------------ | -------------------------------------- | ------------- |
+| `portrait`   | 生成竖屏视频                           | `sora_video2` |
+| `landscape`  | 生成横屏视频                           | `sora_video2` |
+| `hd`         | 生成高清视频                           | `sora_video2` |
+| `15s`        | 生成 15 秒视频                         | `sora_video2` |
+| `25s`        | 生成 25 秒视频                         | `sora_video2` |
+| `pro`        | 使用 Pro 版本模型                      | `sora_video2` |
+| `storyboard` | 使用故事板实现更精细的视频生成细节控制 | `sora_video2` |
 
 ## 支持的接口
 
