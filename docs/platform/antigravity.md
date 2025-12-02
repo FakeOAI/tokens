@@ -217,42 +217,42 @@ curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1/images/edits' \
 ```bash [非流式]
 curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low:generateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+--header 'X-Goog-Api-Key: <你的许可证>' \
+--data '{"contents":[{"role":"user","parts":[{"text":"你是什么模型?"}]}]}'
 ```
 
 ```bash [流式]
 curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-low:streamGenerateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+--header 'X-Goog-Api-Key: <你的许可证>' \
+--data '{"contents":[{"role":"user","parts":[{"text":"你是什么模型?"}]}]}'
 ```
 
 ```bash [文生4K图]
 curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image:generateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: Bearer <你的许可证>' \
+--header 'X-Goog-Api-Key: <你的许可证>' \
 --data '{"contents":[{"role":"user","parts":[{"text":"画小猫"}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
 ```
 
 ```bash [图生4K图]
 curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-image:generateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: Bearer <你的许可证>' \
+--header 'X-Goog-Api-Key: <你的许可证>' \
 --data '{"contents":[{"role":"user","parts":[{"text":"换一个风格"},{"inline_data":{"mime_type":"image/jpeg","data":"$IMG_BASE64"}}]}],"generationConfig":{"responseModalities":["TEXT","IMAGE"],"imageConfig":{"aspectRatio":"1:1","imageSize":"4K"}}}'
 ```
 
 ```bash [联网搜索]
 curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-2.5-flash:generateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: Bearer <你的许可证>' \
+--header 'X-Goog-Api-Key: <你的许可证>' \
 --data '{"contents":[{"role":"user","parts":[{"text":"今日金价是多少？"}]}],"tools":[{"googleSearch":{}}]}'
 ```
 
 ```bash [思考模式]
 curl -X POST 'http://<你的IP>:<你的端口>/antigravity/v1beta/models/gemini-3-pro-high:generateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: Bearer <你的许可证>' \
+--header 'X-Goog-Api-Key: <你的许可证>' \
 --data '{"contents":[{"role":"user","parts":[{"text":"9.8和9.11谁大"}]}],"generationConfig":{"thinkingConfig":{"includeThoughts":true,"thinkingLevel":"high"}}}'
 ```
 
