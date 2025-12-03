@@ -12,9 +12,12 @@
 
 ## 模型列表
 
-| 模型名称  | 功能说明             | 默认设置         |
-| --------- | -------------------- | ---------------- |
-| `veo_3_1` | Veo 3.1 视频生成模型 | 默认生成竖屏视频 |
+| 模型名称          | 功能说明                     | 默认设置         |
+| ----------------- | ---------------------------- | ---------------- |
+| `veo_3_1`         | Veo 3.1 视频生成模型         | 默认生成竖屏视频 |
+| `nano_banana`     | Nano Banana 图片生成模型     | 默认生成竖屏视频 |
+| `nano_banana_pro` | Nano Banana Pro 图片生成模型 | 默认生成竖屏视频 |
+| `imagen_4`        | Imagen 4 图片生成模型        | 默认生成竖屏视频 |
 
 **模型参数组合**
 
@@ -26,18 +29,18 @@
 
 **支持的参数**
 
-| 参数        | 说明                           | 适用模型  |
-| ----------- | ------------------------------ | --------- |
-| `portrait`  | 生成竖屏视频                   | `veo_3_1` |
-| `landscape` | 生成横屏视频                   | `veo_3_1` |
-| `fast`      | 快速生成模式                   | `veo_3_1` |
-| `fl`        | 帧转视频模式（Frame-to-Video） | `veo_3_1` |
+| 参数        | 说明                           | 适用模型                                                |
+| ----------- | ------------------------------ | ------------------------------------------------------- |
+| `portrait`  | 生成竖屏的图片或视频           | `veo_3_1`、`nano_banana`、`nano_banana_pro`、`imagen_4` |
+| `landscape` | 生成横屏的图片或视频           | `veo_3_1`、`nano_banana`、`nano_banana_pro`、`imagen_4` |
+| `fast`      | 快速生成模式                   | `veo_3_1`                                               |
+| `fl`        | 帧转视频模式（Frame-to-Video） | `veo_3_1`                                               |
 
 ## 支持的接口
 
 > [!WARNING]
 >
-> 视频接口需要额外付费开通
+> 图片接口和视频接口需要额外付费开通
 
 ### 对话接口
 
@@ -94,6 +97,31 @@ curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
 }'
 ```
 
+### 图片接口
+
+官方文档：`https://platform.openai.com/docs/api-reference/images/create`
+
+::: code-group
+
+```bash [文生图]
+curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/images/generations' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: multipart/form-data' \
+--form 'prompt="画小猫"' \
+--form 'model="nano_banana"'
+```
+
+```bash [图生图]
+curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/images/edits' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: multipart/form-data' \
+--form 'image[]=@"/path/to/example.jpg"' \
+--form 'prompt="换一个风格"' \
+--form 'model="nano_banana"'
+```
+
+:::
+
 ### 视频接口
 
 官方文档：`https://platform.openai.com/docs/api-reference/videos/create`
@@ -124,7 +152,7 @@ curl -X GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}/content'
 
 ## 额外参数说明
 
-| 参数   | 描述                                                                  | 取值范围/选项      | 默认值 | 备注                                                                  |
-| ------ | --------------------------------------------------------------------- | ------------------ | ------ | --------------------------------------------------------------------- |
-| `n`    | 视频生成不同变体的数量                                                | 1-4                | 1      | `/v1/videos` 异步接口不支持此参数，仅 `/v1/chat/completions` 接口支持 |
-| `size` | 生成视频的尺寸，格式为 `widthxheight`，例如 `720x1280` 或 `1920x1080` | 任意符合格式的数值 | -      | -                                                                     |
+| 参数   | 描述                                                                       | 取值范围/选项      | 默认值 | 备注                                           |
+| ------ | -------------------------------------------------------------------------- | ------------------ | ------ | ---------------------------------------------- |
+| `n`    | 图片或视频生成不同变体的数量                                               | 1-4                | 1      | 视频接口不支持此参数，仅对话接口和图片接口支持 |
+| `size` | 生成图片或视频的尺寸，格式为 `widthxheight`，例如 `1024x1024`、`1920x1080` | 任意符合格式的数值 | -      | 宽大于高为横屏，高大于宽为竖屏                 |
