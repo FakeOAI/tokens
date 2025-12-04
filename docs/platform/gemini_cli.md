@@ -189,17 +189,17 @@ curl -X POST 'http://<你的IP>:<你的端口>/gemini_cli/v1/chat/completions' \
 ::: code-group
 
 ```bash [非流式]
-curl -X POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/generateContent' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro:generateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+--header 'X-Goog-Api-Key: <你的许可证>' \
+--data '{"contents":[{"role":"user","parts":[{"text":"你是什么模型?"}]}]}'
 ```
 
 ```bash [流式]
-curl -X POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro/streamGenerateContent' \
+curl -X POST 'http://<你的IP>:<你的端口>/gemini_cli/v1beta/models/gemini-2.5-pro:streamGenerateContent' \
 --header 'Content-Type: application/json' \
---header 'X-Goog-Api-Key: Bearer <你的许可证>' \
---data '{"contents":[{"parts":[{"text":"你是什么模型?"}]}]}'
+--header 'X-Goog-Api-Key: <你的许可证>' \
+--data '{"contents":[{"role":"user","parts":[{"text":"你是什么模型?"}]}]}'
 ```
 
 :::
