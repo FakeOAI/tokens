@@ -26,6 +26,14 @@
 | `claude-sonnet-4-5-thinking` |                                |
 | `gpt-oss-120b-medium`        |                                |
 
+**支持的参数**
+
+| 参数 | 说明           | 适用模型                                       |
+| ---- | -------------- | ---------------------------------------------- |
+| `4K` | 生成 4K 的图片 | `gemini-3-pro-image`、`gemini-2.5-flash-image` |
+| `2K` | 生成 2K 的图片 | `gemini-3-pro-image`、`gemini-2.5-flash-image` |
+| `1K` | 生成 1K 的图片 | `gemini-3-pro-image`、`gemini-2.5-flash-image` |
+
 ## 支持的接口
 
 > [!WARNING]
