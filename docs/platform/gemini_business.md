@@ -8,6 +8,8 @@
 
 **认证方式:** `Bearer Token`
 
+**Token 提取：** [点击查看](/others/extract-token.md#gemini-business)
+
 ### 模型列表
 
 | 模型名称               | 特殊说明 |
