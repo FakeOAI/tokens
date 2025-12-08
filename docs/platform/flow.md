@@ -29,12 +29,13 @@
 
 **支持的参数**
 
-| 参数        | 说明                           | 适用模型                                                |
-| ----------- | ------------------------------ | ------------------------------------------------------- |
-| `portrait`  | 生成竖屏的图片或视频           | `veo_3_1`、`nano_banana`、`nano_banana_pro`、`imagen_4` |
-| `landscape` | 生成横屏的图片或视频           | `veo_3_1`、`nano_banana`、`nano_banana_pro`、`imagen_4` |
-| `fast`      | 快速生成模式                   | `veo_3_1`                                               |
-| `fl`        | 帧转视频模式（Frame-to-Video） | `veo_3_1`                                               |
+| 参数        | 说明                             | 适用模型                                                |
+| ----------- | -------------------------------- | ------------------------------------------------------- |
+| `portrait`  | 生成竖屏的图片或视频             | `veo_3_1`、`nano_banana`、`nano_banana_pro`、`imagen_4` |
+| `landscape` | 生成横屏的图片或视频             | `veo_3_1`、`nano_banana`、`nano_banana_pro`、`imagen_4` |
+| `fast`      | 快速生成模式                     | `veo_3_1`                                               |
+| `fl`        | 帧转视频模式（Frame-to-Video）   | `veo_3_1`                                               |
+| `relaxed`   | 低优先级的 fast 模式，不消耗额度 | `veo_3_1`                                               |
 
 ## 支持的接口
 
