@@ -129,13 +129,25 @@ curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/images/edits' \
 
 :::: code-group
 
-```bash [创建视频任务]
+```bash [创建文生视频任务]
 curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/videos' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: application/json' \
 --data '{
     "prompt": "画小猫",
     "model": "veo_3_1"
+}'
+```
+
+```bash [创建图生视频任务]
+curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/videos/generations' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: application/json' \
+--data '{
+    "prompt": "画小猫",
+    "model": "veo_3_1",
+    "input_reference": ["url_or_base64", "url_or_base64"]
+    # "input_reference": "url_or_base64"
 }'
 ```
 
