@@ -131,7 +131,7 @@ curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/videos' \
 ```
 
 ```bash [创建图生视频任务]
-curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/videos/generations' \
+curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/videos' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: application/json' \
 --data '{
