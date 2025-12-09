@@ -10,26 +10,22 @@
 
 **Token 提取：** [点击查看](/others/extract-token.md#gemini-business)
 
-### 模型列表
+## 模型列表
 
-| 模型名称               | 特殊说明 |
-| ---------------------- | -------- |
-| `auto`                 | -        |
-| `gemini-2.5-flash`     | -        |
-| `gemini-2.5-pro`       | -        |
-| `gemini-3-pro-preview` | -        |
+- `auto`
+- `gemini-2.5-flash`
+- `gemini-2.5-pro`
+- `gemini-3-pro-preview`
 
-**模型参数组合**
+## 模型参数
 
-所有模型都支持使用 `-` 连接符组合参数，例如：`gemini-3-pro-preview-image`
+[什么是模型参数？](/others/high-level-play.md#模型参数)
 
-**支持的参数**
-
-| 参数     | 说明                                | 适用模型 |
-| -------- | ----------------------------------- | -------- |
-| `image`  | 调用图像生成能力（Nano Banana Pro） | 全系模型 |
-| `video`  | 调用视频生成能力（Veo 3.1）         | 全系模型 |
-| `search` | 调用搜索能力                        | 全系模型 |
+| 参数取值 | 说明                                | 适用范围      |
+| -------- | ----------------------------------- | ------------- |
+| `image`  | 调用图像生成能力（Nano Banana Pro） | `auto` 不可用 |
+| `video`  | 调用视频生成能力（Veo 3.1）         | `auto` 不可用 |
+| `search` | 调用搜索能力                        | `auto` 不可用 |
 
 ## 支持的接口
 

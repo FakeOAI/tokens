@@ -12,27 +12,26 @@
 
 ## 模型列表
 
-| 模型名称                     | 说明                           |
-| ---------------------------- | ------------------------------ |
-| `gemini-2.5-flash`           | 支持联网搜索，请看原生格式示例 |
-| `gemini-2.5-flash-image`     | Nano Banana 图像生成           |
-| `gemini-2.5-flash-lite`      |                                |
-| `gemini-2.5-flash-thinking`  |
-| `gemini-2.5-pro`             |                                |
-| `gemini-3-pro-image`         | Nano Banana Pro 图像生成       |
-| `gemini-3-pro-low`           |                                |
-| `gemini-3-pro-high`          |                                |
-| `claude-sonnet-4-5`          |                                |
-| `claude-sonnet-4-5-thinking` |                                |
-| `gpt-oss-120b-medium`        |                                |
+- `gemini-2.5-flash`
+- `gemini-2.5-flash-image`
+- `gemini-2.5-flash-lite`
+- `gemini-2.5-flash-thinking`
+- `gemini-2.5-pro`
+- `gemini-3-pro-image`
+- `gemini-3-pro-low`
+- `gemini-3-pro-high`
+- `claude-sonnet-4-5`
+- `claude-sonnet-4-5-thinking`
+- `claude-opus-4-5-thinking`
+- `gpt-oss-120b-medium`
 
-**支持的参数**
+## 模型参数
 
-| 参数 | 说明           | 适用模型                                       |
-| ---- | -------------- | ---------------------------------------------- |
-| `4K` | 生成 4K 的图片 | `gemini-3-pro-image`、`gemini-2.5-flash-image` |
-| `2K` | 生成 2K 的图片 | `gemini-3-pro-image`、`gemini-2.5-flash-image` |
-| `1K` | 生成 1K 的图片 | `gemini-3-pro-image`、`gemini-2.5-flash-image` |
+[什么是模型参数？](/others/high-level-play.md#模型参数)
+
+| 参数取值           | 说明           | 适用范围                                           |
+| ------------------ | -------------- | -------------------------------------------------- |
+| `1K` / `2K` / `4K` | 指定图片分辨率 | `gemini-3-pro-image`、<br>`gemini-2.5-flash-image` |
 
 ## 支持的接口
 

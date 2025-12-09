@@ -12,61 +12,25 @@
 
 ## 模型列表
 
-### GPT-5 系列
+- `gpt-5`
+- `gpt-5-codex`
+- `gpt-5-codex-mini`
+- `gpt-5.1`
+- `gpt-5.1-codex`
+- `gpt-5.1-codex-mini`
+- `gpt-5.1-codex-max`
 
-| 模型名称        | 功能说明       | 推理级别 |
-| --------------- | -------------- | -------- |
-| `gpt-5-minimal` | GPT-5 最小推理 | Minimal  |
-| `gpt-5-low`     | GPT-5 低级推理 | Low      |
-| `gpt-5-medium`  | GPT-5 中级推理 | Medium   |
-| `gpt-5-high`    | GPT-5 高级推理 | High     |
+## 模型参数
 
-### GPT-5 Codex 系列
+[什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 模型名称             | 功能说明             | 推理级别 |
-| -------------------- | -------------------- | -------- |
-| `gpt-5-codex-low`    | GPT-5 Codex 低级推理 | Low      |
-| `gpt-5-codex-medium` | GPT-5 Codex 中级推理 | Medium   |
-| `gpt-5-codex-high`   | GPT-5 Codex 高级推理 | High     |
-
-### GPT-5 Codex Mini 系列
-
-| 模型名称                  | 功能说明                  | 推理级别 |
-| ------------------------- | ------------------------- | -------- |
-| `gpt-5-codex-mini-medium` | GPT-5 Codex Mini 中级推理 | Medium   |
-| `gpt-5-codex-mini-high`   | GPT-5 Codex Mini 高级推理 | High     |
-
-### GPT-5.1 系列
-
-| 模型名称         | 功能说明         | 推理级别 |
-| ---------------- | ---------------- | -------- |
-| `gpt-5.1-low`    | GPT-5.1 低级推理 | Low      |
-| `gpt-5.1-medium` | GPT-5.1 中级推理 | Medium   |
-| `gpt-5.1-high`   | GPT-5.1 高级推理 | High     |
-
-### GPT-5.1 Codex 系列
-
-| 模型名称               | 功能说明               | 推理级别 |
-| ---------------------- | ---------------------- | -------- |
-| `gpt-5.1-codex-low`    | GPT-5.1 Codex 低级推理 | Low      |
-| `gpt-5.1-codex-medium` | GPT-5.1 Codex 中级推理 | Medium   |
-| `gpt-5.1-codex-high`   | GPT-5.1 Codex 高级推理 | High     |
-
-### GPT-5.1 Codex Mini 系列
-
-| 模型名称                    | 功能说明                    | 推理级别 |
-| --------------------------- | --------------------------- | -------- |
-| `gpt-5.1-codex-mini-medium` | GPT-5.1 Codex Mini 中级推理 | Medium   |
-| `gpt-5.1-codex-mini-high`   | GPT-5.1 Codex Mini 高级推理 | High     |
-
-### GPT-5.1 Codex Max 系列
-
-| 模型名称                   | 功能说明                     | 推理级别 |
-| -------------------------- | ---------------------------- | -------- |
-| `gpt-5.1-codex-max-low`    | GPT-5.1 Codex Max 低级推理   | Low      |
-| `gpt-5.1-codex-max-medium` | GPT-5.1 Codex Max 中级推理   | Medium   |
-| `gpt-5.1-codex-max-high`   | GPT-5.1 Codex Max 高级推理   | High     |
-| `gpt-5.1-codex-max-xhigh`  | GPT-5.1 Codex Max 超高级推理 | xHigh    |
+| 模型参数  | 推理等级   | 适用范围                                        |
+| --------- | ---------- | ----------------------------------------------- |
+| `minimal` | 最小推理   | `gpt-5` 可用                                    |
+| `low`     | 低级推理   | `gpt-5-codex-mini`、<br>`gpt-5.1-codex-mini` 不可用 |
+| `medium`  | 中级推理   | 全系模型可用                                    |
+| `high`    | 高级推理   | 全系模型可用                                    |
+| `xhigh`   | 超高级推理 | `gpt-5.1-codex-max` 可用                        |
 
 ## 支持的接口
 

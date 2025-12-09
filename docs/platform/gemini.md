@@ -13,26 +13,19 @@
 ## 模型列表
 
 > [!WARNING]
-> 官网 API 支持的模型都支持
+> 官网 API 支持的模型**基本上都支持**
 
-### Flash 系列
+- `gemini-2.5-flash`
+- `gemini-2.5-pro`
+- `gemini-3-pro-preview`
 
-| 模型名称                                    | 功能说明                        |
-| ------------------------------------------- | ------------------------------- |
-| `gemini-2.0-flash`                          | Gemini 2.0 Flash                |
-| `gemini-2.0-flash-preview-image-generation` | Gemini 2.0 Flash 图像生成预览版 |
-| `gemini-2.5-flash`                          | Gemini 2.5 Flash                |
-| `gemini-2.5-flash-preview-05-20`            | Gemini 2.5 Flash 预览版         |
-| `gemini-2.5-flash-preview-tts`              | Gemini 2.5 Flash TTS 预览版     |
-| `gemini-2.5-flash-thinking`                 | Gemini 2.5 Flash 思考模式       |
+## 模型参数
 
-### Pro 系列
+[什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 模型名称                     | 功能说明                  |
-| ---------------------------- | ------------------------- |
-| `gemini-2.5-pro`             | Gemini 2.5 Pro            |
-| `gemini-2.5-pro-preview-tts` | Gemini 2.5 Pro TTS 预览版 |
-| `gemini-2.5-pro-thinking`    | Gemini 2.5 Pro 思考模式   |
+| 模型参数   | 功能说明     | 适用范围                                                             |
+| ---------- | ------------ | -------------------------------------------------------------------- |
+| `thinking` | 开启思考模式 | `gemini-2.5-flash`、<br>`gemini-2.5-pro`、<br>`gemini-3-pro-preview` |
 
 ## 支持的接口
 

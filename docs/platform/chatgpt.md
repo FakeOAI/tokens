@@ -15,36 +15,22 @@
 > [!WARNING]
 > 官网所有可用模型都支持
 
-### 标准模型
-
-| 模型名称         | 功能说明        |
-| ---------------- | --------------- |
-| `gpt-4`          | GPT-4 标准模型  |
-| `gpt-4o`         | GPT-4 Optimized |
-| `gpt-4o-mini`    | GPT-4o 轻量版   |
-| `gpt-4-5`        | GPT-4.5 模型    |
-| `gpt-4-1-mini`   | GPT-4.1 Mini    |
-| `gpt-4-1`        | GPT-4.1 模型    |
-| `gpt-5`          | GPT-5 模型      |
-| `gpt-5-thinking` | GPT-5 思考模式  |
-| `gpt-5-pro`      | GPT-5 专业版    |
-
-### O 系列模型
-
-| 模型名称       | 功能说明         |
-| -------------- | ---------------- |
-| `o3`           | O3 模型          |
-| `o3-mini`      | O3 轻量版        |
-| `o4-mini`      | O4 轻量版        |
-| `o4-mini-high` | O4 Mini 高性能版 |
-| `o1-pro`       | O1 专业版        |
-| `o3-pro`       | O3 专业版        |
-
-### 特殊能力模型
-
-| 模型名称       | 功能说明            |
-| -------------- | ------------------- |
-| `gpt-4o-image` | GPT-4o 图像生成能力 |
+- `gpt-4`
+- `gpt-4o`
+- `gpt-4o-mini`
+- `gpt-4-5`
+- `gpt-4-1-mini`
+- `gpt-4-1`
+- `gpt-5`
+- `gpt-5-thinking`
+- `gpt-5-pro`
+- `o3`
+- `o3-mini`
+- `o4-mini`
+- `o4-mini-high`
+- `o1-pro`
+- `o3-pro`
+- `gpt-4o-image`
 
 ### GPTs 自定义模型
 

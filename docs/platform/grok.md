@@ -12,22 +12,18 @@
 
 ## 模型列表
 
-| 模型名称                       | 功能说明                                     |
-| ------------------------------ | -------------------------------------------- |
-| `grok-3`                       | 快速回应模式                                 |
-| `grok-4-auto`                  | 最佳模式，智能调用思考、画图、联网搜索等能力 |
-| `grok-4`                       | 专家模式，智能调用思考、画图、联网搜索等能力 |
-| `grok-4-mini-thinking-tahoe`   | Grok 4 快速模型                              |
-| `grok-4-1-non-thinking-w-tool` | Grok 4.1 Beta 模型                           |
-| `grok-4-1-thinking-1108b`      | Grok 4.1 Thinking Beta 模型                  |
+- `grok-3`
+- `grok-4-auto`
+- `grok-4`
+- `grok-4-mini-thinking-tahoe`
+- `grok-4-1-non-thinking-w-tool`
+- `grok-4-1-thinking-1108b`
 
-**模型参数组合**
+## 模型参数
 
-所有模型都支持使用 `-` 连接符组合参数，例如：`grok-4-deepsearch`
+[什么是模型参数？](/others/high-level-play.md#模型参数)
 
-**支持的参数**
-
-| 参数         | 说明             | 适用模型 |
+| 参数取值     | 说明             | 适用模型 |
 | ------------ | ---------------- | -------- |
 | `deepsearch` | 调用深度研究能力 | 全系模型 |
 

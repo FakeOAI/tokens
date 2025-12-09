@@ -12,46 +12,26 @@
 
 ## 模型列表
 
-#### Claude 3 系列
+- `claude-sonnet-4-20250514`
+- `claude-opus-4-20250514`
+- `claude-3-7-sonnet-20250219`
+- `claude-3-opus-20240229`
+- `claude-3-5-haiku-20241022`
+- `claude-3-5-sonnet-20241022`
+- `claude-3-5-sonnet-20240620`
+- `claude-3-haiku-20240307`
+- `claude-opus-4-1-20250805`
+- `claude-sonnet-4-5-20250929`
+- `claude-haiku-4-5-20251001`
+- `claude-opus-4-5-20251101`
 
-| 模型名称                    | 功能说明         |
-| --------------------------- | ---------------- |
-| `claude-3-opus-20240229`    | Claude 3 Opus    |
-| `claude-3-5-haiku-20241022` | Claude 3.5 Haiku |
+## 模型参数
 
-#### Claude 3.7 系列
+[什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 模型名称                              | 功能说明                   |
-| ------------------------------------- | -------------------------- |
-| `claude-3-7-sonnet-20250219`          | Claude 3.7 Sonnet          |
-| `claude-3-7-sonnet-20250219-thinking` | Claude 3.7 Sonnet 思考模式 |
-
-#### Claude 4 Sonnet 系列
-
-| 模型名称                              | 功能说明                   |
-| ------------------------------------- | -------------------------- |
-| `claude-sonnet-4-20250514`            | Claude 4 Sonnet            |
-| `claude-sonnet-4-20250514-thinking`   | Claude 4 Sonnet 思考模式   |
-| `claude-sonnet-4-5-20250929`          | Claude 4.5 Sonnet          |
-| `claude-sonnet-4-5-20250929-thinking` | Claude 4.5 Sonnet 思考模式 |
-
-#### Claude 4 Opus 系列
-
-| 模型名称                            | 功能说明                 |
-| ----------------------------------- | ------------------------ |
-| `claude-opus-4-20250514`            | Claude 4 Opus            |
-| `claude-opus-4-20250514-thinking`   | Claude 4 Opus 思考模式   |
-| `claude-opus-4-1-20250805`          | Claude 4.1 Opus          |
-| `claude-opus-4-1-20250805-thinking` | Claude 4.1 Opus 思考模式 |
-| `claude-opus-4-5-20251101`          | Claude 4.5 Opus          |
-| `claude-opus-4-5-20251101-thinking` | Claude 4.5 Opus 思考模式 |
-
-#### Claude 4 Haiku 系列
-
-| 模型名称                             | 功能说明                  |
-| ------------------------------------ | ------------------------- |
-| `claude-haiku-4-5-20251001`          | Claude 4.5 Haiku          |
-| `claude-haiku-4-5-20251001-thinking` | Claude 4.5 Haiku 思考模式 |
+| 模型参数   | 功能说明     | 适用范围                                                                                                   |
+| ---------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
+| `thinking` | 开启思考模式 | `claude-3-opus-20240229`、<br>`claude-3-5-haiku-20241022`、<br>`claude-3-5-sonnet-20241022`、<br>`claude-3-5-sonnet-20240620`、<br>`claude-3-haiku-20240307` 不可用 |
 
 ## 支持的接口
 
