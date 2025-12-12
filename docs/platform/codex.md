@@ -19,6 +19,7 @@
 - `gpt-5.1-codex`
 - `gpt-5.1-codex-mini`
 - `gpt-5.1-codex-max`
+- `gpt-5.2`
 
 ## 模型参数
 
@@ -30,7 +31,7 @@
 | `low`     | 低级推理   | `gpt-5-codex-mini`、<br>`gpt-5.1-codex-mini` 不可用 |
 | `medium`  | 中级推理   | 全系模型可用                                    |
 | `high`    | 高级推理   | 全系模型可用                                    |
-| `xhigh`   | 超高级推理 | `gpt-5.1-codex-max` 可用                        |
+| `xhigh`   | 超高级推理 | `gpt-5.1-codex-max`、`gpt-5.2` 可用                        |
 
 ## 支持的接口
 
