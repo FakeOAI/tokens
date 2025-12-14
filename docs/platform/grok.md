@@ -12,12 +12,10 @@
 
 ## 模型列表
 
+- `auto`
 - `grok-3`
-- `grok-4-auto`
 - `grok-4`
-- `grok-4-mini-thinking-tahoe`
-- `grok-4-1-non-thinking-w-tool`
-- `grok-4-1-thinking-1108b`
+- `grok-4-1-thinking-1129`
 
 ## 模型参数
 
