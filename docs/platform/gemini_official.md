@@ -12,21 +12,21 @@
 
 ### 模型列表
 
-- `gemini-2.5-flash`
+- `gemini-3-fast`
+- `gemini-3-thinking`
 - `gemini-3-pro`
 
 ## 模型参数
 
 [什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 参数取值     | 说明                            | 适用模型           |
-| ------------ | ------------------------------- | ------------------ |
-| `imagen`     | 调用图像生成能力（Nano Banana） | 全系模型           |
-| `video`      | 调用视频生成能力（Veo 3.1）     | `gemini-3-pro`     |
-| `canvas`     | 调用 Canvas 创作能力            | 全系模型           |
-| `deepsearch` | 调用深度研究能力                | 全系模型           |
-| `storybook`  | 调用故事创作能力                | 全系模型           |
-| `free`       | 免费调用，不支持图片文件分析    | `gemini-2.5-flash` |
+| 参数取值     | 说明                            | 适用模型 |
+| ------------ | ------------------------------- | -------- |
+| `imagen`     | 调用图像生成能力（Nano Banana） | 全系模型 |
+| `video`      | 调用视频生成能力（Veo 3.1）     | 全系模型 |
+| `canvas`     | 调用 Canvas 创作能力            | 全系模型 |
+| `deepsearch` | 调用深度研究能力                | 全系模型 |
+| `storybook`  | 调用故事创作能力                | 全系模型 |
 
 ## 支持的接口
 
@@ -49,7 +49,7 @@ curl -X POST 'http://<你的IP>:<你的端口>/gemini_official/v1/chat/completio
             "content": "你是什么模型"
         }
     ],
-    "model": "gemini-2.5-flash",
+    "model": "gemini-3-fast",
     "stream": true
 }'
 ```
@@ -65,7 +65,7 @@ curl -X POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/generat
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
 --form 'prompt="画小猫"' \
---form 'model="gemini-2.5-flash-imagen"'
+--form 'model="gemini-3-fast-imagen"'
 ```
 
 ```bash [图生图]
@@ -74,7 +74,7 @@ curl -X POST 'http://<你的IP>:<你的端口>/gemini_official/v1/images/edits' 
 --header 'Content-Type: multipart/form-data' \
 --form 'image[]=@"/path/to/example.jpg"' \
 --form 'prompt="换一个风格"' \
---form 'model="gemini-2.5-flash-imagen"'
+--form 'model="gemini-3-fast-imagen"'
 ```
 
 :::
