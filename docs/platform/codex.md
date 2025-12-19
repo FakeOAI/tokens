@@ -20,6 +20,7 @@
 - `gpt-5.1-codex-mini`
 - `gpt-5.1-codex-max`
 - `gpt-5.2`
+- `gpt-5.2-codex`
 
 ## 模型参数
 
