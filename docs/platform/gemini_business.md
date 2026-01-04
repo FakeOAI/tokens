@@ -1,4 +1,4 @@
-# Gemini 官网逆向接口文档
+# Gemini Business 官网逆向接口文档
 
 ## 基础信息
 
