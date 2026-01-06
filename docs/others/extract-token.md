@@ -31,6 +31,12 @@ OpenAI 平台有 `ChatGPT`、`Sora`、`Codex`三个平台，都可以通过以�
 
 ![](/67733724f2d5db55403bd7736f9d086b.png)
 
+## Kiro
+
+打开 [Kiro 官网](https://app.kiro.dev/) 的开发者控制台，在**登录后**抓取一个后缀为 `ExchangeToken` 的接口，在 `Set-Cookie` 中找到 `RefreshToken`
+
+![](/db9399e8f5456477b87eb990f088bd85.png)
+
 ## Grok
 
 打开 [Grok 官网](https://grok.com/) 控制台，在 `Cookie` 中找到一个名为 `sso`
