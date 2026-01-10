@@ -157,6 +157,40 @@ curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/
 }'
 ```
 
+```bash [根据视频地址创建角色生成视频]
+curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/remix' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "prompt": "视频描述",
+    "model": "sora_video2",
+    "character_url": "视频地址或者base64",
+    "character_timestamps": "1,3"
+}'
+```
+
+```bash [根据任务ID创建角色生成视频]
+curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/remix' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "prompt": "视频描述",
+    "model": "sora_video2",
+    "character_from_task": "任务ID"
+}'
+```
+
+```bash [生成视频后创建角色]
+curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/remix' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "prompt": "视频描述",
+    "model": "sora_video2",
+    "character_create": true
+}'
+```
+
 :::
 
 ### 非真人角色创建接口
