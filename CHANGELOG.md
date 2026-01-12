@@ -2,5 +2,158 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog],
-and this project adheres to [Semantic Versioning].
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [3.1.14] - 2026-01-11
+
+### Added
+
+- 后台插件支持通过插件添加 Sora 客户端专属 token，可通过此插件直接提取 pro、plus 等类型的 Sora 客户端专属 rt（需安装最新插件）
+
+## [3.1.13] - 2026-01-11
+
+### Changed
+
+- 优化提升 GeminiCLI 加号开启 gemini-3-pro 预览模型的成功率
+- GeminiCLI 现在也可通过 rt 的方式加号直接开启预览模型（之前只支持插件加号的方式）
+
+## [3.1.12] - 2026-01-10
+
+### Fixed
+
+- 修复 Sora2 模型使用故事板参数报错【Hmmm something didn't look right with your request】
+
+## [3.1.11] - 2026-01-10
+
+### Fixed
+
+- 修复 CC 平台 token 异常【{"error": "invalid_grant", "error_description": "Refresh token not found or invalid"}】
+
+## [3.1.10] - 2026-01-10
+
+### Fixed
+
+- 修复 Sora 平台客户端 token 封控的问题
+
+## [3.1.9] - 2026-01-09
+
+### Changed
+
+- 优化使用内置代理而非服务器 IP 去访问接码平台获取接码状态的接口
+- 优化调整部分接码逻辑
+
+## [3.1.8] - 2026-01-09
+
+### Added
+
+- 后台新增 HeroSms 平台的接码服务配置，用于 Sora 平台绑定手机号码
+- 支持加号时自动检测并异步执行绑定操作
+- 支持请求 Sora2 模型报错时自动异步执行绑定操作并重试
+- 接码超时（2分钟）自动请求退款接口
+
+## [3.1.7] - 2026-01-09
+
+### Fixed
+
+- 修复 Anti 报错 403 的问题
+
+## [3.1.6] - 2026-01-08
+
+### Added
+
+- 后台配置新增是否只轮训验证过手机号码的 token 开关
+
+### Changed
+
+- Sora 报错手机号码验证的 token 不再进行异常标记
+- 优化 Sora 加号的速度
+
+## [3.1.5] - 2026-01-08
+
+### Fixed
+
+- 修复 Anti 平台的原生流式请求在 GeminiCLI 客户端中部分情况下报错 429 的问题
+
+## [3.1.4] - 2026-01-08
+
+### Fixed
+
+- 修复 Anti 报错 429 封控问题（目前只有 Gemini 原生接口的非流依旧 429，其他接口均正常）
+
+## [3.1.3] - 2026-01-08
+
+### Fixed
+
+- 修复 Sora 客户端 token 请求报错 Please update your app version and try again
+
+## [3.1.2] - 2026-01-08
+
+### Fixed
+
+- 修复 Flow 平台画图没有返回具体图片的问题（官方格式变动）
+
+## [3.1.1] - 2026-01-07
+
+### Changed
+
+- 自动禁用 Sora2 需要手机验证码的 token，并进行重试
+
+## [3.1.0] - 2026-01-06
+
+### Added
+
+- 新增 Claude 模型逆向渠道 - Kiro 平台（定价 500/月）
+- Gemini Business 平台新增 claude-sonnet-4-5 模型
+
+## [3.0.8] - 2026-01-05
+
+### Added
+
+- 日志新增请求端点类型的记录
+- 日志配置新增日志存活时间，定时任务自动清理过期日志
+
+## [3.0.5] - 2026-01-03
+
+### Added
+
+- Flow 平台新增 hd、gif 模型参数，用于指定 veo3.1 模型视频分辨率的输出
+
+## [3.0.4] - 2026-01-02
+
+### Fixed
+
+- 修复 v3 版本 CC 粘性对话遇到 429 没有换号重试的问题
+
+### Added
+
+- Sora 平台新增 Sora2 模型是否只轮训 Sora 移动端专属 Token 开关
+
+## [3.0.3] - 2026-01-01
+
+### Fixed
+
+- 修复 GeminiCLI 平台刷新过期 token 不生效导致轮训永远出现 401 的问题
+
+## [3.0.2] - 2025-12-29
+
+### Changed
+
+- 增加 TLS 请求握手的超时时间，避免高并发时因握手超时导致请求失败
+
+## [3.0.1] - 2025-12-29
+
+### Added
+
+- 首页面板显示许可证容器 ID 的绑定信息
+
+### Changed
+
+- Codex 平台对流中 Policy Violation 报错进行 token 禁用以及重试
+
+## [3.0.0] - 2025-12-28
+
+### Changed
+
+- 重构号池底层轮训策略，优化程序内存和 CPU 占用
+- 各个平台的对话格式，如果有图片返回，将计算图片补全 token
