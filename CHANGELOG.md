@@ -1,3 +1,13 @@
+## [3.1.29] - 2026-01-16
+
+### Added
+
+- Kiro平台新增IDC认证方式的token添加，格式为：【refreshToken----clientId----clientSecret】
+
+### Fixed
+
+- 实验性修复Kiro封控问题
+
 ## [3.1.28] - 2026-01-16
 
 ### Added
