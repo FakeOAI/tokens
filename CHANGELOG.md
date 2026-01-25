@@ -1,3 +1,14 @@
+## [3.1.45] - 2026-01-25
+
+### Added
+
+- 插件中Sora支持添加安卓Sora RrefreshToken、苹果Sora RrefreshToken以及Sora网页RefreshCookie
+
+### Fixed
+
+- 修复上游返回状态码500，但是程序返回网络请求失败的问题
+- 优化Sora2模型负载问题
+
 ## [3.1.44] - 2026-01-23
 
 ### Fixed
