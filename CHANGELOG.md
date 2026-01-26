@@ -1,3 +1,9 @@
+## [3.1.47] - 2026-01-26
+
+### Fixed
+
+- 优化Sora2模型报错【Unable to process request】问题
+
 ## [3.1.46] - 2026-01-25
 
 ### Fixed
