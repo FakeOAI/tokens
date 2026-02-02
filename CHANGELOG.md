@@ -1,3 +1,9 @@
+## [3.2.10] - 2026-02-01
+
+### Added
+
+- Cursor、Kiro平台的OpenAI对话补全接口支持function_call工具函数调用
+
 ## [3.2.9] - 2026-02-01
 
 ### Added
