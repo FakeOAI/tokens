@@ -40,7 +40,7 @@
 
 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
 
-:::: code-group
+::: code-group
 
 ```bash [文生视频]
 curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
@@ -90,6 +90,8 @@ curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
     "n": 2
 }'
 ```
+
+:::
 
 ### 图片接口
 
