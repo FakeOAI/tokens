@@ -17,6 +17,7 @@
 - `claude-sonnet-4`
 - `claude-haiku-4.5`
 - `claude-opus-4.5`
+- `claude-opus-4.6`
 
 ## 支持的接口
 
