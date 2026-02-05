@@ -3,6 +3,7 @@
 ### Added
 
 - ClaudeApi和Claude官网逆向平台新增【claude-opus-4-6】模型
+- Kiro平台新增【claude-opus-4.6】模型
 
 ## [3.2.13] - 2026-02-05
 
