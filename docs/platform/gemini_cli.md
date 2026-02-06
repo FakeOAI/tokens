@@ -15,17 +15,24 @@
 > [!WARNING]
 > 官网 API 支持的模型**基本上都支持**
 
+- `gemini-2.0-flash`
+- `gemini-2.0-flash_vertex`
 - `gemini-2.5-flash`
+- `gemini-2.5-flash_vertex`
 - `gemini-2.5-pro`
+- `gemini-2.5-pro_vertex`
+- `gemini-3-flash-preview`
+- `gemini-3-flash-preview_vertex`
 - `gemini-3-pro-preview`
+- `gemini-3-pro-preview_vertex`
 
 ## 模型参数
 
 [什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 模型参数   | 功能说明     | 适用范围                                                             |
-| ---------- | ------------ | -------------------------------------------------------------------- |
-| `thinking` | 开启思考模式 | `gemini-2.5-flash`、<br>`gemini-2.5-pro`、<br>`gemini-3-pro-preview` |
+| 模型参数   | 功能说明     |
+| ---------- | ------------ |
+| `thinking` | 开启思考模式 |
 
 ## 支持的接口
 
