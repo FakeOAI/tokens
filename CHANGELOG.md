@@ -1,9 +1,15 @@
+## [3.2.15] - 2026-02-06
+
+### Added
+
+- Codex平台新增【gpt-5.3-codex】模型
+- Kiro平台新增【claude-opus-4.6】模型
+
 ## [3.2.14] - 2026-02-06
 
 ### Added
 
 - ClaudeApi和Claude官网逆向平台新增【claude-opus-4-6】模型
-- Kiro平台新增【claude-opus-4.6】模型
 
 ## [3.2.13] - 2026-02-05
 
