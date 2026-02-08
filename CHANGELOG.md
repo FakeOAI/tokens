@@ -1,3 +1,13 @@
+## [3.2.18] - 2026-02-08
+
+### Added
+
+- Anti平台新增【claude-opus-4-6-thinking】模型
+
+## Fixed
+
+- 修复flow平台在任务管理中无法查看任务对应的TokenId问题
+
 ## [3.2.17] - 2026-02-07
 
 ### Fixed
