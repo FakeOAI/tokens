@@ -25,6 +25,7 @@
 - `claude-opus-4-5-thinking`
 - `gpt-oss-120b-medium`
 - `gemini-3-flash`
+- `claude-opus-4-6-thinking`
 
 ## 模型参数
 
