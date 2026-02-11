@@ -28,7 +28,7 @@ export default defineConfig({
             text: "OpenAI",
             items: [
               { text: "ChatGPT 官网逆向", link: "chatgpt" },
-              { text: "Codex 客户端逆向", link: "codex" },
+              { text: "Codex 终端逆向", link: "codex" },
               { text: "Sora 官网逆向", link: "sora" },
             ],
           },
@@ -36,7 +36,7 @@ export default defineConfig({
             text: "Anthropic",
             items: [
               { text: "Claude 官网逆向", link: "claude" },
-              { text: "Claude Code 客户端逆向", link: "claude_api" },
+              { text: "Claude Code 终端逆向", link: "claude_api" },
             ],
           },
           {
@@ -45,7 +45,7 @@ export default defineConfig({
               { text: "Gemini 官方API", link: "gemini" },
               { text: "Gemini 官网逆向", link: "gemini_official" },
               { text: "Gemini Business 官网逆向", link: "gemini_business" },
-              { text: "Gemini Cli 客户端逆向", link: "gemini_cli" },
+              { text: "Gemini Cli 终端逆向", link: "gemini_cli" },
               { text: "Flow 官网逆向", link: "flow" },
               { text: "Antigravity 客户端逆向", link: "antigravity" },
             ],
