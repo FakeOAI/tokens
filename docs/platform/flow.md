@@ -1,16 +1,5 @@
 # Flow 官网逆向接口文档
 
-## 接口支持概览
-
-| 端点接口                 | 支持情况 | 函数调用 |   备注   |
-| :----------------------- | :------: | :------: | :------: |
-| `V1ChatCompletions` 接口 |    ✅    |    ❌    |    -     |
-| `V1Messages` 接口        |    ✅    |    ❌    | 额外收费 |
-| `V1Responses` 接口       |    ❌    |    ❌    |    -     |
-| `V1BetaModels` 接口      |    ✅    |    ❌    | 额外收费 |
-| `V1Images` 接口          |    ✅    |    ❌    | 额外收费 |
-| `V1Videos` 接口          |    ✅    |    ❌    | 额外收费 |
-
 ## 基础信息
 
 **官网地址：** `https://labs.google/fx/zh/tools/flow`
@@ -41,133 +30,20 @@
 | `1K` / `2K` / `4K`          | 指定图片分辨率                                                     | `nano_banana_pro`                                                   |
 | `gif` / `hd` / `4K`         | 指定视频分辨率，`hd` 为 1080P，仅支持横屏生成，`gif`为 270P 的动图 | `veo_3_1`                                                           |
 
-## 支持的接口
-
-### 对话接口
-
-官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
-
-::: code-group
-
-```bash [文生视频]
-curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <你的许可证>' \
---data '{
-    "messages": [
-        {
-            "role": "user",
-            "content": "画只猪在天上飞"
-        }
-    ],
-    "model": "veo_3_1",
-    "stream": true,
-    "n": 2
-}'
-```
-
-```bash [帧转视频]
-curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <你的许可证>' \
---data '{
-    "messages": [{
-        "role": "user",
-        "content": [
-            {
-                "type": "text",
-                "text": "根据两张图片生成一个完整的过渡视频"
-            },
-            {
-                "type": "image_url",
-                "image_url": {
-                    "url": "开始帧图片URL或base64"
-                }
-            },
-            {
-                "type": "image_url",
-                "image_url": {
-                    "url": "结束帧图片URL或base64（可选）"
-                }
-            }
-        ]
-    }],
-    "model": "veo_3_1-fl-fast",
-    "stream": true,
-    "n": 2
-}'
-```
-
-:::
-
-### 图片接口
-
-官方文档：`https://platform.openai.com/docs/api-reference/images/create`
-
-::: code-group
-
-```bash [文生图]
-curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/images/generations' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: multipart/form-data' \
---form 'prompt="画小猫"' \
---form 'model="nano_banana"'
-```
-
-```bash [图生图]
-curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/images/edits' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: multipart/form-data' \
---form 'image[]=@"/path/to/example.jpg"' \
---form 'prompt="换一个风格"' \
---form 'model="nano_banana"'
-```
-
-:::
-
-### 视频接口
-
-官方文档：`https://platform.openai.com/docs/api-reference/videos/create`
-
-:::: code-group
-
-```bash [创建文生视频任务]
-curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/videos' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: application/json' \
---data '{
-    "prompt": "画小猫",
-    "model": "veo_3_1"
-}'
-```
-
-```bash [创建图生视频任务]
-curl -X POST 'http://<你的IP>:<你的端口>/flow/v1/videos' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: application/json' \
---data '{
-    "prompt": "画小猫",
-    "model": "veo_3_1",
-    "input_reference": ["url_or_base64", "url_or_base64"]
-    # "input_reference": "url_or_base64"
-}'
-```
-
-```bash [查询视频任务状态]
-curl -X GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}' \
---header 'Authorization: Bearer <你的许可证>'
-```
-
-```bash [获取视频内容]
-curl -X GET 'http://<你的IP>:<你的端口>/flow/v1/videos/{video_id}/content' \
---header 'Authorization: Bearer <你的许可证>'
-```
-
-::::
-
 ## 额外参数说明
 
 | 参数   | 描述                                                                       | 取值范围/选项      | 默认值 | 备注                                           |
 | ------ | -------------------------------------------------------------------------- | ------------------ | ------ | ---------------------------------------------- |
 | `n`    | 图片或视频生成不同变体的数量                                               | 1-4                | 1      | 视频接口不支持此参数，仅对话接口和图片接口支持 |
 | `size` | 生成图片或视频的尺寸，格式为 `widthxheight`，例如 `1024x1024`、`1920x1080` | 任意符合格式的数值 | -      | 宽大于高为横屏，高大于宽为竖屏                 |
+
+## 接口支持概览
+
+| 端点接口                                                               | 支持情况 | 函数调用 |   备注   |
+| :--------------------------------------------------------------------- | :------: | :------: | :------: |
+| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ❌    |    -     |
+| [`V1Messages`](/others/api-reference.md#v1messages) 接口               |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |    -     |
+| [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |

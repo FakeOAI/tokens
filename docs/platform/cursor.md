@@ -1,16 +1,5 @@
 # Cursor 官网逆向接口文档
 
-## 接口支持概览
-
-| 端点接口                 | 支持情况 | 函数调用 |   备注   |
-| :----------------------- | :------: | :------: | :------: |
-| `V1ChatCompletions` 接口 |    ✅    |    ✅    |    -     |
-| `V1Messages` 接口        |    ✅    |    ✅    | 额外收费 |
-| `V1Responses` 接口       |    ❌    |    ❌    |    -     |
-| `V1BetaModels` 接口      |    ✅    |    ✅    | 额外收费 |
-| `V1Images` 接口          |    ❌    |    ❌    |    -     |
-| `V1Videos` 接口          |    ❌    |    ❌    |    -     |
-
 ## 基础信息
 
 **官网地址：** `https://cursor.com`
@@ -72,72 +61,13 @@
 - `gemini-2.5-flash`
 - `kimi-k2-instruct`
 
-## 支持的接口
+## 接口支持概览
 
-### 对话接口
-
-官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
-
-::: code-group
-
-```bash [流式对话]
-curl -X POST 'http://<你的IP>:<你的端口>/cursor/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <你的许可证>' \
---data '{
-    "messages": [
-        {
-            "role": "user",
-            "content": "你是什么模型"
-        }
-    ],
-    "model": "claude-3.7-sonnet-thinking",
-    "stream": true
-}'
-```
-
-```bash [函数调用]
-curl -X POST 'http://<你的IP>:<你的端口>/cursor/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <你的许可证>' \
---data '{
-    "messages": [
-        {
-            "role": "user",
-            "content": "What is the weather like in Boston today?"
-        }
-    ],
-    "tools": [
-        {
-            "type": "function",
-            "function": {
-                "name": "get_current_weather",
-                "description": "Get the current weather in a given location",
-                "parameters": {
-                    "type": "object",
-                    "properties": {
-                        "location": {
-                            "type": "string",
-                            "description": "The city and state, e.g. San Francisco, CA"
-                        },
-                        "unit": {
-                            "type": "string",
-                            "enum": [
-                                "celsius",
-                                "fahrenheit"
-                            ]
-                        }
-                    },
-                    "required": [
-                        "location"
-                    ]
-                }
-            }
-        }
-    ],
-    "model": "gpt-4o",
-    "stream": false
-}'
-```
-
-:::
+| 端点接口                                                               | 支持情况 | 函数调用 |   备注   |
+| :--------------------------------------------------------------------- | :------: | :------: | :------: |
+| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ✅    |    -     |
+| [`V1Messages`](/others/api-reference.md#v1messages) 接口               |    ✅    |    ✅    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |    -     |
+| [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ✅    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ❌    |    ❌    |    -     |
+| [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ❌    |    ❌    |    -     |

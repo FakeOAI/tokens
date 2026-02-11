@@ -1,16 +1,5 @@
 # ChatGPT 官网逆向接口文档
 
-## 接口支持概览
-
-| 端点接口                 | 支持情况 | 函数调用 |   备注   |
-| :----------------------- | :------: | :------: | :------: |
-| `V1ChatCompletions` 接口 |    ✅    |    ❌    |    -     |
-| `V1Messages` 接口        |    ✅    |    ❌    | 额外收费 |
-| `V1Responses` 接口       |    ❌    |    ❌    |    -     |
-| `V1BetaModels` 接口      |    ✅    |    ❌    | 额外收费 |
-| `V1Images` 接口          |    ❌    |    ❌    |    -     |
-| `V1Videos` 接口          |    ❌    |    ❌    |    -     |
-
 ## 基础信息
 
 **官网地址：** `https://chatgpt.com`
@@ -63,48 +52,6 @@
 
 ![2481748234920_.pic.jpg](/2481748234920_.pic.jpg)
 
-## 支持的接口
-
-### 对话接口
-
-官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
-
-::: code-group
-
-```bash [普通对话]
-curl -X POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <你的许可证>' \
---data '{
-    "messages": [
-        {
-            "role": "user",
-            "content": "你是什么模型"
-        }
-    ],
-    "model": "gpt-4o",
-    "stream": true
-}'
-```
-
-```bash [调用GPTs]
-curl -X POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <你的许可证>' \
---data '{
-    "messages": [
-        {
-            "role": "user",
-            "content": "帮我分析一下这段代码"
-        }
-    ],
-    "model": "gpt-4o-gizmo-g-2DQzU5UZl",
-    "stream": true
-}'
-```
-
-:::
-
 ## 网关配置
 
 ChatGPT 网关起到转发以及对话接口请求逻辑的处理作用。
@@ -115,3 +62,14 @@ ChatGPT 网关起到转发以及对话接口请求逻辑的处理作用。
 **配置界面：**
 
 ![/3701744441658_.pic.jpg](/3701744441658_.pic.jpg)
+
+## 接口支持概览
+
+| 端点接口                                                               | 支持情况 | 函数调用 |   备注   |
+| :--------------------------------------------------------------------- | :------: | :------: | :------: |
+| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ❌    |    -     |
+| [`V1Messages`](/others/api-reference.md#v1messages) 接口               |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |    -     |
+| [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ❌    |    ❌    |    -     |
+| [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ❌    |    ❌    |    -     |

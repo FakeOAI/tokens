@@ -1,17 +1,5 @@
 # Sora 官网逆向接口文档
 
-## 接口支持概览
-
-| 端点接口                 | 支持情况 | 函数调用 |   备注   |
-| :----------------------- | :------: | :------: | :------: |
-| `V1ChatCompletions` 接口 |    ✅    |    ❌    |    -     |
-| `V1Messages` 接口        |    ✅    |    ❌    | 额外收费 |
-| `V1Responses` 接口       |    ❌    |    ❌    |    -     |
-| `V1BetaModels` 接口      |    ✅    |    ❌    | 额外收费 |
-| `V1Images` 接口          |    ✅    |    ❌    | 额外收费 |
-| `V1Videos` 接口          |    ✅    |    ❌    | 额外收费 |
-| `V1Characters` 接口      |    ✅    |    ❌    | 额外收费 |
-
 ## 基础信息
 
 **官网地址：** `https://sora.chatgpt.com`
@@ -42,195 +30,6 @@
 | `pro`                    | 使用 Pro 版本模型生成视频，只有 Pro 订阅类型的账户可用，默认基础版本 | `sora_video2` |
 | `storyboard`             | 故事板实现更精细的视频生成细节控制                                   | `sora_video2` |
 
-## 支持的接口
-
-### 对话接口
-
-官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
-
-::: code-group
-
-```bash [文生图]
-curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <你的许可证>' \
---data '{
-    "messages": [
-        {
-            "role": "user",
-            "content": "画小猫"
-        }
-    ],
-    "model": "sora_image",
-    "stream": true
-}'
-```
-
-```bash [图生图]
-curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <你的许可证>' \
---data '{
-    "messages": [
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "根据图片换个风格"
-                },
-                {
-                    "type": "image_url",
-                    "image_url": {
-                        "url": "url或者base64"
-                    }
-                }
-            ]
-        }
-    ],
-    "model": "sora_image",
-    "stream": true
-}'
-```
-
-:::
-
-### 图片接口
-
-官方文档：`https://platform.openai.com/docs/api-reference/images/create`
-
-::: code-group
-
-```bash [文生图]
-curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/images/generations' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: multipart/form-data' \
---form 'prompt="画小猫"' \
---form 'model="sora_image"'
-```
-
-```bash [图生图]
-curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/images/edits' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: multipart/form-data' \
---form 'image[]=@"/path/to/example.jpg"' \
---form 'prompt="换一个风格"' \
---form 'model="sora_image"'
-```
-
-:::
-
-### 视频接口
-
-官方文档：`https://platform.openai.com/docs/api-reference/videos/create`
-
-::: code-group
-
-```bash [文生视频]
-curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/videos' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: application/json' \
---data '{
-    "prompt": "画小猫",
-    "model": "sora_video2"
-}'
-```
-
-```bash [图生视频]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: multipart/form-data' \
---form 'input_reference[]=@"/path/to/example.jpg"' \
---form 'prompt="根据图片生成视频"' \
---form 'model="sora_video2"'
-```
-
-```bash [查询视频任务状态]
-curl -X GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}' \
---header 'Authorization: Bearer <你的许可证>'
-```
-
-```bash [获取视频内容]
-curl -X GET 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/content' \
---header 'Authorization: Bearer <你的许可证>'
-```
-
-```bash [编辑视频]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/remix' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "prompt": "再加一只小狗",
-    "model": "sora_video2"
-}'
-```
-
-```bash [根据视频地址创建角色生成视频]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/remix' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "prompt": "视频描述",
-    "model": "sora_video2",
-    "character_url": "视频地址或者base64",
-    "character_timestamps": "1,3"
-}'
-```
-
-```bash [根据任务ID创建角色生成视频]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/remix' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "prompt": "视频描述",
-    "model": "sora_video2",
-    "character_from_task": "任务ID"
-}'
-```
-
-```bash [生成视频后创建角色]
-curl --location --request POST 'http://<你的IP>:<你的端口>/sora/v1/videos/{video_id}/remix' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "prompt": "视频描述",
-    "model": "sora_video2",
-    "character_create": true
-}'
-```
-
-:::
-
-### 非真人角色创建接口
-
-::: code-group
-
-```bash [通过视频URL创建角色]
-curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/characters' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: application/json' \
---data '{
-    "url": "视频地址或者base64",
-    "timestamps": "0,3"
-}'
-```
-
-```bash [通过任务ID创建角色]
-curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/characters' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: application/json' \
---data '{
-    "from_task": "任务ID",
-    "timestamps": "0,3"
-}'
-```
-
-:::
-
-### 真人角色创建接口
-
-尽情期待....
-
 ## 额外参数说明
 
 | 参数                   | 描述                                                                        | 取值范围/选项                                                   | 默认值  | 备注                                                                                                              |
@@ -247,3 +46,15 @@ curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/characters' \
 | `character_timestamps` | 视频角色出现的秒数范围，格式 {start},{end}, 注意 end-start 的范围 1 ～ 3 秒 | `string`                                                        | `0,3`   | 需开通角色接口权限才生效                                                                                          |
 | `character_create`     | 创建视频完成后，会自动根据生成的视频创建角色                                | `true` / `false`                                                | `false` | 需开通角色接口权限才生效                                                                                          |
 | `character_from_task`  | 可以根据已经生成的任务 id，来创建角色                                       | `string`                                                        | -       | 需开通角色接口权限才生效                                                                                          |
+
+## 接口支持概览
+
+| 端点接口                                                               | 支持情况 | 函数调用 |   备注   |
+| :--------------------------------------------------------------------- | :------: | :------: | :------: |
+| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ❌    |    -     |
+| [`V1Messages`](/others/api-reference.md#v1messages) 接口               |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |    -     |
+| [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Characters`](/others/api-reference.md#v1characters) 接口            |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
