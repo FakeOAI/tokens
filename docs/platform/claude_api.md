@@ -2,7 +2,7 @@
 
 ## 接口支持概览
 
-| 端点接口                 | 支持情况 | 函数调用 | 备注 |
+| 端点接口                 | 支持情况 | 函数调用 |   备注   |
 | :----------------------- | :------: | :------: | :------: |
 | `V1ChatCompletions` 接口 |    ✅    |    ✅    |    -     |
 | `V1Messages` 接口        |    ✅    |    ✅    |    -     |
@@ -93,41 +93,4 @@ curl -X POST 'http://<你的IP>:<你的端口>/claude_api/v1/messages' \
     "model": "claude-sonnet-4-20250514",
     "stream": true
 }'
-```
-
-## 客户端使用教程
-
-**1. 安装 Claude Code 脚手架**
-
-```bash
-npm install -g @anthropic/claude-code
-```
-
-**2. 设置环境变量**
-
-在终端中设置 `Claude Code` 的环境变量：`ANTHROPIC_BASE_URL`、`ANTHROPIC_AUTH_TOKEN`
-
-::: code-group
-
-```bash [Linux、MacOS]
-export ANTHROPIC_BASE_URL="http://<你的IP>:<你的端口>/claude_api"
-export ANTHROPIC_AUTH_TOKEN="Tokens许可证"
-```
-
-```bash [Windows - CMD]
-set ANTHROPIC_BASE_URL=http://<你的IP>:<你的端口>/claude_api
-set ANTHROPIC_AUTH_TOKEN=Tokens许可证
-```
-
-```powershell [Windows - PowerShell]
-$env:ANTHROPIC_BASE_URL="http://<你的IP>:<你的端口>/claude_api"
-$env:ANTHROPIC_AUTH_TOKEN="Tokens许可证"
-```
-
-:::
-
-**3. 运行 Claude Code**
-
-```bash
-claude
 ```
