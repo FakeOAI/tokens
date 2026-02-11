@@ -7,7 +7,7 @@ titleTemplate: 管理逆向Token的平台
 hero:
   name: Tokens
   text: 管理逆向Token的平台
-  tagline: 轮训号池将各大平台的对话接口转OpenAI标准格式
+  tagline: 轮训号池将各大平台的对话接口转OpenAI、Anthropic、Gemini等平台标准API接口的格式
   actions:
     - theme: brand
       text: 什么是 Tokens?
@@ -24,8 +24,8 @@ hero:
 
 features:
   - icon: ⚙️
-    title: 遵循OpenAI标准格式
-    details: 所有平台的对话接口统一转换为业界标准的OpenAI格式，确保兼容性。
+    title: 遵循OpenAI、Anthropic、Gemini等平台标准API接口的格式
+    details: 所有平台的对话接口统一转换为业界标准的OpenAI、Anthropic、Gemini等平台标准API接口的格式，确保兼容性。
   - icon: 🌐
     title: 支持多平台接入
     details: 程序支持Grok、Claude、ChatGPT、Cursor、Gemini、Sora、Claude Code等多个主流AI平台。
