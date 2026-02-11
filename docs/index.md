@@ -24,11 +24,11 @@ hero:
 
 features:
   - icon: ⚙️
-    title: 遵循OpenAI、Anthropic、Gemini等平台标准API接口的格式
-    details: 所有平台的对话接口统一转换为业界标准的OpenAI、Anthropic、Gemini等平台标准API接口的格式，确保兼容性。
+    title: 标准API接口格式
+    details: 所有平台接口兼容各大主流AI平台的API接口格式。
   - icon: 🌐
     title: 支持多平台接入
-    details: 程序支持Grok、Claude、ChatGPT、Cursor、Gemini、Sora、Claude Code等多个主流AI平台。
+    details: 程序支持Grok、Claude、OpenAI、Cursor、Gemini、Kiro等多个主流AI平台。
   - icon: 🔒
     title: 支持代理配置
     details: 系统后台允许配置各平台的代理及固定IP，为你的操作提供额外的安全保障。
