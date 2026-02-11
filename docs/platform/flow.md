@@ -43,10 +43,6 @@
 
 ## 支持的接口
 
-> [!WARNING]
->
-> 图片接口和视频接口需要额外付费开通
-
 ### 对话接口
 
 官方文档：`https://platform.openai.com/docs/api-reference/chat/create`
