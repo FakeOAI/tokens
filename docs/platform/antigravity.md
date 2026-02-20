@@ -27,6 +27,8 @@
 - `gemini-3-flash`
 - `claude-opus-4-6-thinking`
 - `claude-sonnet-4-6`
+- `gemini-3.1-pro-low`
+- `gemini-3.1-pro-high`
 
 ## 模型参数
 

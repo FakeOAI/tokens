@@ -18,6 +18,7 @@
 - `gemini-3-flash-preview`
 - `gemini-3-pro-preview`
 - `claude-sonnet-4-5`
+- `gemini-3.1-pro-preview`
 
 ## 模型参数
 
