@@ -12,9 +12,9 @@
 
 ### 模型列表
 
-- `gemini-3-fast`
-- `gemini-3-thinking`
-- `gemini-3-pro`
+- `gemini-3.1-fast`
+- `gemini-3.1-thinking`
+- `gemini-3.1-pro`
 
 ## 模型参数
 
