@@ -1,3 +1,9 @@
+## [4.0.6] - 2026-02-20
+
+### Added
+
+- GeminiBusiness平台新增gemini-3.1-pro-preview模型
+
 ## [4.0.5] - 2026-02-19
 
 ### Fixed
