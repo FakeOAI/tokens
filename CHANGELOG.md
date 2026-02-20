@@ -2,7 +2,8 @@
 
 ### Added
 
-- GeminiBusiness平台新增gemini-3.1-pro-preview模型
+- GeminiBusiness平台新增【gemini-3.1-pro-preview】模型
+- Anti平台新增【gemini-3.1-pro-low】和【gemini-3.1-pro-high】模型
 
 ## [4.0.5] - 2026-02-19
 
