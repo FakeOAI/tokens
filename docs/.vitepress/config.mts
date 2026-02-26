@@ -8,6 +8,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "计费标准", link: "/others/platform-pricing" },
+      { text: "赞助", link: "/others/sponsor" },
       { text: "演示站", link: "https://tokens-pool.top" },
     ],
     sidebar: [
@@ -71,6 +72,7 @@ export default defineConfig({
           { text: "平台计费标准", link: "platform-pricing" },
           { text: "代理计费标准", link: "proxy-pricing" },
           { text: "联系作者", link: "contact" },
+          { text: "赞助", link: "sponsor" },
         ],
       },
     ],

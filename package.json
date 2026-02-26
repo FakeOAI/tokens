@@ -2,7 +2,8 @@
   "packageManager": "pnpm@8.7.5",
   "private": true,
   "devDependencies": {
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.29"
   },
   "scripts": {
     "dev": "vitepress dev docs",
