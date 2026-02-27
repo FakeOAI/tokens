@@ -14,6 +14,7 @@
 
 - `veo_3_1`
 - `nano_banana`
+- `nano_banana_2`
 - `nano_banana_pro`
 - `imagen_4`
 
@@ -21,14 +22,15 @@
 
 [什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 参数取值                    | 说明                                                               | 适用范围                                                            |
-| --------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------- |
-| `portrait`、<br>`landscape` | 生成图片或视频的方向，默认竖屏                                     | `veo_3_1`、<br>`nano_banana`、<br>`nano_banana_pro`、<br>`imagen_4` |
-| `fast`                      | 快速生成模式                                                       | `veo_3_1`                                                           |
-| `fl`                        | 帧转视频模式（Frame-to-Video）                                     | `veo_3_1`                                                           |
-| `relaxed`                   | 低优先级的 fast 模式，不消耗额度                                   | `veo_3_1`                                                           |
-| `1K` / `2K` / `4K`          | 指定图片分辨率                                                     | `nano_banana_pro`                                                   |
-| `gif` / `hd` / `4K`         | 指定视频分辨率，`hd` 为 1080P，仅支持横屏生成，`gif`为 270P 的动图 | `veo_3_1`                                                           |
+| 参数取值                    | 说明                                                               | 适用范围                                                                                 |
+| --------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| `portrait`、<br>`landscape` | 生成图片或视频的方向，默认竖屏                                     | `veo_3_1`、<br>`nano_banana`、<br>`nano_banana_2`、<br>`nano_banana_pro`、<br>`imagen_4` |
+| `square`、<br>`4/3`、`3/4`  | 生成`1:1`、`4:3`、`3:4`比例的图片                                  | `nano_banana_2`、<br>`nano_banana_pro`                                                   |
+| `fast`                      | 快速生成模式                                                       | `veo_3_1`                                                                                |
+| `fl`                        | 帧转视频模式（Frame-to-Video）                                     | `veo_3_1`                                                                                |
+| `relaxed`                   | 低优先级的 fast 模式，不消耗额度                                   | `veo_3_1`                                                                                |
+| `1K` / `2K` / `4K`          | 指定图片分辨率                                                     | `nano_banana_pro`                                                                        |
+| `gif` / `hd` / `4K`         | 指定视频分辨率，`hd` 为 1080P，仅支持横屏生成，`gif`为 270P 的动图 | `veo_3_1`                                                                                |
 
 ## 额外参数说明
 
@@ -39,11 +41,11 @@
 
 ## 接口支持概览
 
-| 端点接口                                                               | 支持情况 | 函数调用 |   备注   |
-| :--------------------------------------------------------------------- | :------: | :------: | :------: |
-| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ❌    |    -     |
+| 端点接口                                                               | 支持情况 | 函数调用 |                           备注                           |
+| :--------------------------------------------------------------------- | :------: | :------: | :------------------------------------------------------: |
+| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ❌    |                            -                             |
 | [`V1Messages`](/others/api-reference.md#v1messages) 接口               |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
-| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |    -     |
+| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |                            -                             |
 | [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
 | [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
 | [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
