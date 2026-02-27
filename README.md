@@ -18,4 +18,4 @@
 
 | 赞助商 | 简介 |
 | :---: | :--- |
-| <img src="https://github.com/FakeOAI/tokens/blob/docs/docs/public/apihk_sp.png" width="200" alt="apiHK.Ai"> | 感谢 **apiHK.Ai** 对本项目的赞助！**apiHK.Ai**是专注Claude Code（CC）API的专业服务平台，提供稳定高效的AI接口解决方案。平台采用优质专线，7×24小时稳定运行，支持高并发与个性化定制，对接响应快、售后有保障。秉持诚信为本、长久合作，做您稳定可靠的CC API合作伙伴，🤝 对接微信：bbpbcc。[【点击进入官网】](https://apiHK.Ai) |
+| <img src="https://github.com/FakeOAI/tokens/blob/docs/docs/public/apihk_sp.png" width="200" alt="apiHK.Ai"> | 感谢 **apiHK.Ai** 对本项目的赞助！**apiHK.Ai**是专注Claude Code（CC）API的专业服务平台，提供稳定高效的AI接口解决方案。平台采用优质专线，7×24小时稳定运行，支持高并发与个性化定制，对接响应快、售后有保障。秉持诚信为本、长久合作，做您稳定可靠的CC API合作伙伴。[【点击进入官网】](https://apiHK.Ai) |
