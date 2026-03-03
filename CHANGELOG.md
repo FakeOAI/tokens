@@ -1,3 +1,9 @@
+## [4.0.19] - 2026-03-03
+
+### Added
+
+- CC平台新增对【Invalid authentication credentials】报错的异常标记并重试
+
 ## [4.0.18] - 2026-03-02
 
 ### Fixed
