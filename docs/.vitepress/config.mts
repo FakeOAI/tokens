@@ -69,6 +69,7 @@ export default defineConfig({
           { text: "额外参数", link: "extra-params" },
           { text: "Token提取", link: "extract-token" },
           { text: "后台鉴权", link: "admin-auth" },
+          { text: "粘性对话", link: "sticky-conversation" },
           { text: "平台计费标准", link: "platform-pricing" },
           { text: "代理计费标准", link: "proxy-pricing" },
           { text: "联系作者", link: "contact" },

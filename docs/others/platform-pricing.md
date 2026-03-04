@@ -35,4 +35,4 @@
 |     **全平台 `V1Messages` 接口**     |     `1500 元`      |        `Claude Code` 无限制        |
 |    **全平台 `V1BetaModels` 接口**    |     `1500 元`      | `Gemini Cli`、`Antigravity` 无限制 |
 |    **Sora的 `V1Characters` 接口**    |     `5000 元`      |                 -                  |
-|             **粘性对话**             |      `500 元`      | 目前仅 `Codex`、`Claude Code` 支持 |
+|             **[粘性对话](/others/sticky-conversation.md)**             |      `500 元`      | 目前仅 `Codex`、`Claude Code` 支持 |
