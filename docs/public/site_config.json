@@ -3,20 +3,12 @@
     {
       "image": "/apihk_ad.png",
       "link": "https://apihk.ai"
-    },
-    {
-      "image": "/aiclaude_ad.png",
-      "link": "https://aiclaude.club"
     }
   ],
   "sponsors": [
     {
       "logo": "/apihk_sp.png",
       "link": "https://apihk.ai"
-    },
-    {
-      "logo": "/aiclaude_sp.png",
-      "link": "https://auclaude.club"
     }
   ]
 }
