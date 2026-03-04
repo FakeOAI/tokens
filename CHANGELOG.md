@@ -1,3 +1,12 @@
+## [4.0.20] - 2026-03-04
+
+### Changed
+
+- 优化Codex插件加号的授权登录流程
+- 由于Codex官方不再强校验客户端预设，所以移除Codex平台的默认终端的预设，大幅度减少提示的Token数量
+- Codex平台支持clientId为【app_EMoamEEZ73f0CkXaXp7hrann】的rt进行加号
+- YesCaptcha平台请求地址更换为国内镜像地址
+
 ## [4.0.19] - 2026-03-03
 
 ### Added
