@@ -12,3 +12,4 @@
 | `close_reasoning_content`  | 是否关闭思考内容，这是控制单次请求是否关闭思考内容，可在设置中关闭全局的思考内容。                                    | `boolean` | `false` |
 | `return_reasoning_content` | 思考内容是否输出在 `reasoning_content` 字段中，这是控制单次请求的思考内容是否输出到该字段中，可在设置中进行全局设置。 | `boolean` | `false` |
 | `retry_attempt`            | 重试次数，这是控制单次请求的重试次数，可在设置中进行全局设置。                                                        | `number`  | `5`     |
+| `thinking_budget`          | 思考预算，支持思考预算设置的平台模型才生效                                                                            | `number`  | `1024`  |
