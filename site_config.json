@@ -1,0 +1,14 @@
+{
+  "ads": [
+    {
+      "image": "/apihk_ad.png",
+      "link": "https://apihk.ai"
+    }
+  ],
+  "sponsors": [
+    {
+      "logo": "/apihk_sp.png",
+      "link": "https://apihk.ai"
+    }
+  ]
+}
