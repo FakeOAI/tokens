@@ -13,3 +13,5 @@
 | `return_reasoning_content` | 思考内容是否输出在 `reasoning_content` 字段中，这是控制单次请求的思考内容是否输出到该字段中，可在设置中进行全局设置。 | `boolean` | `false` |
 | `retry_attempt`            | 重试次数，这是控制单次请求的重试次数，可在设置中进行全局设置。                                                        | `number`  | `5`     |
 | `thinking_budget`          | 思考预算，支持思考预算设置的平台模型才生效                                                                            | `number`  | `1024`  |
+| `resolution`               | 分辨率，支持分辨率设置的平台模型才生效，例如：`1K`、`2K`、`4K`                                                        | `string`  | -       |
+| `aspect_ratio`             | 比例设置，支持比例设置的平台模型才生效，例如：`1:1`、`4:3`、`3:4`等                                                   | `string`  | -       |
