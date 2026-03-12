@@ -1,4 +1,4 @@
-# Gemini API 官方接口文档
+# Vertex API 官方接口文档
 
 ## 基础信息
 
