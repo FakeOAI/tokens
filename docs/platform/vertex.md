@@ -2,13 +2,11 @@
 
 ## 基础信息
 
-**官网地址：** `https://ai.google.dev/gemini-api/docs`
+**官网地址：** `https://console.cloud.google.com/vertex-ai`
 
-**Base URL:** `http://<你的IP>:<你的端口>/gemini`
+**Base URL:** `http://<你的IP>:<你的端口>/vertex`
 
 **认证方式:** `Bearer Token`、`X-Goog-Api-Key请求头`、`URL参数key`
-
-**Token 提取：** [点击查看](/others/extract-token.md#gemini-api)
 
 ## 模型列表
 
@@ -36,5 +34,5 @@
 | [`V1Messages`](/others/api-reference.md#v1messages) 接口               |    ✅    |    ✅    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
 | [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |                            -                             |
 | [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ✅    |                            -                             |
-| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ❌    |    ❌    |                            -                             |
+| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ✅    |    ❌    |                            -                             |
 | [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ❌    |    ❌    |                            -                             |

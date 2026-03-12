@@ -44,6 +44,7 @@ export default defineConfig({
             text: "Google",
             items: [
               { text: "Gemini 官方API", link: "gemini" },
+              { text: "Vertex 官方API", link: "vertex" },
               { text: "Gemini 官网逆向", link: "gemini_official" },
               { text: "Gemini Business 官网逆向", link: "gemini_business" },
               { text: "Gemini Cli 终端逆向", link: "gemini_cli" },
