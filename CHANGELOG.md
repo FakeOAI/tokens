@@ -1,3 +1,13 @@
+## [4.0.31] - 2026-03-14
+
+### Fixed
+
+- 修复Codex、Anti、GeminiCli平台在ClaudeCode终端中联网搜索能力不生效的问题
+
+### Added
+
+- 插件管理中新增ClaudeCode平台的插件加号的功能
+
 ## [4.0.30] - 2026-03-13
 
 ### Fixed
