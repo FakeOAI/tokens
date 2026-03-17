@@ -1,3 +1,14 @@
+## [4.0.32] - 2026-03-14
+
+### Added
+
+- ClaudeCode平台支持以AccessToken（sk-ant-oat开头）、RefreshToken（sk-ant-ort开头）的Token进行加号
+
+### Changed
+
+- 优化ClaudeCode平台封控策略（参照开源的Sub2API）
+- ClaudeCode平台额度查询接口改为客户端接口，不走网页接口查询
+
 ## [4.0.31] - 2026-03-14
 
 ### Fixed
