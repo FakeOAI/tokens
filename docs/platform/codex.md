@@ -24,6 +24,7 @@
 - `gpt-5.3-codex`
 - `gpt-5.3-codex-spark`
 - `gpt-5.4`
+- `gpt-5.4-mini`
 
 ## 模型参数
 
@@ -35,7 +36,7 @@
 | `low`     | 低级推理   | `gpt-5-codex-mini`、<br>`gpt-5.1-codex-mini` 不可用                                                     |
 | `medium`  | 中级推理   | 全系模型可用                                                                                            |
 | `high`    | 高级推理   | 全系模型可用                                                                                            |
-| `xhigh`   | 超高级推理 | `gpt-5.1-codex-max`、`gpt-5.2`、<br>`gpt-5.2-codex`、<br>`gpt-5.3-codex`、<br>`gpt-5.3-codex-spark`、<br>`gpt-5.4` 可用 |
+| `xhigh`   | 超高级推理 | `gpt-5.1-codex-max`、`gpt-5.2`、<br>`gpt-5.2-codex`、<br>`gpt-5.3-codex`、<br>`gpt-5.3-codex-spark`、<br>`gpt-5.4`、`gpt-5.4-mini` 可用 |
 
 ## 接口支持概览
 
