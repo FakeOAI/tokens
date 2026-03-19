@@ -15,29 +15,29 @@
 - `gemini-2.5-flash`
 - `gemini-2.5-flash-image`
 - `gemini-2.5-flash-lite`
-- `gemini-2.5-flash-thinking`
-- `gemini-2.5-pro`
-- `gemini-3-pro-image`
-- `gemini-3-pro-low`
-- `gemini-3-pro-high`
-- `claude-sonnet-4-5`
-- `claude-sonnet-4-5-thinking`
-- `claude-opus-4-5-thinking`
-- `gpt-oss-120b-medium`
+- `gemini-2.5-flash`
 - `gemini-3-flash`
-- `claude-opus-4-6-thinking`
-- `claude-sonnet-4-6`
-- `gemini-3.1-pro-low`
-- `gemini-3.1-pro-high`
+- `gemini-2.5-pro`
+- `gemini-3-pro`
+- `gemini-3.1-pro`
+- `gemini-3-pro-image`
 - `gemini-3.1-flash-image`
+- `claude-sonnet-4-5`
+- `claude-sonnet-4-5`
+- `claude-opus-4-5`
+- `claude-opus-4-6`
+- `claude-sonnet-4-6`
+- `gpt-oss-120b-medium`
 
 ## 模型参数
 
 [什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 参数取值           | 说明           | 适用范围                                           |
-| ------------------ | -------------- | -------------------------------------------------- |
-| `1K` / `2K` / `4K` | 指定图片分辨率 | `gemini-3-pro-image`、<br>`gemini-2.5-flash-image` |
+| 参数取值           | 说明           | 适用范围                                                                                                                     |
+| ------------------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `1K` / `2K` / `4K` | 指定图片分辨率 | `gemini-3-pro-image`、<br>`gemini-2.5-flash-image`                                                                           |
+| `thinking`         | 开启思考模式   | `gemini-2.5-flash`、`gemini-2.5-pro`、<br>`claude-sonnet-4-5`、`claude-opus-4-5`、<br>`claude-sonnet-4-6`、`claude-opus-4-6` |
+| `low` / `high`     | 开启思考模式   | `gemini-3-pro`、`gemini-3.1-pro`                                                                                             |
 
 ## 额外参数说明
 
