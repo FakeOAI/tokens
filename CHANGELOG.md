@@ -1,4 +1,15 @@
-## [4.1.1] - 2026-03-18
+## [4.1.2] - 2026-03-19
+
+### Fixed
+
+- 修复V1Messages端点在ClaudeCode客户端报错【Invalid tool parameters】的问题
+- 修复程序流处理用到的一个库出现内存泄露的问题
+
+### Added
+
+- Anti模型加入thinking模型参数，claude的所有模型都可以选择加或不加thinking参数，具体可以看文档
+
+## [4.1.1] - 2026-03-19
 
 ### Fixed
 
