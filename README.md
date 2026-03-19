@@ -19,3 +19,4 @@
 | 赞助商 | 简介 |
 | :---: | :--- |
 | <img src="https://github.com/FakeOAI/tokens/blob/docs/docs/public/apihk_sp.png" width="200" alt="apihk.ai"> | 感谢 **apiHK.Ai** 对本项目的赞助！**apiHK.Ai**是专注Claude Code（CC）API的专业服务平台，提供稳定高效的AI接口解决方案。平台采用优质专线，7×24小时稳定运行，支持高并发与个性化定制，对接响应快、售后有保障。秉持诚信为本、长久合作，做您稳定可靠的CC API合作伙伴。[【点击进入官网】](https://apiHK.Ai) |
+| <img src="https://github.com/FakeOAI/tokens/blob/docs/docs/public/deepwl_sp.png" width="200" alt="zx1.deepwl.net"> | 感谢 **zx1.deepwl.net** 对本项目的赞助！**zx1.deepwl.net**是全球大模型API的专业服务平台，专攻企业级别稳定高并发的AI接口解决方案。大模型【gemini/veo/grok】长期高并发稳定供应，全站百款模型自选随意切换。平台采用企业级优质专线，7x24小时稳定运行，客服秒级响应，支持高并发与个性化定制，新模型极速上线，对接响应快、售后有保障。[【点击进入官网】](https://zx1.deepwl.net) |
