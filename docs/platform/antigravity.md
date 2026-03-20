@@ -23,10 +23,9 @@
 - `gemini-3-pro-image`
 - `gemini-3.1-flash-image`
 - `claude-sonnet-4-5`
-- `claude-sonnet-4-5`
+- `claude-sonnet-4-6`
 - `claude-opus-4-5`
 - `claude-opus-4-6`
-- `claude-sonnet-4-6`
 - `gpt-oss-120b-medium`
 
 ## 模型参数
