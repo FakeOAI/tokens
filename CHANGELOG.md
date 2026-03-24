@@ -1,3 +1,9 @@
+## [4.1.9] - 2026-03-24
+
+### Added
+
+- OpenAI平台适配开头为【oaistb】的RefreshToken加号
+
 ## [4.1.8] - 2026-03-24
 
 ### Fixed
