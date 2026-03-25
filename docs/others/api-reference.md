@@ -956,9 +956,7 @@ curl -X POST 'http://localhost/{platform}/v1beta/models/<平台模型>:streamGen
 
 ## V1Characters
 
-> 该接口只有 `Sora` 官网逆向平台支持
-
-### 非真人角色创建接口
+Sora官网逆向的非真人角色创建接口
 
 ::: code-group
 
@@ -984,6 +982,118 @@ curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/characters' \
 
 :::
 
-### 真人角色创建接口
+## V1Cameos
 
-尽情期待....
+Sora官网逆向的真人角色创建接口
+
+### 创建真人角色任务
+
+请求示例：
+
+```bash
+curl -X GET 'http://<你的IP>:<你的端口>/sora/v1/cameos/session' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: application/json'
+```
+
+返回示例：
+
+```json
+{
+  "expires_at": 1766048431.7830756, // 任务过期时间
+  "id": 1000, // 任务ID
+  "movements": [
+    // 摇头动作
+    {
+      "direction": "left"
+    },
+    {
+      "direction": "down"
+    }
+  ],
+  "numbers": [56, 73, 23],
+  "phrase": "56 - 73 - 23" // 密语顺序
+}
+```
+
+### 上传真人角色视频
+
+请求示例：
+
+```bash
+curl -X POST 'http://<你的IP>:<你的端口>/sora/v1/cameos' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: multipart/form-data' \
+--form 'id=<任务ID>' \
+--form 'file=@<视频文件>'
+```
+
+返回示例：
+
+```json
+{
+  "display_name": "Michafsadfel Flynn", // 角色展示名称
+  "id": "6943b565c5048191b8dcddbd41c51c42", // 角色id
+  "permalink": "https://sora.chatgpt.com/profile/yswrfkhhgcddddasdfav", // 角色主页地址
+  "profile_picture_url": "https://cdn.openai.com/sora/images/profile_placeholder_v4.png", // 角色头像地址
+  "username": "lailasldasdas2112" // 角色名称
+}
+```
+
+### 修改真人角色信息
+
+请求示例：
+
+```bash
+curl -X PUT 'http://<你的IP>:<你的端口>/sora/v1/cameos/<角色ID>' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: application/json' \
+--data '{
+    "username": "角色新名称",
+    "profile_picture_url": "角色新头像地址"
+}'
+```
+
+返回示例：
+
+```json
+{
+  "display_name": "xxxxxxxx", // 角色展示名称
+  "id": "xxxxxxxx", // 角色id
+  "permalink": "https://sora.chatgpt.com/profile/xxxxxxxx", // 角色主页地址
+  "profile_picture_url": "https://cdn.openai.com/sora/images/xxxxxxxx.png", // 角色头像地址
+  "username": "xxxxxxxx" // 角色名称
+}
+```
+
+### 获取真人角色信息
+
+请求示例：
+
+```bash
+curl -X GET 'http://<你的IP>:<你的端口>/sora/v1/cameos/<角色ID>' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: application/json'
+```
+
+返回示例：
+
+```json
+{
+  "display_name": "xxxxxxxx", // 角色展示名称
+  "id": "xxxxxxxx", // 角色id
+  "permalink": "https://sora.chatgpt.com/profile/xxxxxxxx", // 角色主页地址
+  "profile_picture_url": "https://cdn.openai.com/sora/images/xxxxxxxx.png", // 角色头像地址
+  "username": "xxxxxxxx" // 角色名称
+}
+```
+
+### 删除真人角色
+
+请求示例：
+
+```bash
+curl -X DELETE 'http://<你的IP>:<你的端口>/sora/v1/cameos/<角色ID>' \
+--header 'Authorization: Bearer <你的许可证>' \
+--header 'Content-Type: application/json'
+```
