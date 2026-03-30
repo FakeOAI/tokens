@@ -1,3 +1,10 @@
+## [4.1.14] - 2026-03-30
+
+### Fixed
+
+- 修复ClaudeCode平台单号并发报错【Rate limited】没有自动标记限速重试的问题
+- 修复Codex平台的team号报错【invalid_workspace_selected】没有自动标记异常重试的问题
+
 ## [4.1.13] - 2026-03-29
 
 ### Fixed
