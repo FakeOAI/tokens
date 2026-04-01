@@ -1,3 +1,10 @@
+## [4.1.17] - 2026-04-01
+
+### Fixed
+
+- 后台配置新增检验ClaudeCode终端流量的请求，开启后ClaudeCode平台只能V1Messages端点请求
+- Codex平台展开Token支持用量额度查询
+
 ## [4.1.16] - 2026-03-31
 
 ### Fixed
