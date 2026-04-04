@@ -1,3 +1,13 @@
+## [4.1.20] - 2026-04-04
+
+### Changed
+
+- 更新Anti默认的客户端版本为【1.21.9】
+
+### Fixed
+
+- 修复Anti平台部分模型报错【This version of Antigravity is no longer supported. Please upgrade to receive the latest features.】的问题
+
 ## [4.1.19] - 2026-04-02
 
 ### Fixed
