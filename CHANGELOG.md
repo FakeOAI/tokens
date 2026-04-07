@@ -1,3 +1,9 @@
+## [4.1.21] - 2026-04-07
+
+### Fixed
+
+- Flow平台新增对【PUBLIC_ERROR_UNUSUAL_ACTIVITY】、【PUBLIC_ERROR_UNUSUAL_ACTIVITY_TOO_MUCH_TRAFFIC】报错进行重试处理
+
 ## [4.1.20] - 2026-04-04
 
 ### Changed
