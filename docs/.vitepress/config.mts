@@ -63,6 +63,7 @@ export default defineConfig({
         link: "high-level-play",
         collapsed: false,
         items: [
+          { text: "接入NewAPI", link: "new-api" },
           { text: "高阶玩法", link: "high-level-play" },
           { text: "终端接入", link: "terminal" },
           { text: "储存配置", link: "storage" },
