@@ -80,11 +80,11 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 > [!WARNING]
 >
 > - 提取之前如果已登录过，**一定要退出重新登录**，提取之后马上加入 tokens 号池中，否则很快会失效
-> - 建议使用无痕浏览器提取，提取完之后，页面不要进行任何对话等**点击操作**，马上关闭浏览器或网页，否则很快会失效
+> - 使用无痕浏览器提取，提取完之后，页面不要进行任何对话等**点击操作**，马上关闭浏览器或网页，否则很快会失效
 
-打开 [Gemini 官网](https://gemini.google.com/) 控制台，在 `Cookie` 中找到一个名为 `__Secure-1PSID`
+打开 [Gemini 官网](https://gemini.google.com/) 控制台，在 `Cookie` 中找到 `__Secure-1PSID` 和 `NID`，然后把他们的值通过 `::` 拼接起来，格式为：`__Secure-1PSID的值::NID的值`
 
-![](/WechatIMG424.jpg)
+![](/7939e8c78f11c4c433fede54ce1a001f.png)
 
 ### Flow
 
