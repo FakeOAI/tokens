@@ -1,3 +1,10 @@
+## [4.2.2] - 2026-04-12
+
+### Fixed
+
+- 修复Gemini官网逆向平台加号经常报错502的问题，加号方式已更新在文档【http://localhost:5174/others/extract-token.html#gemini-%E5%AE%98%E7%BD%91】
+- 后台Tokens管理页面的邮箱支持忽略大小写的模糊搜索
+
 ## [4.2.1] - 2026-04-10
 
 ### Added
