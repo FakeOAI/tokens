@@ -1,3 +1,9 @@
+## [4.2.3] - 2026-04-14
+
+### Fixed
+
+- 修复Codex平台报错【The encrypted content gAAA...MQ== could not be verified.】的问题
+
 ## [4.2.2] - 2026-04-12
 
 ### Fixed
