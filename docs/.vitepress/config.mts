@@ -55,6 +55,7 @@ export default defineConfig({
           { text: "Grok 官网逆向", link: "grok" },
           { text: "Cursor 客户端逆向", link: "cursor" },
           { text: "Kiro 客户端逆向", link: "kiro" },
+          { text: "Copilot 客户端逆向", link: "copilot" },
         ],
       },
       {
