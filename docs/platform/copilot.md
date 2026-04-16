@@ -2,17 +2,30 @@
 
 ## 基础信息
 
+**官网地址：** `https://www.copilot.com/`
+
 **Base URL:** `http://<你的IP>:<你的端口>/copilot`
 
 **认证方式:** `Bearer Token`、`X-Goog-Api-Key请求头`、`URL参数key`
+
+**Token 提取：** [点击查看](/others/extract-token.md#copilot)
 
 ## 模型列表
 
 - `claude-opus-4.6`
 - `claude-sonnet-4.6`
 - `claude-haiku-4.5`
+- `claude-sonnet-4`
+- `gemini-3.1-pro-preview`
+- `gemini-3-flash-preview`
+- `gemini-3-pro`
+- `gemini-2.5-pro`
+- `gemini-2.5-flash`
 - `gpt-5.4`
+- `gpt-5.4-mini`
 - `gpt-5-mini`
+- `gpt-5.3-codex`
+- `gpt-5.2-codex`
 
 ## 接口支持概览
 
