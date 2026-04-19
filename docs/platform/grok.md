@@ -18,6 +18,7 @@
 - `grok-420-fast`
 - `grok-420-thinking`
 - `grok-420-agents`
+- `grok-4.3`
 
 ## 模型参数
 
