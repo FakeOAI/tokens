@@ -15,12 +15,12 @@
 > [!WARNING]
 > 官网 API 支持的模型**基本上都支持**
 
-- `gemini-2.0-flash`
 - `gemini-2.5-flash`
 - `gemini-2.5-pro`
 - `gemini-2.5-pro_vertex`
 - `gemini-3-flash-preview`
 - `gemini-3-pro-preview`
+- `gemini-3.1-pro-preview`
 
 ## 模型参数
 
