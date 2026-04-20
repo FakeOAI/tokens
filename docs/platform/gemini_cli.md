@@ -16,15 +16,11 @@
 > 官网 API 支持的模型**基本上都支持**
 
 - `gemini-2.0-flash`
-- `gemini-2.0-flash_vertex`
 - `gemini-2.5-flash`
-- `gemini-2.5-flash_vertex`
 - `gemini-2.5-pro`
 - `gemini-2.5-pro_vertex`
 - `gemini-3-flash-preview`
-- `gemini-3-flash-preview_vertex`
 - `gemini-3-pro-preview`
-- `gemini-3-pro-preview_vertex`
 
 ## 模型参数
 
@@ -33,14 +29,15 @@
 | 模型参数   | 功能说明     |
 | ---------- | ------------ |
 | `thinking` | 开启思考模式 |
+| `search`   | 开启联网模式 |
 
 ## 接口支持概览
 
-| 端点接口                                                               | 支持情况 | 函数调用 |   备注   |
-| :--------------------------------------------------------------------- | :------: | :------: | :------: |
-| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ✅    |    -     |
+| 端点接口                                                               | 支持情况 | 函数调用 |                           备注                           |
+| :--------------------------------------------------------------------- | :------: | :------: | :------------------------------------------------------: |
+| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ✅    |                            -                             |
 | [`V1Messages`](/others/api-reference.md#v1messages) 接口               |    ✅    |    ✅    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
-| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |    -     |
-| [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ✅    |    -     |
-| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ❌    |    ❌    |    -     |
-| [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ❌    |    ❌    |    -     |
+| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |                            -                             |
+| [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ✅    |                            -                             |
+| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ❌    |    ❌    |                            -                             |
+| [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ❌    |    ❌    |                            -                             |
