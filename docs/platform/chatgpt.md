@@ -15,22 +15,22 @@
 > [!WARNING]
 > 官网所有可用模型都支持
 
-- `gpt-4`
-- `gpt-4o`
-- `gpt-4o-mini`
-- `gpt-4-5`
-- `gpt-4-1-mini`
-- `gpt-4-1`
-- `gpt-5`
-- `gpt-5-thinking`
-- `gpt-5-pro`
-- `o3`
-- `o3-mini`
-- `o4-mini`
-- `o4-mini-high`
-- `o1-pro`
-- `o3-pro`
-- `gpt-4o-image`
+- `auto`
+- `gpt-5-4-thinking`
+- `gpt-5-3`
+- `gpt-5-3-instant`
+- `gpt-5-3-thinking`
+- `gpt-5-2`
+- `gpt-5-2-instant`
+- `gpt-5-2-thinking`
+
+## 模型参数
+
+[什么是模型参数？](/others/high-level-play.md#模型参数)
+
+| 模型参数 | 功能说明         |
+| -------- | ---------------- |
+| `image`  | 开启图像生成模式 |
 
 ### GPTs 自定义模型
 
@@ -65,11 +65,11 @@ ChatGPT 网关起到转发以及对话接口请求逻辑的处理作用。
 
 ## 接口支持概览
 
-| 端点接口                                                               | 支持情况 | 函数调用 |   备注   |
-| :--------------------------------------------------------------------- | :------: | :------: | :------: |
-| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ❌    |    -     |
+| 端点接口                                                               | 支持情况 | 函数调用 |                           备注                           |
+| :--------------------------------------------------------------------- | :------: | :------: | :------------------------------------------------------: |
+| [`V1ChatCompletions`](/others/api-reference.md#v1chatcompletions) 接口 |    ✅    |    ❌    |                            -                             |
 | [`V1Messages`](/others/api-reference.md#v1messages) 接口               |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
-| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |    -     |
+| [`V1Responses`](/others/api-reference.md#v1responses) 接口             |    ❌    |    ❌    |                            -                             |
 | [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
-| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ❌    |    ❌    |    -     |
-| [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ❌    |    ❌    |    -     |
+| [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
+| [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ❌    |    ❌    |                            -                             |
