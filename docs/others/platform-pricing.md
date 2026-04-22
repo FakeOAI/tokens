@@ -34,6 +34,7 @@
 |      **Gemini官网逆向的 `V1Images` 接口**      |      `500 元`      |                 -                  |
 |       **Antigravity的 `V1Images` 接口**        |      `500 元`      |                 -                  |
 |     **ChatGPT官网逆向的 `V1Images` 接口**      |      `500 元`      |                 -                  |
+|      **Codex终端逆向的 `V1Images` 接口**       |      `500 元`      |                 -                  |
 |          **全平台 `V1Messages` 接口**          |     `1500 元`      |        `Claude Code` 无限制        |
 |         **全平台 `V1BetaModels` 接口**         |     `1500 元`      | `Gemini Cli`、`Antigravity` 无限制 |
 |         **Sora的 `V1Characters` 接口**         |     `5000 元`      |                 -                  |
