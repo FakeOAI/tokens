@@ -17,6 +17,7 @@
 - `gpt-5.3-codex-spark`
 - `gpt-5.4`
 - `gpt-5.4-mini`
+- `gpt-5.5`
 - `gpt-image-2`
 
 ## 模型参数
