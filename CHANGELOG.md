@@ -3,7 +3,7 @@
 ### Fixed
 
 - 优化ChatGPT官网逆向平台图片部分报错的重试逻辑
-- Codex平台的V1Responses端点仅在Codex Desktop App上面使用才会触发画图（newapi需把请求头穿透打开），不然会影响输入不准确的问题
+- Codex平台的V1Responses端点仅在【Codex Desktop App】上面使用才会触发画图（newapi需把请求头穿透打开），不然会影响输入不准确的问题
 
 ## [4.3.25] - 2026-04-25
 
