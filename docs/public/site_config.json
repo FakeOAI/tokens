@@ -1,19 +1,11 @@
 {
   "ads": [
     {
-      "image": "/apihk_ad.png",
-      "link": "https://apihk.ai"
-    },
-    {
       "image": "/deepwl_ad.png",
       "link": "https://zx1.deepwl.net"
     }
   ],
   "sponsors": [
-    {
-      "logo": "/apihk_sp.png",
-      "link": "https://apihk.ai"
-    },
     {
       "logo": "/deepwl_sp.png",
       "link": "https://zx1.deepwl.net"
