@@ -241,6 +241,7 @@ curl -X POST 'http://localhost/{platform}/v1/images/generations?async=true' \
 | `prompt`          | `string`                       | 是   | 图片描述，用于编辑图片                                                   |
 | `model`           | `string`                       | 是   | 平台模型名称，不同平台支持的模型不同，详见各平台文档                     |
 | `image`           | `string` / `string[]` / `form` | 是   | 图片 URL 或者 base64，支持单图或多图                                     |
+| `images`          | `object[]`                     | 是   | 图片 URL 或者 base64，支持单图或多图                                     |
 | `response_format` | `enum`                         | 否   | 响应格式，枚举值为 `b64_json` 或 `url`，默认为 `b64_json`                |
 | `size`            | `string`                       | 否   | 生成图片的尺寸，格式为 `widthxheight`，例如 `1024x1024`、`1920x1080`     |
 | `background`      | `enum`                         | 否   | 生成图片的背景， 枚举值为 `transparent`、`opaque`、`auto`，默认为 `auto` |
@@ -251,41 +252,22 @@ curl -X POST 'http://localhost/{platform}/v1/images/generations?async=true' \
 
 ::: code-group
 
-```bash [单图JSON格式]
+```bash [JSON格式]
 curl -X POST 'http://localhost/{platform}/v1/images/edits' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <你的许可证>' \
 --data-raw '{
-    "image": "<图片URL或者base64>",
-    "prompt": "<图片描述>",
-    "model": "<平台模型>"
-}'
-```
-
-```bash [多图JSON格式]
-curl -X POST 'http://localhost/{platform}/v1/images/edits' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <你的许可证>' \
---data-raw '{
-    "image": [
-        <图片1的URL或者base64>,
-        <图片2的URL或者base64>,
+    "images": [
+        {
+            "image_url": "<图片的URL或者base64>",
+        }
     ],
     "prompt": "<图片描述>",
     "model": "<平台模型>"
 }'
 ```
 
-```bash [单图表单格式]
-curl -X POST 'http://localhost/{platform}/v1/images/edits' \
---header 'Authorization: Bearer <你的许可证>' \
---header 'Content-Type: multipart/form-data' \
---form 'image=@"/path/to/example.jpg"' \
---form 'prompt="<图片描述>"' \
---form 'model="<平台模型>"'
-```
-
-```bash [多图表单格式]
+```bash [表单格式]
 curl -X POST 'http://localhost/{platform}/v1/images/edits' \
 --header 'Authorization: Bearer <你的许可证>' \
 --header 'Content-Type: multipart/form-data' \
