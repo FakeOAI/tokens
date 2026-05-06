@@ -1,3 +1,9 @@
+## [4.5.3] - 2026-05-06
+
+### Fixed
+
+- 修复Windsurf平台在ClaudeCode客户端中使用报错【Invalid tool parameters】的问题
+
 ## [4.5.2] - 2026-05-06
 
 ### Changed
