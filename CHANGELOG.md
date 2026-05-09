@@ -1,3 +1,9 @@
+## [4.5.4] - 2026-05-09
+
+### Fixed
+
+- 兼容Codex平台在第三方平台上使用Responses端点会报错【Item with id 'rs_xxx' not found. Items are not persisted when `store` is set to false】的问题
+
 ## [4.5.3] - 2026-05-06
 
 ### Fixed
