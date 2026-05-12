@@ -2,7 +2,7 @@
 
 ## OpenAI
 
-OpenAI 平台有 `ChatGPT`、`Sora`、`Codex`三个平台，都可以通过以下三种 Token 进行加号
+OpenAI 平台有 `ChatGPT`、`Codex`三个平台，都可以通过以下三种 Token 进行加号
 
 - `AccessToken`：
   1. 一般 `10天` 过期，一旦过期 Token 就变异常

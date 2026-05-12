@@ -20,7 +20,6 @@
 | **Antigravity 客户端逆向**   | `500 元/月`  |
 | **Cursor 客户端逆向**        | `500 元/月`  |
 | **Kiro 客户端逆向**          | `500 元/月`  |
-| **Sora 官网逆向**            | `500 元/月`  |
 | **Gemini 官方API**           | `500 元/月`  |
 | **Copilot 客户端逆向**       | `500 元/月`  |
 | **Vertex 官方API**           | `500 元/月`  |
@@ -31,13 +30,12 @@
 |                      功能                      | 价格（一次性收费） |                备注                |
 | :--------------------------------------------: | :----------------: | :--------------------------------: |
 |      **全平台 `V1ChatCompletions` 接口**       |       `0 元`       |         包含在平台授权费内         |
-|        **Sora和Flow的 `V1Images` 接口**        |      `500 元`      |                 -                  |
-|        **Sora和Flow的 `V1Videos` 接口**        |      `500 元`      |                 -                  |
+|           **Flow的 `V1Images` 接口**           |      `500 元`      |                 -                  |
+|           **Flow的 `V1Videos` 接口**           |      `500 元`      |                 -                  |
 |      **Gemini官网逆向的 `V1Images` 接口**      |      `500 元`      |                 -                  |
 |       **Antigravity的 `V1Images` 接口**        |      `500 元`      |                 -                  |
 |     **ChatGPT官网逆向的 `V1Images` 接口**      |      `500 元`      |                 -                  |
 |      **Codex终端逆向的 `V1Images` 接口**       |      `500 元`      |                 -                  |
 |          **全平台 `V1Messages` 接口**          |     `1500 元`      |        `Claude Code` 无限制        |
 |         **全平台 `V1BetaModels` 接口**         |     `1500 元`      | `Gemini Cli`、`Antigravity` 无限制 |
-|         **Sora的 `V1Characters` 接口**         |     `5000 元`      |                 -                  |
 | **[粘性对话](/others/sticky-conversation.md)** |      `500 元`      | 目前仅 `Codex`、`Claude Code` 支持 |
