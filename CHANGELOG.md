@@ -1,3 +1,9 @@
+## [4.5.8] - 2026-05-13
+
+### Fixed
+
+- 修复Windsurf平台在调用函数报错【Unable to process request due to an MCP configuration issue】的问题
+
 ## [4.5.7] - 2026-05-11
 
 ### Added
