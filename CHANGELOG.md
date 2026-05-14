@@ -1,3 +1,9 @@
+## [4.5.11] - 2026-05-14
+
+### Added
+
+- Windsurf平台支持【email----password】的Token添加方式
+
 ## [4.5.10] - 2026-05-14
 
 ### Fixed
