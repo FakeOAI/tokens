@@ -37,6 +37,7 @@ export default defineConfig({
             items: [
               { text: "Claude 官网逆向", link: "claude" },
               { text: "Claude Code 终端逆向", link: "claude_api" },
+              { text: "Claude Aws 官方API", link: "claude_aws" },
             ],
           },
           {

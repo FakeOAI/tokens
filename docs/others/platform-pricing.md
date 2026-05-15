@@ -24,18 +24,19 @@
 | **Copilot 客户端逆向**       | `500 元/月`  |
 | **Vertex 官方API**           | `500 元/月`  |
 | **Windsurf 客户端逆向**      | `1000 元/月` |
+| **Claude Aws 官方API**       | `500 元/月`  |
 
 ## 附加功能收费标准
 
-|                      功能                      | 价格（一次性收费） |                备注                |
-| :--------------------------------------------: | :----------------: | :--------------------------------: |
-|      **全平台 `V1ChatCompletions` 接口**       |       `0 元`       |         包含在平台授权费内         |
-|           **Flow的 `V1Images` 接口**           |      `500 元`      |                 -                  |
-|           **Flow的 `V1Videos` 接口**           |      `500 元`      |                 -                  |
-|      **Gemini官网逆向的 `V1Images` 接口**      |      `500 元`      |                 -                  |
-|       **Antigravity的 `V1Images` 接口**        |      `500 元`      |                 -                  |
-|     **ChatGPT官网逆向的 `V1Images` 接口**      |      `500 元`      |                 -                  |
-|      **Codex终端逆向的 `V1Images` 接口**       |      `500 元`      |                 -                  |
-|          **全平台 `V1Messages` 接口**          |     `1500 元`      |        `Claude Code` 无限制        |
-|         **全平台 `V1BetaModels` 接口**         |     `1500 元`      | `Gemini Cli`、`Antigravity` 无限制 |
-| **[粘性对话](/others/sticky-conversation.md)** |      `500 元`      | 目前仅 `Codex`、`Claude Code` 支持 |
+|                      功能                      | 价格（一次性收费） |                         备注                         |
+| :--------------------------------------------: | :----------------: | :--------------------------------------------------: |
+|      **全平台 `V1ChatCompletions` 接口**       |       `0 元`       |                  包含在平台授权费内                  |
+|           **Flow的 `V1Images` 接口**           |      `500 元`      |                          -                           |
+|           **Flow的 `V1Videos` 接口**           |      `500 元`      |                          -                           |
+|      **Gemini官网逆向的 `V1Images` 接口**      |      `500 元`      |                          -                           |
+|       **Antigravity的 `V1Images` 接口**        |      `500 元`      |                          -                           |
+|     **ChatGPT官网逆向的 `V1Images` 接口**      |      `500 元`      |                          -                           |
+|      **Codex终端逆向的 `V1Images` 接口**       |      `500 元`      |                          -                           |
+|          **全平台 `V1Messages` 接口**          |     `1500 元`      |        `Claude Code`、<br>`Claude Aws` 无限制        |
+|         **全平台 `V1BetaModels` 接口**         |     `1500 元`      |        `Gemini Cli`、<br>`Antigravity` 无限制        |
+| **[粘性对话](/others/sticky-conversation.md)** |      `500 元`      | 目前仅 `Codex`、`Claude Code`、<br>`Claude Aws` 支持 |
