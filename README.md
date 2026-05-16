@@ -1,6 +1,6 @@
 # Tokens [![Docker Pulls](https://img.shields.io/docker/pulls/fakeoai/tokens?logo=docker&label=Docker%20Pulls)](https://hub.docker.com/r/fakeoai/tokens)
 
-一个管理逆向Token的平台，轮训号池将各大平台的模型能力转化为OpenAI、Anthropic、Gemini等平台的API接口标准格式。
+一个Tokens管理平台，调度管理号池将各大国外AI平台的模型转化为OpenAI、Anthropic、Gemini等平台的API接口标准格式，支持Claude Code、Codex、GeminiCli等终端调用。
 
 > [!IMPORTANT]  
 > - 在使用前您应当知悉使用本项目可能会违反相关用户协议，并了解相关的风险。我们不对任何因使用本项目而导致的任何损失负责。
