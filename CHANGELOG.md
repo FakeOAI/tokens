@@ -1,3 +1,9 @@
+## [4.6.5] - 2026-05-20
+
+### Fixed
+
+- 修复Flow平台omni_flash模型报错【Internal error encountered】的问题
+
 ## [4.6.4] - 2026-05-20
 
 ### Added
