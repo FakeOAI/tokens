@@ -1,3 +1,11 @@
+## [4.6.4] - 2026-05-20
+
+### Added
+
+- Flow平台新增全新动态推理的【omni_flash】视频模型，支持生成10秒视频
+- Anti平台新增gemini-3.5-flash模型，支持low和high两种思考登记
+- Gemini官网逆向平台新增【gemini-3.5-flash】和【gemini-3.5-thinking】模型，原本的【gemini-3.1-fast】和【gemini-3.1-thinking】模型已下架，版本更新后请及时替换模型
+
 ## [4.6.3] - 2026-05-19
 
 ### Added
