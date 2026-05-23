@@ -1,3 +1,11 @@
+## [4.6.7] - 2026-05-23
+
+### Fixed
+
+- 修复Kiro平台MCP工具函数不规范导致报错【Improperly formed request.】的问题
+- 优化Flow平台4K模型报错【connectionerror: FLOW_CONTROL_ERROR】的问题
+- 修复Flow平台视频模型传递8s参数导致报错【Internal error encountered.】的问题
+
 ## [4.6.6] - 2026-05-20
 
 ### Fixed
