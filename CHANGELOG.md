@@ -1,3 +1,9 @@
+## [4.6.10] - 2026-05-24
+
+### Added
+
+- 优化ClaudeCode平台对Claude Enterprise类型的账号的类型识别
+
 ## [4.6.9] - 2026-05-24
 
 ### Added
