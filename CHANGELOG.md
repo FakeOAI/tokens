@@ -1,3 +1,9 @@
+## [4.6.11] - 2026-05-26
+
+### Fixed
+
+- 修复ChatGPT官网逆向平台报错【Unusual activity has been detected from your device】的问题
+
 ## [4.6.10] - 2026-05-24
 
 ### Added
