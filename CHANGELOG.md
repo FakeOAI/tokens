@@ -1,3 +1,12 @@
+## [4.6.13] - 2026-05-26
+
+### Fixed
+
+- claude全系平台新增claude-opus-4-8模型
+- windsurf平台新增claude-opus-4-8模型，并自动适配客户端传递的思考等级
+- 修复flow平台omni_flash模型部分情况下出现【Internal error encountered.】的问题
+- OpenAI所有平台的付费Token将在订阅过期后自动刷新订阅类型
+
 ## [4.6.12] - 2026-05-26
 
 ### Fixed
