@@ -1,3 +1,9 @@
+## [4.6.16] - 2026-05-31
+
+### Fixed
+
+- 修复ClaudeCode平台在第三方平台调用报错【Third-party apps now draw from your extra usage, not your plan limits】的问题
+
 ## [4.6.15] - 2026-05-29
 
 ### Fixed
