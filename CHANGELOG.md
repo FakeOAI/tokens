@@ -1,3 +1,10 @@
+## [4.6.18] - 2026-06-02
+
+### Fixed
+
+- 修复Codex平台部分封控问题
+- 修复Flow平台报错【PUBLIC_ERROR_MODEL_ACCESS_DENIED】的问题
+
 ## [4.6.17] - 2026-06-02
 
 ### Fixed
