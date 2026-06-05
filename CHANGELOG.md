@@ -1,3 +1,10 @@
+## [4.6.20] - 2026-06-05
+
+### Fixed
+
+- 优化Codex平台画图模型限速不重试的问题
+- 通过请求头【x-tokens-disable-codex-image-generation: true】可以禁用Codex平台的画图能力
+
 ## [4.6.19] - 2026-06-02
 
 ### Fixed
