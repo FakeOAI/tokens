@@ -1,3 +1,9 @@
+## [4.6.22] - 2026-06-06
+
+### Fixed
+
+- 修复Kiro报错【User is not authorized to make this call.】的问题
+
 ## [4.6.21] - 2026-06-06
 
 ### Fixed
