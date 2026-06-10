@@ -30,9 +30,9 @@ OpenAI 平台有 `ChatGPT`、`Codex`三个平台，都可以通过以下三种 T
 
 ## Windsurf
 
-打开 [Windsurf 官网](https://windsurf.com/) 的开发者控制台，在**登录后**抓取一个 `Fetch/XHR` 类型的包，在请求头中找到 `X-Devin-Session-Token`、`X-Auth-Token` 或 `X-Devin-Auth1-Token` 其中一个即可
+打开 [Windsurf 官网](https://app.devin.ai/) 的开发者控制台，在**登录后**查看本地储存空间中找到 `auth1_session` 里面的token值
 
-![](/fe70aeb9497d6b59b958fbee33bafa25.png)
+![](/278a9c65f7001a268c55baffbe829a64.png)
 
 ## Kiro
 
