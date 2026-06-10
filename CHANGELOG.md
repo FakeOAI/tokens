@@ -1,3 +1,10 @@
+## [4.7.3] - 2026-06-07
+
+### Added
+
+- Claude平台新增【claude-fable-5】、【claude-mythos-5】模型
+- Windsurf平台新增【claude-fable-5】模型
+
 ## [4.7.2] - 2026-06-07
 
 ### Added
