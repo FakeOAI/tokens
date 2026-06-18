@@ -1,3 +1,9 @@
+## [4.7.13] - 2026-06-18
+
+### Fixed
+
+- 修复Codex平台image2模型2K、4K分辨率问题，同时Codex画图接口支持n、quality、background等参数
+
 ## [4.7.12] - 2026-06-18
 
 ### Fixed
