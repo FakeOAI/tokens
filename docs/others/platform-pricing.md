@@ -39,5 +39,5 @@
 |      **Codex终端逆向的 `V1Images` 接口**       |      `500 元`      |                          -                           |
 |          **全平台 `V1Messages` 接口**          |     `1500 元`      |        `Claude Code`、<br>`Claude Aws` 无限制        |
 |         **全平台 `V1BetaModels` 接口**         |     `1500 元`      |        `Gemini Cli`、<br>`Antigravity` 无限制        |
-|        **Kiro的 `V1Messages` 接口缓存**        |     `1000 元`      |                          -                           |
+|        **Kiro的 `V1Messages` 接口缓存**        |      `500 元`      |                          -                           |
 | **[粘性对话](/others/sticky-conversation.md)** |      `500 元`      | 目前仅 `Codex`、`Claude Code`、<br>`Claude Aws` 支持 |
