@@ -1,3 +1,11 @@
+## [4.7.15] - 2026-06-18
+
+### Added
+
+- OpenAI的图片接口支持返回size、quality、background等参数
+- Kiro平台支持External IdP认证方式加号
+- 修复Codex平台Responses端点部分情况下会报错【assignment to entry in nil map】的问题
+
 ## [4.7.14] - 2026-06-18
 
 ### Fixed
