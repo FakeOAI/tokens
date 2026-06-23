@@ -1,3 +1,9 @@
+## [4.7.17] - 2026-06-23
+
+### Fixed
+
+- 修复Kiro平台报错【The bearer token included in the request is invalid】的问题
+
 ## [4.7.16] - 2026-06-18
 
 ### Added
