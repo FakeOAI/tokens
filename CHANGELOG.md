@@ -1,3 +1,10 @@
+## [4.7.20] - 2026-06-27
+
+### Added
+
+- Codex平台的【gpt-image-2】模型新增【responses】模型参数，使用该参数后会调用V1Responses端点生成图片，其模型限速和文本模型窗口限速一致
+- 优化GeminiCli平台模型限速策略，根据官方策略，分为Flash、FlashLite、Pro三个等级的窗口进行单独限速
+
 ## [4.7.19] - 2026-06-26
 
 ### Fixed
