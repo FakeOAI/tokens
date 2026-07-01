@@ -1,14 +1,4 @@
 {
-  "ads": [
-    {
-      "image": "/deepwl_ad.png",
-      "link": "https://zx1.deepwl.net"
-    }
-  ],
-  "sponsors": [
-    {
-      "logo": "/deepwl_sp.png",
-      "link": "https://zx1.deepwl.net"
-    }
-  ]
+  "ads": [],
+  "sponsors": []
 }
