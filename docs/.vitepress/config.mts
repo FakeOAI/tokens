@@ -57,6 +57,7 @@ export default defineConfig({
           { text: "Kiro 客户端逆向", link: "kiro" },
           { text: "Copilot 客户端逆向", link: "copilot" },
           { text: "Windsurf 客户端逆向", link: "windsurf" },
+          { text: "Adobe 官网逆向", link: "adobe" },
         ],
       },
       {

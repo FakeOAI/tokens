@@ -46,6 +46,12 @@ OpenAI 平台有 `ChatGPT`、`Codex`三个平台，都可以通过以下三种 T
 
 ![](/9495afa5b843b15a2220101aa31d3e0e.png)
 
+## Adobe
+
+打开 [Adobe 官网](https://firefly.adobe.com/) 控制台，**登录后**在 `Cookie` 中找到一个名为 `ims_sid` 的值
+
+![](/d389b03fd8032639b48c6d84d8affeab.png)
+
 ## Copilot
 
 1、在插件管理中安装插件之后，通过插件跳转登录页面，输入账号密码自动完成加号
