@@ -10,12 +10,6 @@
 
 请 [点击这里](https://docs2.tokens-pool.top) 查看项目文档
 
-## 赞助商
-
-| 赞助商 | 简介 |
-| :---: | :--- |
-| <img src="https://github.com/FakeOAI/tokens/blob/docs/docs/public/deepwl_sp.png" width="200" alt="zx1.deepwl.net"> | 感谢 **zx1.deepwl.net** 对本项目的赞助！**zx1.deepwl.net**是全球大模型API的专业服务平台，专攻企业级别稳定高并发的AI接口解决方案。大模型【gemini/veo/grok】长期高并发稳定供应，全站百款模型自选随意切换。平台采用企业级优质专线，7x24小时稳定运行，客服秒级响应，支持高并发与个性化定制，新模型极速上线，对接响应快、售后有保障。[【点击进入官网】](https://zx1.deepwl.net) |
-
 ## 免责声明
 
 - 在使用前您应当知悉使用本项目可能会违反相关用户协议，并了解相关的风险。我们不对任何因使用本项目而导致的任何损失负责。
