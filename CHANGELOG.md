@@ -1,3 +1,9 @@
+## [4.8.4] - 2026-07-05
+
+### Added
+
+- OpenAI平台适配PAT（Personal AccessToken）类型Token加号方式
+
 ## [4.8.3] - 2026-07-05
 
 ### Added
