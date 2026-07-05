@@ -16,21 +16,35 @@
 > 官网所有可用模型都支持
 
 - `auto`
+- `gpt-5-5-pro`
+- `gpt-5-5-thinking`
+- `gpt-5-5-instant`
+- `gpt-5-5`
 - `gpt-5-4-thinking`
-- `gpt-5-3`
-- `gpt-5-3-instant`
+- `gpt-5-4-instant`
+- `gpt-5-4`
 - `gpt-5-3-thinking`
-- `gpt-5-2`
-- `gpt-5-2-instant`
+- `gpt-5-3-instant`
+- `gpt-5-3`
 - `gpt-5-2-thinking`
+- `gpt-5-2-instant`
+- `gpt-5-2`
+- `gpt-5-1-thinking`
+- `gpt-5-1-instant`
+- `gpt-5-1`
+- `gpt-5-thinking`
+- `gpt-5-instant`
+- `gpt-5`
 
 ## 模型参数
 
 [什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 模型参数 | 功能说明                                        |
-| -------- | ----------------------------------------------- |
-| `image`  | 开启图像生成模式（即最新的【gpt-image-2】模型） |
+| 模型参数   | 功能说明                                        |       适用范围       |
+| ---------- | ----------------------------------------------- | :------------------: |
+| `image`    | 开启图像生成模式（即最新的【gpt-image-2】模型） |          -           |
+| `extended` | 高级思考模式                                    | 所有 `thinking` 模型 |
+| `max`      | 超高思考模式                                    | 所有 `thinking` 模型 |
 
 ### GPTs 自定义模型
 
