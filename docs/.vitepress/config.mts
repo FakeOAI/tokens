@@ -52,7 +52,13 @@ export default defineConfig({
               { text: "Antigravity 客户端逆向", link: "antigravity" },
             ],
           },
-          { text: "Grok 官网逆向", link: "grok" },
+          {
+            text: "Xai",
+            items: [
+              { text: "Grok 官网逆向", link: "grok" },
+              { text: "Grok Cli 终端逆向", link: "grok_cli" },
+            ],
+          },
           { text: "Cursor 客户端逆向", link: "cursor" },
           { text: "Kiro 客户端逆向", link: "kiro" },
           { text: "Copilot 客户端逆向", link: "copilot" },
