@@ -40,12 +40,6 @@ OpenAI 平台有 `ChatGPT`、`Codex`三个平台，都可以通过以下三种 T
 
 ![](/db9399e8f5456477b87eb990f088bd85.png)
 
-## Grok
-
-打开 [Grok 官网](https://grok.com/) 控制台，在 `Cookie` 中找到一个名为 `sso`
-
-![](/9495afa5b843b15a2220101aa31d3e0e.png)
-
 ## Adobe
 
 打开 [Adobe 官网](https://firefly.adobe.com/) 控制台，**登录后**在 `Cookie` 中找到一个名为 `ims_sid` 的值
@@ -67,6 +61,12 @@ OpenAI 平台有 `ChatGPT`、`Codex`三个平台，都可以通过以下三种 T
 Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开 [Claude 官网](https://claude.ai/) 控制台，在 `Cookie` 中找到一个名为 `sessionKey`
 
 ![](/9e0a0571ad6e6aa905e6e0807062d8c7.png)
+
+## XAI
+
+打开 [Grok 官网](https://grok.com/) 控制台，在 `Cookie` 中找到一个名为 `sso`
+
+![](/9495afa5b843b15a2220101aa31d3e0e.png)
 
 ## Google
 
