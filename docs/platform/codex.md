@@ -16,6 +16,9 @@
 - `gpt-5.4`
 - `gpt-5.4-mini`
 - `gpt-5.5`
+- `gpt-5.6-sol`
+- `gpt-5.6-terra`
+- `gpt-5.6-luna`
 - `gpt-image-2`
 - `codex-auto-review`
 
@@ -23,13 +26,15 @@
 
 [什么是模型参数？](/others/high-level-play.md#模型参数)
 
-|  模型参数   | 参数说明                                              |      适用范围      |
-| :---------: | ----------------------------------------------------- | :----------------: |
-|    `low`    | 低级推理                                              | `gpt-image-2` 除外 |
-|  `medium`   | 中级推理                                              | `gpt-image-2` 除外 |
-|   `high`    | 高级推理                                              | `gpt-image-2` 除外 |
-|   `xhigh`   | 超高级推理                                            | `gpt-image-2` 除外 |
-| `responses` | 使用V1Reponses端点生成，不支持`n`、`background`等参数 |   `gpt-image-2`    |
+|  模型参数   | 参数说明                                              |            适用范围            |
+| :---------: | ----------------------------------------------------- | :----------------------------: |
+|    `low`    | 低级推理                                              |       `gpt-image-2` 除外       |
+|  `medium`   | 中级推理                                              |       `gpt-image-2` 除外       |
+|   `high`    | 高级推理                                              |       `gpt-image-2` 除外       |
+|   `xhigh`   | 超高级推理                                            |       `gpt-image-2` 除外       |
+|    `max`    | 超高级推理                                            |         `gpt-5.6` 系列         |
+|   `ultra`   | 超高级推理                                            | `gpt-5.6-sol`、`gpt-5.6-terra` |
+| `responses` | 使用V1Reponses端点生成，不支持`n`、`background`等参数 |         `gpt-image-2`          |
 
 ## 接口支持概览
 
