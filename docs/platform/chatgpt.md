@@ -16,6 +16,9 @@
 > 官网所有可用模型都支持
 
 - `auto`
+- `gpt-5.6-sol-wm`
+- `gpt-5.6-terra-wm`
+- `gpt-5.6-luna-wm`
 - `gpt-5-5-pro`
 - `gpt-5-5-thinking`
 - `gpt-5-5-instant`
