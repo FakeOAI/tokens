@@ -1,3 +1,17 @@
+## [4.9.7] - 2026-07-15
+
+### Fixed
+
+- 优化大部分平台转发重试逻辑，在高并发重试下大幅度减少内存以及CPU占比
+- 优化Grok Cli缓存命中的问题，同时Grok Cli也支持粘性对话
+
+## [4.9.6] - 2026-07-14
+
+### Added
+
+- 优化copilot在cc客户端的使用
+- 修复grokcli报错【Invalid or expired credentials】的问题
+
 ## [4.9.5] - 2026-07-13
 
 ### Added
