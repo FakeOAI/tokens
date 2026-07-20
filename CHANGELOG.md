@@ -1,3 +1,10 @@
+## [4.9.11] - 2026-07-20
+
+### Added
+
+- 后台设置支持自定义多个APIKEY
+- 通过请求头【x-tokens-save-codex-encrypted-content: true】可以穿透Codex平台的思考签名
+
 ## [4.9.10] - 2026-07-20
 
 ### Added
