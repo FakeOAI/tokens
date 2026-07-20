@@ -21,17 +21,28 @@
 - `claude-opus-4.7`
 - `claude-opus-4.8`
 - `claude-sonnet-4.6`
+- `claude-sonnet-5`
+- `gpt-5.6-sol`
+- `gpt-5.6-terra`
+- `gpt-5.6-luna`
 - `deepseek-3.2`
+- `minimax-m2.5`
 - `minimax-m2.1`
+- `glm-5`
 - `qwen3-coder-next`
 
 ## 模型参数
 
 [什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 模型参数   | 功能说明     | 适用范围                                              |
-| ---------- | ------------ | ----------------------------------------------------- |
-| `thinking` | 开启思考模式 | `auto`、`deepseek-3.2`、<br>`qwen3-coder-next` 不可用 |
+| 模型参数   | 功能说明     | 适用范围                                                                                                  |
+| ---------- | ------------ | --------------------------------------------------------------------------------------------------------- |
+| `thinking` | 开启思考模式 | `claude-opus-4.5`、`claude-sonnet-4.5`、<br/>`claude-haiku-4.5`、`claude-sonnet-4`                        |
+| `low`      | 低级推理     | `claude-sonnet-5`、`claude-opus-4.8`、<br/>`claude-opus-4.7`、`claude-opus-4.6`、<br/>`claude-sonnet-4.6` |
+| `medium`   | 中级推理     | `claude-sonnet-5`、`claude-opus-4.8`、<br/>`claude-opus-4.7`、`claude-opus-4.6`、<br/>`claude-sonnet-4.6` |
+| `high`     | 高级推理     | `claude-sonnet-5`、`claude-opus-4.8`、<br/>`claude-opus-4.7`、`claude-opus-4.6`、<br/>`claude-sonnet-4.6` |
+| `xhigh`    | 超高级推理   | `claude-sonnet-5`、`claude-opus-4.8`、<br/>`claude-opus-4.7`、`claude-opus-4.6`、<br/>`claude-sonnet-4.6` |
+| `max`      | 超高级推理   | `claude-sonnet-5`、`claude-opus-4.8`、<br/>`claude-opus-4.7`、`claude-opus-4.6`、<br/>`claude-sonnet-4.6` |
 
 ## 接口支持概览
 
