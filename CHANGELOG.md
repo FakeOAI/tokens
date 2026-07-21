@@ -1,3 +1,9 @@
+## [4.9.12] - 2026-07-21
+
+### Added
+
+- OpenAI平台支持AgentIdentity认证方式加号，加号格式为【agentRuntimeId----agentPrivateKey】
+
 ## [4.9.11] - 2026-07-20
 
 ### Added
