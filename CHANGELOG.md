@@ -1,3 +1,10 @@
+## [4.9.15] - 2026-07-22
+
+### Added
+
+- Gemini官网逆向新增【gemini-3.6-flash】、【gemini-3.5-flash-lite】模型，同时下架【gemini-3.5-thinking】模型
+- 修复Anti平台部分情况下报错【Request contains an invalid argument】的问题
+
 ## [4.9.14] - 2026-07-22
 
 ### Added
