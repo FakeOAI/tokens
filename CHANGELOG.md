@@ -1,3 +1,10 @@
+## [4.9.18] - 2026-07-25
+
+### Added
+
+- Anthropi、Kiro、Windsurf平台适配【claude-opus-5】模型
+- GeminiCli平台新增【gemini-3.5-flash】模型
+
 ## [4.9.17] - 2026-07-24
 
 ### Added
