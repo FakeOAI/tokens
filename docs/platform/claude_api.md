@@ -29,6 +29,7 @@
 - `claude-opus-4-7`
 - `claude-fable-5`
 - `claude-mythos-5`
+- `claude-opus-5`
 
 ## 模型参数
 
