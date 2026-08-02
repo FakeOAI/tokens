@@ -1,5 +1,11 @@
 ## [4.9.21] - 2026-07-31
 
+### Fixed
+
+- 优化Codex平台报错【Our servers are currently overloaded. Please try again later.】的问题
+
+## [4.9.21] - 2026-07-31
+
 ### Changed
 
 - 调整Codex平台【gpt-5.6-terra】、【gpt-5.6-luna】模型计费价格与官方价格对齐
