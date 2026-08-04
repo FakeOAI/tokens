@@ -1,3 +1,10 @@
+## [4.9.25] - 2026-08-03
+
+### Fixed
+
+- 修复Codex的【gpt-image-2】模型报错空指针问题
+- 修复Codex平台报错【 Expected an ID that begins with 'xxx'】的问题
+
 ## [4.9.24] - 2026-08-03
 
 ### Added
