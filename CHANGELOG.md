@@ -1,3 +1,17 @@
+## [4.10.0] - 2026-08-06
+
+### Fixed
+
+- 修复Codex平台报错【System messages are not allowed】的问题
+
+### Changed
+
+- 优化后台批量更新Token的逻辑
+
+### Added
+
+- 后台支持添加Anti企业号，加号格式为【rt----projectId】
+
 ## [4.9.25] - 2026-08-03
 
 ### Fixed
