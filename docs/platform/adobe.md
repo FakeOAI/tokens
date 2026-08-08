@@ -19,7 +19,7 @@
 - `nano-banana-2`
 - `veo-3-1`
 - `veo-3-1-fast`
-- `sora-2`
+- `omni-flash`
 - `seedance-2`
 - `seedance-2-fast`
 
