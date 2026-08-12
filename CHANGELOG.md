@@ -1,3 +1,10 @@
+## [4.10.1] - 2026-08-06
+
+### Added
+
+- Grok官网逆向新增【grok-heavy】和【grok-build】模型
+- GrokCli平台新增【grok-4.6】模型
+
 ## [4.10.0] - 2026-08-06
 
 ### Fixed
