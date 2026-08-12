@@ -24,6 +24,8 @@
 - `grok-4.5`
 - `grok-4.5-fast`
 - `grok-4.5-expert`
+- `grok-heavy`
+- `grok-build`
 
 ## 模型参数
 

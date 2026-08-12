@@ -12,6 +12,7 @@
 
 ## 模型列表
 
+- `grok-4.6`
 - `grok-4.5`
 - `grok-4.3`
 - `grok-imagine-image`
