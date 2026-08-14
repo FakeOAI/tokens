@@ -21,6 +21,7 @@
 - `claude-opus-4-6`
 - `gemini-3.5-flash`
 - `gemini-3.6-flash`
+- `gemini-3.7-flash`
 
 ## 模型参数
 
@@ -30,7 +31,7 @@
 | ------------------------- | -------------- | -------------------------------------------------------------------------------- |
 | `1K` / `2K` / `4K`        | 指定图片分辨率 | `gemini-3.1-flash-image`                                                         |
 | `thinking`                | 开启思考模式   | `gemini-2.5-flash`、`gemini-2.5-pro`、<br>`claude-sonnet-4-6`、`claude-opus-4-6` |
-| `low` / `medium` / `high` | 开启思考模式   | `gemini-3.1-pro`、`gemini-3.5-flash`、<br>`gemini-3.6-flash`                     |
+| `low` / `medium` / `high` | 开启思考模式   | `gemini-3.1-pro`、`gemini-3.5-flash`、<br>`gemini-3.6-flash`、`gemini-3.7-flash` |
 
 ## 额外参数说明
 
