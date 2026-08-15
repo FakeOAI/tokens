@@ -964,3 +964,63 @@ curl -X POST 'http://localhost/{platform}/v1beta/models/<平台模型>:streamGen
 **流式响应：**
 
 流式响应会返回一个 JSON 数组，每个元素格式如上所示。
+
+## V1AlphaSearch
+
+> Codex Standalone Web Search 内部接口，主要供 Codex 客户端的 `web.run` 工具调用。该接口不是 OpenAI 公开且稳定的 API，字段和返回结构可能随 Codex 版本变化。
+
+`POST /{platform}/v1/alpha/search`
+
+**请求示例：**
+
+```bash
+curl -X POST 'http://localhost/{platform}/v1/alpha/search' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <你的许可证>' \
+--data-raw '{
+    "id": "search-session-001",
+    "model": "gpt-5.6-sol",
+    "commands": {
+        "search_query": [
+            {
+                "q": "Go 1.26 有哪些新特性？"
+            }
+        ]
+    }
+}'
+```
+
+**响应参数：**
+
+| 参数名             | 类型              | 说明                                                   |
+| ------------------ | ----------------- | ------------------------------------------------------ |
+| `output`           | `string`          | 提供给 Codex 模型继续处理的搜索结果文本                |
+| `encrypted_output` | `string` / `null` | 可选的加密状态数据，客户端通常原样保留或传递           |
+| `results`          | `array`           | 可选的结构化搜索结果；结果类型和字段可能随服务升级扩展 |
+
+**响应示例：**
+
+```json
+{
+  "encrypted_output": "gAAAAABqgA70_6HjPzuJUQYCqNoVOaMm...",
+  "output": "Search results for query `Go 1.26 有哪些新特性？`\n**viewing lines [0 - 42] of 42**\nL0: # Go 1.26 is released ...",
+  "results": [
+    {
+      "type": "text_result",
+      "domain": "go.dev",
+      "ref_id": "turn6search0",
+      "snippet": "# Go 1.26 is released ... Go 1.26 introduces two significant refinements to the language syntax and type system.",
+      "title": "Go 1.26 is released - The Go Programming Language",
+      "url": "https://go.dev/blog/go1.26"
+    },
+    {
+      "type": "text_result",
+      "domain": "go.dev",
+      "ref_id": "turn6search1",
+      "snippet": "# Go 1.26 Release Notes ...",
+      "title": "Go 1.26 Release Notes - The Go Programming Language",
+      "url": "https://go.dev/doc/go1.26"
+    }
+  ]
+}
+```

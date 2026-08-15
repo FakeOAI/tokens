@@ -46,6 +46,7 @@
 | [`V1BetaModels`](/others/api-reference.md#v1betamodels) 接口           |    ✅    |    ✅    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
 | [`V1Images`](/others/api-reference.md#v1images) 接口                   |    ✅    |    ❌    | [额外收费](/others/platform-pricing.md#附加功能收费标准) |
 | [`V1Videos`](/others/api-reference.md#v1videos) 接口                   |    ❌    |    ❌    |                            -                             |
+| [`V1AlphaSearch`](/others/api-reference.md#v1alphasearch) 接口         |    ✅    |    ❌    |                            -                             |
 
 ## `gpt-image-2` 模型额外参数
 
