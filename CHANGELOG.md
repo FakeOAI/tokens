@@ -1,3 +1,9 @@
+## [4.10.6] - 2026-08-16
+
+### Added
+
+- Codex平台新增 `gpt-daybreak-blue-latest` 模型
+
 ## [4.10.5] - 2026-08-15
 
 ### Added
