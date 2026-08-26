@@ -1,3 +1,9 @@
+## [4.10.14] - 2026-08-26
+
+### Fixed
+
+- 修复Grok平台报错【This page is out of date. Reload to continue】的问题
+
 ## [4.10.13] - 2026-08-25
 
 ### Fixed
