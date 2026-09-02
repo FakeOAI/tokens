@@ -1,3 +1,10 @@
+## [4.10.21] - 2026-09-02
+
+### Added
+
+- Anti平台新增【gemini-3.8-flash】模型
+- Claude Code平台新增【claude-fable-5-1】模型
+
 ## [4.10.20] - 2026-09-02
 
 ### Added
