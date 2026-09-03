@@ -1,3 +1,10 @@
+## [4.10.22] - 2026-09-03
+
+### Added
+
+- Gemini官网逆向新增【gemini-3.8-flash】模型
+- GrokCli平台新增【grok-build-0.1】、【grok-imagine-image-2.0】模型
+
 ## [4.10.21] - 2026-09-02
 
 ### Added
