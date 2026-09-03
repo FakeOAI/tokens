@@ -17,7 +17,7 @@
 - `nano_banana_2`
 - `nano_banana_pro`
 - `imagen_4`
-- `omni_flash`
+- `omni_1_1_flash`
 
 ## 模型参数
 
@@ -28,10 +28,10 @@
 | `portrait`、<br>`landscape`                    | 生成图片或视频的方向，默认竖屏                                     | `veo_3_1`、<br>`nano_banana`、<br>`nano_banana_2`、<br>`nano_banana_pro`、<br>`imagen_4`、<br>`omni_flash` |
 | `square`、<br>`4/3`、`3/4`、<br>`9/16`、`16/9` | 生成`1:1`、`4:3`、`3:4`、`9:16`、`16:9` 比例的图片                 | `nano_banana_2`、<br>`nano_banana_pro`、<br>`imagen_4`                                                     |
 | `fast` / `relaxed` / `lite`                    | 生成模式                                                           | `veo_3_1`                                                                                                  |
-| `fl`                                           | 帧转视频模式（Frame-to-Video）                                     | `veo_3_1`<br>`omni_flash`                                                                                  |
+| `fl`                                           | 帧转视频模式（Frame-to-Video）                                     | `veo_3_1`<br>`omni_1_1_flash`                                                                              |
 | `1K` / `2K` / `4K`                             | 指定图片分辨率                                                     | `nano_banana_pro`<br>`nano_banana_2`                                                                       |
-| `gif` / `hd` / `4K`                            | 指定视频分辨率，`hd` 为 1080P，仅支持横屏生成，`gif`为 270P 的动图 | `veo_3_1`、<br>`omni_flash`                                                                                |
-| `4s` / `6s` / `10s`                            | 指定视频时长                                                       | `omni_flash`                                                                                               |
+| `gif` / `hd` / `4K`                            | 指定视频分辨率，`hd` 为 1080P，仅支持横屏生成，`gif`为 270P 的动图 | `veo_3_1`、<br>`omni_1_1_flash`                                                                            |
+| `4s` / `6s` / `10s`                            | 指定视频时长                                                       | `omni_1_1_flash`                                                                                           |
 | `extend`                                       | 续写延长视频到 `15秒`，仅在 `remix` 操作中使用                     | `veo_3_1`                                                                                                  |
 
 ## 额外参数说明

@@ -22,16 +22,17 @@
 - `gemini-3.5-flash`
 - `gemini-3.6-flash`
 - `gemini-3.7-flash`
+- `gemini-3.8-flash`
 
 ## 模型参数
 
 [什么是模型参数？](/others/high-level-play.md#模型参数)
 
-| 参数取值                  | 说明           | 适用范围                                                                         |
-| ------------------------- | -------------- | -------------------------------------------------------------------------------- |
-| `1K` / `2K` / `4K`        | 指定图片分辨率 | `gemini-3.1-flash-image`                                                         |
-| `thinking`                | 开启思考模式   | `gemini-2.5-flash`、`gemini-2.5-pro`、<br>`claude-sonnet-4-6`、`claude-opus-4-6` |
-| `low` / `medium` / `high` | 开启思考模式   | `gemini-3.1-pro`、`gemini-3.5-flash`、<br>`gemini-3.6-flash`、`gemini-3.7-flash` |
+| 参数取值                  | 说明           | 适用范围                                                                                                 |
+| ------------------------- | -------------- | -------------------------------------------------------------------------------------------------------- |
+| `1K` / `2K` / `4K`        | 指定图片分辨率 | `gemini-3.1-flash-image`                                                                                 |
+| `thinking`                | 开启思考模式   | `gemini-2.5-flash`、`gemini-2.5-pro`、<br>`claude-sonnet-4-6`、`claude-opus-4-6`                         |
+| `low` / `medium` / `high` | 开启思考模式   | `gemini-3.1-pro`、`gemini-3.5-flash`、<br>`gemini-3.6-flash`、`gemini-3.7-flash`、<br>`gemini-3.8-flash` |
 
 ## 额外参数说明
 
