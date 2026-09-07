@@ -41,6 +41,7 @@
 |      **Codex终端逆向的 `V1Images` 接口**       |      `500 元`      |                         -                          |
 |          **全平台 `V1Messages` 接口**          |     `1500 元`      |       `Claude Code`、<br>`Claude Aws` 无限制       |
 |         **全平台 `V1BetaModels` 接口**         |     `1500 元`      |       `Gemini Cli`、<br>`Antigravity` 无限制       |
+|         **全平台 `V1Responses` 接口**          |     `1500 元`      |     `Codex`、`Copilot`、<br>`Grok Cli` 无限制      |
 |        **Kiro的 `V1Messages` 接口缓存**        |      `500 元`      |                         -                          |
 |      **Adobe 官网逆向的 `V1Images` 接口**      |      `500 元`      |                         -                          |
 |      **Adobe 官网逆向的 `V1Videos` 接口**      |      `500 元`      |                         -                          |
