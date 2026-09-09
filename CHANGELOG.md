@@ -1,3 +1,9 @@
+## [4.11.3] - 2026-09-09
+
+### Added
+
+- Adobe平台上架【gpt-image-2.5-sunburst】、【gpt-image-2.5-flare】模型
+
 ## [4.11.2] - 2026-09-09
 
 ### Fixed
