@@ -1,3 +1,13 @@
+## [4.11.7] - 2026-09-22
+
+### Added
+
+- GrokCli平台新增【grok-4.7】模型
+
+### Changed
+
+- Grok官网逆向模型调整，只保留【auto】、【grok-fast】、【grok-expert】、【grok-build】、【grok-heavy】模型
+
 ## [4.11.6] - 2026-09-18
 
 ### Added
