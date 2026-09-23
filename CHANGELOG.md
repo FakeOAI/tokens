@@ -1,3 +1,12 @@
+## [4.11.9] - 2026-09-23
+
+### Added
+
+- 后台优化对Gemini官网逆向的额度展示，分为5小时额度限制和周额度限制
+- 优化Gemini 付费模型【gemini-pro】、【gemini-flash】额度跑完后的限速标记
+- Gemini官网逆向的模型统一调整为：【gemini-flash-lite】、【gemini-flash】、【gemini-pro】三种，更新后请及时调整模型名称
+- Gemini官网逆向支持在后台设置对话模式为隐私模式
+
 ## [4.11.8] - 2026-09-23
 
 ### Added
