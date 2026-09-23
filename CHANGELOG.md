@@ -1,3 +1,10 @@
+## [4.11.8] - 2026-09-23
+
+### Added
+
+- Codex平台新增【gpt-6-sol】、【gpt-6-luna】模型
+- Anthropic平台新增【claude-opus-5-5】模型
+
 ## [4.11.7] - 2026-09-22
 
 ### Added
