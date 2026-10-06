@@ -14,6 +14,8 @@
 
 - `gpt-image-1.5`
 - `gpt-image-2`
+- `gpt-image-2.5-sunburst`
+- `gpt-image-2.5-flare`
 - `nano-banana`
 - `nano-banana-pro`
 - `nano-banana-2`
@@ -22,6 +24,7 @@
 - `omni-flash`
 - `seedance-2`
 - `seedance-2-fast`
+- `seedance-2.5`
 
 ## 模型参数
 
