@@ -1,3 +1,15 @@
+## [4.11.24] - 2026-10-13
+
+### Changed
+
+- Anti平台下架【gemini-3.1-pro】、【gemini-3.6-flash】、【gemini-3.7-flash】模型
+- Anti平台优化experimental版本检测逻辑，【gemini-3.8-flash-exp-b】会被标记为【exp-b】分组，【gemini-3.8-flash-exp-a】会被标记为【exp-a】分组，同一个token支持多分组并存
+
+Anti灰度重定向示例：
+
+- gemini-4-a:gemini-3.8-flash-high|[exp-a]
+- gemini-4-b:gemini-3.8-flash-medium|[exp-b]
+
 ## [4.11.23] - 2026-10-13
 
 ### Added
