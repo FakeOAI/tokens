@@ -18,6 +18,8 @@
 - `nano_banana_pro`
 - `imagen_4`
 - `omni_1_1_flash`
+- `nano_banana_2_lite`
+- `nano_banana_2_1`
 
 ## 模型参数
 

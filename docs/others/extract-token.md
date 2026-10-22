@@ -112,17 +112,19 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 >
 > 全程加号必须在谷歌的**无痕浏览器**中进行，请确保在插件详情中打开【在无痕模式下启用】选项
 
-- 先 [按照这里](#插件安装) 的步骤安装好插件，然后返回插件管理刷新页面
+在 [Flow 官网](https://labs.google/fx/zh/tools/flow/) 控制台，在 `Cookie` 中找到如下，使用 `::` 拼接成一个字符串
 
-- 点击 `添加Flow平台Token` 按钮
+> 如果浏览器的cookies中存在【\_\_Secure-1PSIDTS】，说明这个cookie很快失效，想取长久Cookie的话，推荐使用老版本的谷歌浏览器，老版本的谷歌浏览器一般都没这个Cookie
 
-  ![](/4066755b24c74d5bd73a47883a65d6f9.png)
+- `__Secure-1PSID`
+- `SID`
+- `OSID`
+- `__Secure-1PSIDTS`（可选）
 
-- 登陆谷歌账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
+加号格式为：
 
-  ![5a94bb398b6a8d20542a52ef1447cb37.png](/5a94bb398b6a8d20542a52ef1447cb37.png)
-
-  ![9e82c16b4b009c5449e47d9afb67d79b.png](/9e82c16b4b009c5449e47d9afb67d79b.png)
+1. `__Secure-1PSID::SID::OSID`
+2. `__Secure-1PSID::SID::OSID::__Secure-1PSIDTS`（__Secure-1PSIDTS存在的话）
 
 ### Gemini CLI
 
