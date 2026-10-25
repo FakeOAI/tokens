@@ -98,23 +98,27 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 
 > [!WARNING]
 >
-> - 提取之前如果已登录过，**一定要退出重新登录**，提取之后马上加入 tokens 号池中，否则很快会失效
-> - 使用无痕浏览器提取，提取完之后，页面不要进行任何对话等**点击操作**，马上关闭浏览器或网页，否则很快会失效
-> - 最好使用低版本的谷歌浏览器
+> 1. 全程加号必须在谷歌的**无痕浏览器**中进行，请确保在插件详情中打开【在无痕模式下启用】选项
+> 2. 如果浏览器的cookies中存在 `__Secure-1PSIDTS`，说明 `__Secure-1PSID` 这个cookie很快失效，想取长久Cookie的话，推荐使用老版本（13x内核）的谷歌浏览器，因为老版本的谷歌浏览器一般都没 `__Secure-1PSIDTS` 这个Cookie
 
-打开 [Gemini 官网](https://gemini.google.com/) 控制台，在 `Cookie` 中找到 `__Secure-1PSID`
+在 [Gemini 官网](https://gemini.google.com/) 控制台，在 `Cookie` 中找到如下，使用 `::` 拼接成一个字符串
 
-![](/7939e8c78f11c4c433fede54ce1a001f.png)
+- `__Secure-1PSID`
+- `__Secure-1PSIDTS`（可选）
+
+加号格式为：
+
+1. `__Secure-1PSID`
+2. `__Secure-1PSID::__Secure-1PSIDTS`（\_\_Secure-1PSIDTS存在的话）
 
 ### Flow
 
 > [!WARNING]
 >
-> 全程加号必须在谷歌的**无痕浏览器**中进行，请确保在插件详情中打开【在无痕模式下启用】选项
+> 1. 全程加号必须在谷歌的**无痕浏览器**中进行，请确保在插件详情中打开【在无痕模式下启用】选项
+> 2. 如果浏览器的cookies中存在 `__Secure-1PSIDTS`，说明 `__Secure-1PSID` 这个cookie很快失效，想取长久Cookie的话，推荐使用老版本（13x内核）的谷歌浏览器，因为老版本的谷歌浏览器一般都没 `__Secure-1PSIDTS` 这个Cookie
 
 在 [Flow 官网](https://labs.google/fx/zh/tools/flow/) 控制台，在 `Cookie` 中找到如下，使用 `::` 拼接成一个字符串
-
-> 如果浏览器的cookies中存在【\_\_Secure-1PSIDTS】，说明这个cookie很快失效，想取长久Cookie的话，推荐使用老版本的谷歌浏览器，老版本的谷歌浏览器一般都没这个Cookie
 
 - `__Secure-1PSID`
 - `SID`
@@ -124,7 +128,7 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 加号格式为：
 
 1. `__Secure-1PSID::SID::OSID`
-2. `__Secure-1PSID::SID::OSID::__Secure-1PSIDTS`（__Secure-1PSIDTS存在的话）
+2. `__Secure-1PSID::SID::OSID::__Secure-1PSIDTS`（\_\_Secure-1PSIDTS存在的话）
 
 ### Gemini CLI
 
