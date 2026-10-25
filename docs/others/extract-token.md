@@ -130,6 +130,24 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 1. `__Secure-1PSID::SID::OSID`
 2. `__Secure-1PSID::SID::OSID::__Secure-1PSIDTS`（\_\_Secure-1PSIDTS存在的话）
 
+### Gemini AIStudio
+
+> [!WARNING]
+>
+> 1. 全程加号必须在谷歌的**无痕浏览器**中进行，请确保在插件详情中打开【在无痕模式下启用】选项
+> 2. 如果浏览器的cookies中存在 `__Secure-1PSIDTS`，说明 `__Secure-1PSID` 这个cookie很快失效，想取长久Cookie的话，推荐使用老版本（13x内核）的谷歌浏览器，因为老版本的谷歌浏览器一般都没 `__Secure-1PSIDTS` 这个Cookie
+
+在 [AIStudio 官网](https://aistudio.google.com) 控制台，在 `Cookie` 中找到如下，使用 `::` 拼接成一个字符串
+
+- `__Secure-1PSID`
+- `SAPISID`
+- `__Secure-1PSIDTS`（可选）
+
+加号格式为：
+
+1. `__Secure-1PSID::SAPISID`
+2. `__Secure-1PSID::SAPISID::__Secure-1PSIDTS`（\_\_Secure-1PSIDTS存在的话）
+
 ### Gemini CLI
 
 > [!WARNING]
