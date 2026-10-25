@@ -37,6 +37,7 @@
 |           **Flow的 `V1Images` 接口**           |      `500 元`      |                         -                          |
 |           **Flow的 `V1Videos` 接口**           |      `500 元`      |                         -                          |
 |      **Gemini官网逆向的 `V1Images` 接口**      |      `500 元`      |                         -                          |
+| **Gemini AIStudio官网逆向的 `V1Images` 接口**  |      `500 元`      |                         -                          |
 |       **Antigravity的 `V1Images` 接口**        |      `500 元`      |                         -                          |
 |     **ChatGPT官网逆向的 `V1Images` 接口**      |      `500 元`      |                         -                          |
 |      **Codex终端逆向的 `V1Images` 接口**       |      `500 元`      |                         -                          |
