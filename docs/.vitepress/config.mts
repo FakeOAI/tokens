@@ -50,6 +50,7 @@ export default defineConfig({
               { text: "Gemini Cli 终端逆向", link: "gemini_cli" },
               { text: "Flow 官网逆向", link: "flow" },
               { text: "Antigravity 客户端逆向", link: "antigravity" },
+              { text: "Gemini AIStudio 官网逆向", link: "gemini_aistudio" },
             ],
           },
           {
