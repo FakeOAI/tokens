@@ -1,3 +1,9 @@
+## [4.12.6] - 2026-10-28
+
+### Fixed
+
+- 修复Gemini AISstudio平台报错【failed to bypass bot guard】、【PROXY_GENERATION_DISABLED: streamGenerateContent is not supported】的问题
+
 ## [4.12.5] - 2026-10-27
 
 ### Added
