@@ -1,3 +1,9 @@
+## [4.12.13] - 2026-11-11
+
+### Added
+
+- Anti、Gemini AI Studio平台新增【gemini-4-carbon】模型
+
 ## [4.12.12] - 2026-11-10
 
 ### Added
