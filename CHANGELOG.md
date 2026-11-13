@@ -1,3 +1,10 @@
+## [4.12.15] - 2026-11-13
+
+### Added
+
+- Gemini AI Studio、Anti平台新增【gemini-4-hydrogen】模型
+- Gemini官网逆向平台新增【gemini-hydrogen】模型
+
 ## [4.12.14] - 2026-11-11
 
 ### Added
