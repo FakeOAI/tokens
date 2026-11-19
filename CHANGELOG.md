@@ -1,3 +1,14 @@
+## [4.12.22] - 2026-11-18
+
+### Fixed
+
+- 修复Gemini官网逆向、AIStudio报错【 botguard interpreter not found】的问题
+
+### Added
+
+- Anti、AIStudio平台新增【gemini-4-neon】模型
+- Gemini官网逆向平台新增【gemini-neon】模型
+
 ## [4.12.21] - 2026-11-18
 
 ### Fixed
