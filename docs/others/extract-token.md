@@ -148,24 +148,6 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 1. `__Secure-1PSID::SAPISID`
 2. `__Secure-1PSID::SAPISID::__Secure-1PSIDTS`（\_\_Secure-1PSIDTS存在的话）
 
-### Gemini CLI
-
-> [!WARNING]
->
-> - 程序自动创建 `Google Cloud` 项目，并开启 `Gemini for Google Cloud API` 能力
-
-- 先 [按照这里](#插件安装) 的步骤安装好插件，然后返回插件管理刷新页面
-
-- 点击 `添加Gemini Cli平台的Token` 按钮
-
-  ![5e3620f58fe5e805ac08413e7eab75f2.png](/e36e1bac4c24d9ea5d3ddd3916c20797.png)
-
-- 登陆谷歌账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
-
-  ![f97c554473195e7f631f5eae2fd66a1a.png](/f97c554473195e7f631f5eae2fd66a1a.png)
-
-  ![9dbbf62375f48abca61eee3e17e2a9b2.png](/9dbbf62375f48abca61eee3e17e2a9b2.png)
-
 ### Antigravity
 
 1. `refresh_token` 方式添加：
@@ -184,30 +166,3 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
      ![f97c554473195e7f631f5eae2fd66a1a.png](/9354f5b0a03de472665fe60e8328d3f2.png)
 
      ![9dbbf62375f48abca61eee3e17e2a9b2.png](/f5970918ab11951dde25544b535d0696.png)
-
-### Gemini Business
-
-> [!WARNING]
->
-> 目前 Gemini Business 平台的 Token 有效期是 12 个小时，过期后需重新提取
-
-1. `cookies` 方式添加：
-   - 在 Token 管理页面的添加 Token 中选择 Gemini Business 平台，一行一个 `cookies`
-   - 提取 `auth.business.gemini.google` 域名下的 `__Host-C_OSES` 和 `__Secure-C_SES`
-   - 使用 `::` 拼接这两个值，格式为：`__Host-C_OSES的值::__Secure-C_SES的值`
-   - 例如：`COS.AW82PoG......::CSE.AdwtfT......`
-
-   ![](/5a00f7e7258748beeb20886c1dad3362.png)
-
-2. 插件添加：
-   - 先 [按照这里](#插件安装) 的步骤安装好插件，然后返回插件管理刷新页面
-
-   - 点击 `添加Gemini Business平台的Token` 按钮
-
-     ![](/3cc1675d827a0539380a45083f9e2651.png)
-
-   - 登陆 Gemini Business 账号，`登陆成功` 后会自动返回到 `tokens管理` 中并且自动添加到号池中
-
-     ![](/abf52effa01de5bb5ed09bc9f9642d37.png)
-
-     ![](/fc24a8dce3c2e90abe4af46a037b115d.png)

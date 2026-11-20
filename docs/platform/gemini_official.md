@@ -16,6 +16,9 @@
 - `gemini-flash`
 - `gemini-pro`
 - `gemini-argon`
+- `gemini-carbon`
+- `gemini-hydrogen`
+- `gemini-neon`
 
 ## 模型参数
 

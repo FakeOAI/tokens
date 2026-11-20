@@ -23,6 +23,9 @@
 - `gemini-3.5-flash`
 - `gemini-3.8-flash`
 - `gemini-4-argon`
+- `gemini-4-carbon`
+- `gemini-4-hydrogen`
+- `gemini-4-neon`
 
 ## 模型参数
 
