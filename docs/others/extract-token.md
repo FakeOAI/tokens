@@ -88,6 +88,12 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 
   ![](/d22afd2ebf6dad0fddb9dd6a1072f4a4.png)
 
+### 如何获取谷歌长效Cookie
+
+谷歌浏览器访问 `chrome://flags` 页面，搜索 `Device Bound Session Credentials (Standard)` 配置并设置成 `Disabled`，改完之后点击底部重启按钮即可
+
+![](/d6ac72627a330a23a0929eca67d50544.png)
+
 ### Gemini API
 
 打开 [Gemini AiStudio](https://aistudio.google.com/) 控制台，点击底部的 `Get API Key` 然后创建或查询已存在的 API KEY
@@ -99,54 +105,38 @@ Anthropic 平台有 `Claude官网`、`Claude Code`两个平台，都需要打开
 > [!WARNING]
 >
 > 1. 全程加号必须在谷歌的**无痕浏览器**中进行，请确保在插件详情中打开【在无痕模式下启用】选项
-> 2. 如果浏览器的cookies中存在 `__Secure-1PSIDTS`，说明 `__Secure-1PSID` 这个cookie很快失效，想取长久Cookie的话，推荐使用老版本（13x内核）的谷歌浏览器，因为老版本的谷歌浏览器一般都没 `__Secure-1PSIDTS` 这个Cookie
+> 2. 需要关闭设备绑定会话凭证，才能获取长效Cookie，[如何关闭?](/others/extract-token#如何获取谷歌长效cookie)
 
-在 [Gemini 官网](https://gemini.google.com/) 控制台，在 `Cookie` 中找到如下，使用 `::` 拼接成一个字符串
-
-- `__Secure-1PSID`
-- `__Secure-1PSIDTS`（可选）
-
-加号格式为：
-
-1. `__Secure-1PSID`
-2. `__Secure-1PSID::__Secure-1PSIDTS`（\_\_Secure-1PSIDTS存在的话）
+在 [Gemini 官网](https://gemini.google.com/) 控制台，在 `Cookie` 中找到 `__Secure-1PSID` 这个Cookie
 
 ### Flow
 
 > [!WARNING]
 >
 > 1. 全程加号必须在谷歌的**无痕浏览器**中进行，请确保在插件详情中打开【在无痕模式下启用】选项
-> 2. 如果浏览器的cookies中存在 `__Secure-1PSIDTS`，说明 `__Secure-1PSID` 这个cookie很快失效，想取长久Cookie的话，推荐使用老版本（13x内核）的谷歌浏览器，因为老版本的谷歌浏览器一般都没 `__Secure-1PSIDTS` 这个Cookie
+> 2. 需要关闭设备绑定会话凭证，才能获取长效Cookie，[如何关闭?](/others/extract-token#如何获取谷歌长效cookie)
 
 在 [Flow 官网](https://labs.google/fx/zh/tools/flow/) 控制台，在 `Cookie` 中找到如下，使用 `::` 拼接成一个字符串
 
 - `__Secure-1PSID`
 - `SID`
 - `OSID`
-- `__Secure-1PSIDTS`（可选）
 
-加号格式为：
-
-1. `__Secure-1PSID::SID::OSID`
-2. `__Secure-1PSID::SID::OSID::__Secure-1PSIDTS`（\_\_Secure-1PSIDTS存在的话）
+加号格式为：`__Secure-1PSID::SID::OSID`
 
 ### Gemini AIStudio
 
 > [!WARNING]
 >
 > 1. 全程加号必须在谷歌的**无痕浏览器**中进行，请确保在插件详情中打开【在无痕模式下启用】选项
-> 2. 如果浏览器的cookies中存在 `__Secure-1PSIDTS`，说明 `__Secure-1PSID` 这个cookie很快失效，想取长久Cookie的话，推荐使用老版本（13x内核）的谷歌浏览器，因为老版本的谷歌浏览器一般都没 `__Secure-1PSIDTS` 这个Cookie
+> 2. 需要关闭设备绑定会话凭证，才能获取长效Cookie，[如何关闭?](/others/extract-token#如何获取谷歌长效cookie)
 
 在 [AIStudio 官网](https://aistudio.google.com) 控制台，在 `Cookie` 中找到如下，使用 `::` 拼接成一个字符串
 
 - `__Secure-1PSID`
 - `SAPISID`
-- `__Secure-1PSIDTS`（可选）
 
-加号格式为：
-
-1. `__Secure-1PSID::SAPISID`
-2. `__Secure-1PSID::SAPISID::__Secure-1PSIDTS`（\_\_Secure-1PSIDTS存在的话）
+加号格式为：`__Secure-1PSID::SAPISID`
 
 ### Antigravity
 
